@@ -22,19 +22,25 @@ export default function foot() {
                     <a
                         className={`${styles.mail} ${"text-white"}`}
                         href="https://www.facebook.com/profile.php?id=100089158682345"
-                        target="_blank">
+                        target="_blank"
+                        rel="noreferrer"
+                        >
                         Facebook
                     </a>
                     <a
                         className={`${styles.mail} ${"text-white"}`}
                         href="https://www.instagram.com/mejortechnologies"
-                        target="_blank">
+                        target="_blank"
+                        rel="noreferrer"
+                        >
                         Instagram
                     </a>
                     <a
                         className={`${styles.mail} ${"text-white"}`}
                         href="https://twitter.com/MejorTechnology"
-                        target="_blank">
+                        target="_blank"
+                        rel="noreferrer"
+                        >
                         twiiter
                     </a>
                 </div>
