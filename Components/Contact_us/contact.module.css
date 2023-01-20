@@ -1,0 +1,166 @@
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.vid {
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    width: 100vw;
+    height: 100%;
+}
+
+.box {
+    display: flex;
+    padding: 5% 5%;
+    z-index: 1;
+    flex-direction: column;
+}
+
+
+.header {
+    display: flex;
+    justify-content: center;
+    font-family: 'Abel', sans-serif;
+    position: relative;
+    font-size: 5vw;
+    color: #907730;
+    margin-bottom: 2%;
+}
+
+.quote {
+    font-size: 1.2vw;
+    font-weight: bolder;
+    font-family: 'PT Sans', sans-serif;
+    text-align: center;
+    width: 50%;
+    align-self: center;
+}
+
+.form {
+    display: flex;
+    align-self: center;
+    width: 45%;
+    margin-top: 5%;
+    flex-direction: column;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.label {
+    font-size: 1.5vw;
+    row-gap: 2vw;
+    cursor: pointer;
+    margin-bottom: 2%;
+    width: fit-content;
+}
+
+.input {
+    font-size: 1vw;
+    border-radius: 5px;
+    padding: 10px;
+    color: black;
+    transition: ease-in-out 0.3s;
+}
+
+.input:focus {
+    transition: ease-in-out 0.3s;
+    outline: 5px solid #907730;
+}
+
+.textarea {
+    display: block;
+    height: 7vw;
+    border-radius: 5px;
+    font-size: 1.2vw;
+    padding: 10px;
+    color: black;
+}
+
+.textarea:focus{
+    transition: ease-in-out 0.3s;
+    outline: 5px solid #907730;
+}
+
+.btn {
+    background: #907730;
+    border-radius: 10%;
+    padding: 10px;
+    color: white;
+    margin-top: 5vw;
+    font-size: 1.5vw;
+    width: 20%;
+}
+
+.btn:hover{
+    transform: scale(1.1);
+    background: transparent;
+    outline: 4px solid white;
+}
+
+@media (max-width:768px) {
+
+    .quote {
+        width: 60%;
+        font-size: 1.6vw;
+        font-weight: bolder;
+    }
+
+    .form {
+        width: 60%;
+    }
+
+    .label{
+        font-size: 2vw;
+    }
+
+    .input{
+        font-size: 2vw;
+    }
+
+    .textarea{
+        height: 10vw;
+        font-size: 2vw;
+    }
+
+    .btn{
+        font-size: 2vw;
+    }
+}
+
+@media (max-width:425px) {
+
+    .header{
+        font-size: 13vw;
+    }
+
+    .quote {
+        width: 95%;
+        font-size: 4vw;
+    }
+
+    .form {
+        width: 100%;
+    }
+
+    .label{
+        font-size: 5vw;
+    }
+
+    .input{
+        font-size: 5vw;
+    }
+
+    .textarea{
+        font-size: 5vw;
+        height: 10%;
+    }
+
+    .btn{
+        font-size: 5vw;
+        width: 30%;
+    }
+}
