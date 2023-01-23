@@ -9,7 +9,7 @@ import Foot from "../Components/Footer/footer";
 export default function App({ Component, pageProps }: AppProps) {
   
   useEffect(() => {
-    AOS.init({ duration: 1000, once: true })
+    AOS.init({ duration: 1000, once: false })
   }, [])
 
   return (
