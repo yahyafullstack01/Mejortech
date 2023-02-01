@@ -8,9 +8,6 @@ export default function Team() {
     const { side, side2, side3, side4, side5, side6, flip, flip2, flip3, flip4, flip5, flip6 } = useContext(AppContext);
     return (
         <div
-            data-aos="flip-left"
-            data-aos-easing="ease-out-cubic"
-            data-aos-duration="2000"
             id="Team" className={`${styles.container} ${"flex flex-col relative"}`}>
             <video
                 autoPlay={true}
