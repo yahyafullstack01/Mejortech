@@ -19,7 +19,7 @@ export default function Contact() {
                     Maybe You Want To Turn A Hobby Into Something More. Or Maybe You Have A Creative Project To Share With The World.
                     Whatever It Is, The Way You Tell Your Story Online Can Make All The Difference.
                 </p>
-                <form action="" method="get" className={`${styles.form} ${"text-white"}`}>
+                <form action={process.env.MyDataHomePage} method="POST" className={`${styles.form} ${"text-white"}`}>
                     <div className="flex flex-col">
                         <label htmlFor={"Email"} className={styles.label}>Email</label>
                         <input className={styles.input} id="Email" name="Email" type={"email"} required placeholder="" />
