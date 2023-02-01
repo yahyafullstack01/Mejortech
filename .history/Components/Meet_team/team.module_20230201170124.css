@@ -41,7 +41,6 @@
 .holder {
     display: flex;
     position: relative;
-    height: 90%;
     justify-content: center;
     transform-style: preserve-3d;
     border-radius: 10%;
@@ -109,8 +108,7 @@
     background: transparent;
 }
 
-
-
+.cv {}
 
 @media (max-width:1200px) {
 

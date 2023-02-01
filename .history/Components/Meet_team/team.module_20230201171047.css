@@ -41,7 +41,7 @@
 .holder {
     display: flex;
     position: relative;
-    height: 90%;
+    background: gree;
     justify-content: center;
     transform-style: preserve-3d;
     border-radius: 10%;

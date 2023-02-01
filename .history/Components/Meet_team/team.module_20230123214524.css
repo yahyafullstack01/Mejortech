@@ -21,7 +21,7 @@
 
 .header {
     display: flex;
-    font-family: 'Abel', sans-serif;
+    font-family:'Abel', sans-serif;
     justify-content: center;
     position: relative;
     font-size: 5vw;
@@ -41,14 +41,13 @@
 .holder {
     display: flex;
     position: relative;
-    height: 90%;
     justify-content: center;
     transform-style: preserve-3d;
     border-radius: 10%;
     transition: ease-in-out 0.3s;
 }
 
-.holder:hover {
+.holder:hover{
     cursor: pointer;
     box-shadow: 1px 1px 20px white;
     transform: scale(1.1);
@@ -104,13 +103,10 @@
     font-size: 1.5vw;
 }
 
-.btn:hover {
+.btn:hover{
     box-shadow: 1px 1px 20px white;
     background: transparent;
 }
-
-
-
 
 @media (max-width:1200px) {
 
