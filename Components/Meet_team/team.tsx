@@ -28,7 +28,7 @@ export default function Team() {
                             <h1>orem Ipsum is simply dummy text of the printing and typesetting industry.
                                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
                             </h1>
-                            <button onClick={() => flip()} className={styles.btn}>Read Info</button>
+                            <button onClick={() => flip()} className={styles.btn}>Close</button>
                         </div>
                         <div className={styles.front}>
                             <img
@@ -48,7 +48,7 @@ export default function Team() {
                             <h1>orem Ipsum is simply dummy text of the printing and typesetting industry.
                                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
                             </h1>
-                            <button onClick={() => flip2()} className={styles.btn}>Read Info</button>
+                            <button onClick={() => flip2()} className={styles.btn}>Close</button>
                         </div>
                         <div className={styles.front}>
                             <img
@@ -71,7 +71,7 @@ export default function Team() {
                             <h1>orem Ipsum is simply dummy text of the printing and typesetting industry.
                                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
                             </h1>
-                            <button onClick={() => flip3()} className={styles.btn}>Read Info</button>
+                            <button onClick={() => flip3()} className={styles.btn}>Close</button>
                         </div>
                         <div className={styles.front}>
                             <img
@@ -91,7 +91,7 @@ export default function Team() {
                             <h1>orem Ipsum is simply dummy text of the printing and typesetting industry.
                                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
                             </h1>
-                            <button onClick={() => flip4()} className={styles.btn}>Read Info</button>
+                            <button onClick={() => flip4()} className={styles.btn}>Close</button>
                         </div>
                         <div className={styles.front}>
                             <img
@@ -111,7 +111,7 @@ export default function Team() {
                             <h1>orem Ipsum is simply dummy text of the printing and typesetting industry.
                                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
                             </h1>
-                            <button onClick={() => flip5()} className={styles.btn}>Read Info</button>
+                            <button onClick={() => flip5()} className={styles.btn}>Close</button>
                         </div>
                         <div className={styles.front}>
                             <img
@@ -130,7 +130,7 @@ export default function Team() {
                             <h1>orem Ipsum is simply dummy text of the printing and typesetting industry.
                                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
                             </h1>
-                            <button onClick={() => flip6()} className={styles.btn}>Read Info</button>
+                            <button onClick={() => flip6()} className={styles.btn}>Close</button>
                         </div>
 
                         <div className={styles.front}>
