@@ -41,7 +41,7 @@ export default function foot() {
                         target="_blank"
                         rel="noreferrer"
                         >
-                        twiiter
+                        twitter
                     </a>
                 </div>
             </div>
