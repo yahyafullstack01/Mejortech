@@ -126,7 +126,7 @@
 }
 
 .list {
-    list-style-type:circle;
+    list-style-type: circle;
     font-size: auto;
     margin-left: 2vw;
 }
@@ -142,7 +142,7 @@
 
 .btn_close:hover {
     cursor: pointer;
-    box-shadow: 1px 1px 20px white;
+    transform: scale(1.1);
 }
 
 

@@ -16,7 +16,7 @@ export default function Team() {
             >
                 <source src="/team.mp4" type="video/mp4" />
             </video>
-
+ 
             <div className={`${styles.box} ${"text-white  w-full"}`}>
                 <h1 className={`${styles.header} ${"text-center"}`}>MEET THE TEAM</h1>
                 <div className={`${styles.Grid}`}>
@@ -54,7 +54,7 @@ export default function Team() {
                                 <li className={styles.list}>coordinate efforts across teams to deliver software products successfully.</li>
                                 <li className={styles.list}>Implementor of more than 25 projects in Web Development</li>
                             </ul>
-                            <button onClick={() => flip2()} className={styles.btn_close}>Close</button>
+                            <button onClick={() => flip2()} className={styles.btn_close_5}>Close</button>
                         </div>
                         <div className={styles.front}>
                             <img
@@ -72,11 +72,8 @@ export default function Team() {
                     </div>
                     <div style={{ transform: side3 ? "rotateY(180deg)" : "" }} className={`${styles.holder} ${"flex flex-col items-center text-center "}`}>
                         <div className={styles.back}>
-                            <h1>back</h1>
-                            <h1>orem Ipsum is simply dummy text of the printing and typesetting industry.
-                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                            </h1>
-                            <button onClick={() => flip3()} className={styles.btn_close}>Close</button>
+
+                            <button onClick={() => flip3()} className={styles.btn}>Close</button>
                         </div>
                         <div className={styles.front}>
                             <img
@@ -89,14 +86,14 @@ export default function Team() {
                             <button onClick={() => flip3()} className={styles.btn}>Read Info</button>
                         </div>
                     </div>
-
                     <div style={{ transform: side4 ? "rotateY(180deg)" : "" }} className={`${styles.holder} ${"flex flex-col items-center text-center "}`}>
                         <div className={styles.back}>
                             <h1>back</h1>
+
                             <h1>orem Ipsum is simply dummy text of the printing and typesetting industry.
                                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
                             </h1>
-                            <button onClick={() => flip4()} className={styles.btn_close}>Close</button>
+                            <button onClick={() => flip4()} className={styles.btn}>Close</button>
                         </div>
                         <div className={styles.front}>
                             <img
@@ -121,7 +118,7 @@ export default function Team() {
                                 <li className={styles.list}>Implementor of more than 20 projects in Web Development</li>
 
                             </ul>
-                            <button onClick={() => flip5()} className={styles.btn_close}>Close</button>
+                            <button onClick={() => flip5()} className={styles.btn_close_5}>Close</button>
                         </div>
                         <div className={styles.front}>
                             <img
@@ -140,7 +137,7 @@ export default function Team() {
                             <h1>orem Ipsum is simply dummy text of the printing and typesetting industry.
                                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
                             </h1>
-                            <button onClick={() => flip6()} className={styles.btn_close}>Close</button>
+                            <button onClick={() => flip6()} className={styles.btn}>Close</button>
                         </div>
 
                         <div className={styles.front}>

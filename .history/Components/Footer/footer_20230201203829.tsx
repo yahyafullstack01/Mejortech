@@ -57,7 +57,7 @@ export default function foot() {
                         target="_blank"
                         rel="noreferrer"
                     >
-                        LinkedIn
+                        twitter
                     </a>
                 </div>
             </div>

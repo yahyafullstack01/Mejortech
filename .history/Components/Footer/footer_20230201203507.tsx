@@ -49,7 +49,7 @@ export default function foot() {
                         target="_blank"
                         rel="noreferrer"
                     >
-                        telegram
+                        twitter
                     </a>
                     <a
                         className={`${styles.mail} ${"text-white"}`}
@@ -57,7 +57,7 @@ export default function foot() {
                         target="_blank"
                         rel="noreferrer"
                     >
-                        LinkedIn
+                        twitter
                     </a>
                 </div>
             </div>

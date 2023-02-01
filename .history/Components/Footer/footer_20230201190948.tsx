@@ -24,7 +24,7 @@ export default function foot() {
                         href="https://www.facebook.com/profile.php?id=100089158682345"
                         target="_blank"
                         rel="noreferrer"
-                    >
+                        >
                         Facebook
                     </a>
                     <a
@@ -32,7 +32,7 @@ export default function foot() {
                         href="https://www.instagram.com/mejortechnologies"
                         target="_blank"
                         rel="noreferrer"
-                    >
+                        >
                         Instagram
                     </a>
                     <a
@@ -40,24 +40,8 @@ export default function foot() {
                         href="https://twitter.com/MejorTechnology"
                         target="_blank"
                         rel="noreferrer"
-                    >
+                        >
                         twitter
-                    </a>
-                    <a
-                        className={`${styles.mail} ${"text-white"}`}
-                        href="https://twitter.com/MejorTechnology"
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        telegram
-                    </a>
-                    <a
-                        className={`${styles.mail} ${"text-white"}`}
-                        href="https://twitter.com/MejorTechnology"
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        LinkedIn
                     </a>
                 </div>
             </div>

@@ -1,7 +1,6 @@
 import styles from "../Contact_us/contact.module.css";
 
 export default function Contact() {
-    
     return (
         <div id="Contact_us" className={`${styles.container} ${"flex flex-col relative"}`}>
             <video

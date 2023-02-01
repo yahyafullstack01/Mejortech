@@ -42,7 +42,7 @@
     display: flex;
     position: relative;
     height: 90%;
-
+    
 
     justify-content: center;
     transform-style: preserve-3d;
@@ -71,13 +71,11 @@
 
 .back {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     position: absolute;
-    height: 100%;
+    height: max-content;
     border-radius: 10%;
-    padding-bottom: 2vw;
-    background: rgba(128, 128, 128, 0.255);
+    /* background: rgba(128, 128, 128, 0.255); */
+    background: grey;
     border: 5px solid white;
     transform: rotateY(180deg);
 }
@@ -126,7 +124,7 @@
 }
 
 .list {
-    list-style-type:circle;
+    list-style-type: circle;
     font-size: auto;
     margin-left: 2vw;
 }
@@ -137,14 +135,17 @@
     background: #907730;
     border-radius: 10%;
     padding: 5%;
+    margin-top: 1vw;
     font-size: 1.5vw;
 }
 
-.btn_close:hover {
-    cursor: pointer;
-    box-shadow: 1px 1px 20px white;
+.btn_close_5 {
+    background: #907730;
+    border-radius: 10%;
+    padding: 5%;
+    font-size: 1.5vw;
+    margin-top: 2vw;
 }
-
 
 
 

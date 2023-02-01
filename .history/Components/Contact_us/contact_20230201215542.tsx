@@ -23,7 +23,7 @@ export default function Contact() {
                 <form action="https://hooks.airtable.com/workflows/v1/genericWebhook/appIbqQDdN5r8Ubiz/wflN4MKI7kBl3ULGj/wtrEbvMzNzmGeWXle" method="POST" className={`${styles.form} ${"text-white"}`}>
                     <div className="flex flex-col">
                         <label htmlFor={"Email"} className={styles.label}>Email</label>
-                        <input className={styles.input} id="Email" name="Email" type={"email"} required placeholder="" />
+                        <input className={styles.input} value={email} id="Email" name="Email" type={"email"} required placeholder="" />
                     </div>
                     <div className="flex flex-col mt-10">
                         <label htmlFor={"TextArea"} className={styles.label}>Message</label>
