@@ -20,6 +20,7 @@ export default function Team() {
             <div className={`${styles.box} ${"text-white  w-full"}`}>
                 <h1 className={`${styles.header} ${"text-center"}`}>MEET THE TEAM</h1>
                 <div className={`${styles.Grid}`}>
+                    {/* Lana card*/}
                     <div style={{ transform: side ? "rotateY(180deg)" : "" }} className={`${styles.holder} ${"flex flex-col items-center  text-center "}`}>
                         <div className={styles.back}>
                             <ul className={styles.listcon}>
@@ -43,6 +44,7 @@ export default function Team() {
                             <button onClick={() => flip()} className={styles.btn}>Read Info</button>
                         </div>
                     </div>
+                    {/* Yahya card*/}
                     <div style={{ transform: side2 ? "rotateY(180deg)" : "" }} className={`${styles.holder} ${"flex flex-col items-center text-center "}`}>
                         <div className={styles.back}>
                             <ul className={styles.listcon}>
@@ -70,6 +72,7 @@ export default function Team() {
                             <button onClick={() => flip2()} className={styles.btn}>Read Info</button>
                         </div>
                     </div>
+                    {/* Samuel card*/}
                     <div style={{ transform: side3 ? "rotateY(180deg)" : "" }} className={`${styles.holder} ${"flex flex-col items-center text-center "}`}>
                         <div className={styles.back}>
                             <h1>back</h1>
@@ -89,13 +92,16 @@ export default function Team() {
                             <button onClick={() => flip3()} className={styles.btn}>Read Info</button>
                         </div>
                     </div>
-
+                    {/* Polina card*/}
                     <div style={{ transform: side4 ? "rotateY(180deg)" : "" }} className={`${styles.holder} ${"flex flex-col items-center text-center "}`}>
                         <div className={styles.back}>
-                            <h1>back</h1>
-                            <h1>orem Ipsum is simply dummy text of the printing and typesetting industry.
-                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                            </h1>
+                            <ul className={styles.listcon}>
+                                <li className={styles.list}>Led new talent acquisition and recruitment processes for over 50 new full-time hires</li>
+                                <li className={styles.list}>Worked with team members 1 to 1 and in small groups to enhance performance and employee satisfaction</li>
+                                <li className={styles.list}>Provided guidance on employee relations and matters of corrective action that reduced turnover rates by 8%</li>
+                                <li className={styles.list}>Assisted with new employee onboarding</li>
+                                <li className={styles.list}>Administered company-wide compensation and benefit plans</li>                                
+                            </ul>
                             <button onClick={() => flip4()} className={styles.btn_close}>Close</button>
                         </div>
                         <div className={styles.front}>
@@ -109,6 +115,7 @@ export default function Team() {
                             <button onClick={() => flip4()} className={styles.btn}>Read Info</button>
                         </div>
                     </div>
+                    {/* Samer card*/}
                     <div style={{ transform: side5 ? "rotateY(180deg)" : "" }} className={`${styles.holder} ${"flex flex-col items-center text-center "}`}>
                         <div className={styles.back}>
                             <ul className={styles.listcon}>
@@ -134,6 +141,7 @@ export default function Team() {
                             <button onClick={() => flip5()} className={styles.btn}>Read Info</button>
                         </div>
                     </div>
+                    {/*  card*/}
                     <div style={{ transform: side6 ? "rotateY(180deg)" : "" }} className={`${styles.holder} ${"flex flex-col items-center text-center "}`}>
                         <div className={styles.back}>
                             <h1>back</h1>

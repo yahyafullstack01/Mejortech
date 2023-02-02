@@ -127,7 +127,7 @@
 
 .list {
     list-style-type:circle;
-    font-size: auto;
+    font-size: 1vw;
     margin-left: 2vw;
 }
 
@@ -157,6 +157,10 @@
         row-gap: 2%;
         margin: 5% 5%;
     }
+
+    .list{
+        font-size: 1.5vw;
+    }
 }
 
 @media(max-width:768px) {
@@ -175,6 +179,14 @@
     }
 
     .title {
+        font-size: 2vw;
+    }
+
+    .list{
+        font-size: 2vw;
+    }
+
+    .btn_close {
         font-size: 2vw;
     }
 }
@@ -217,5 +229,13 @@
 
     .btn {
         font-size: 5vw;
+    }
+
+    .list{
+        font-size: 4vw;
+    }
+
+    .btn_close {
+        font-size: 4vw;
     }
 }
