@@ -17,8 +17,16 @@ export default function foot() {
                     <span className={`${styles.date_time} ${"items-white text-white"}`}>10am – 6pm</span>
                 </div>
 
-                <div className={`${styles.bar_3} ${"flex flex-col"}`}>
+                <div className={`${styles.bar_4} ${"flex flex-col"}`}>
                     <h1 className={`${styles.title_2} ${"items-white text-white"}`}>FOLLOW</h1>
+                    <a
+                        className={`${styles.mail} ${"text-white"}`}
+                        href="https://twitter.com/MejorTechnology"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        LinkedIn
+                    </a>
                     <a
                         className={`${styles.mail} ${"text-white"}`}
                         href="https://www.facebook.com/profile.php?id=100089158682345"
@@ -50,14 +58,6 @@ export default function foot() {
                         rel="noreferrer"
                     >
                         telegram
-                    </a>
-                    <a
-                        className={`${styles.mail} ${"text-white"}`}
-                        href="https://twitter.com/MejorTechnology"
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        LinkedIn
                     </a>
                 </div>
             </div>

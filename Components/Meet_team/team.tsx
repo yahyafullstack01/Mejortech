@@ -72,7 +72,7 @@ export default function Team() {
                             <button onClick={() => flip2()} className={styles.btn}>Read Info</button>
                         </div>
                     </div>
-                    {/* Samuel card*/}
+                    {/* Samuel card*/}  
                     <div style={{ transform: side3 ? "rotateY(180deg)" : "" }} className={`${styles.holder} ${"flex flex-col items-center text-center "}`}>
                         <div className={styles.back}>
                             <h1>back</h1>
