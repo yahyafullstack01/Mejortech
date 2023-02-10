@@ -4,7 +4,7 @@ import { IoIosStar } from "react-icons/io";
 export default function Join() {
     return (
         <div className={`${styles.container} ${"flex flex-col relative"}`}>
-            <h1 className={styles.header}>Testamonials</h1>
+            <h1 data-aos="fade-right" className={styles.header}>Testamonials</h1>
             <video
                 autoPlay={true}
                 loop={true}
@@ -16,7 +16,7 @@ export default function Join() {
             </video>
             <div className={`${styles.box} ${"text-white"}`}>
 
-                <div className={styles.card}>
+                <div data-aos="fade-left" data-aos-duration="2000"  className={styles.card}>
                     <img
                         src="/test_1.jpg"
                         alt="The picture of a man"
@@ -38,7 +38,7 @@ export default function Join() {
                     </div>
                 </div>
 
-                <div className={styles.card}>
+                <div data-aos="fade-right" data-aos-duration="2000"  className={styles.card}>
                     <img
                         src="/test_2.jpg"
                         alt="The picture of a man"
@@ -62,7 +62,7 @@ export default function Join() {
                     </div>
                 </div>
 
-                <div className={styles.card}>
+                <div data-aos="fade-left" data-aos-duration="2000"  className={styles.card}>
                     <img
                         src="/test_3.jpg"
                         alt="The picture of a man"
@@ -84,7 +84,7 @@ export default function Join() {
                     </div>
                 </div>
 
-                <div className={styles.card}>
+                <div data-aos="fade-right" data-aos-duration="2000"  className={styles.card}>
                     <img
                         src="/test_4.jpg"
                         alt="The picture of a man"

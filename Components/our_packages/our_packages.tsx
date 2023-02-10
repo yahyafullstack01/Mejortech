@@ -3,11 +3,11 @@ import { TfiCheck } from "react-icons/tfi";
 
 export default function Join() {
     return (
-        <div className={styles.container}>
-            <h1 className={styles.header}>Our Packages</h1>
+        <div  className={styles.container}>
+            <h1 data-aos="fade-right" className={styles.header}>Our Packages</h1>
 
             <div className={styles.grid}>
-                <div className={styles.card}>
+                <div data-aos="zoom-out-down" data-aos-duration="2000" className={styles.card}>
                     <img
                         src="/card_bg.jpg"
                         alt="The education picture"
@@ -32,7 +32,7 @@ export default function Join() {
                     </ul>
                 </div>
 
-                <div className={styles.card}>
+                <div data-aos="zoom-out-down" data-aos-duration="2000" className={styles.card}>
                     <img
                         src="/card_bg.jpg"
                         alt="The education picture"
@@ -66,7 +66,7 @@ export default function Join() {
                     </ul>
                 </div>
 
-                <div className={styles.card}>
+                <div  data-aos="zoom-out-down" data-aos-duration="2000"className={styles.card}>
                     <img
                         src="/card_bg.jpg"
                         alt="The education picture"

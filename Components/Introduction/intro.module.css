@@ -6,7 +6,6 @@
     z-index: 1;
     margin-top: 2%;
     row-gap: 4vw;
-    overflow: hidden;
 }
 
 
@@ -19,6 +18,39 @@
 .H2 {
     color: white;
     font-size: 2vw;
+}
+
+.circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url(/it_head.jpg) no-repeat center center;
+    background-size: cover;
+    align-self: center;
+    width: 30%;
+    height: 60vh;
+    margin-top: 5%;
+    border-radius: 50%;
+    position: relative;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5vw;
+    color: white;
+}
+
+.logo_bg{
+    display: flex;
+    position: absolute;
+    background-color: black;
+    width: 40%;
+    border-radius: 50%;
+    top:75%;
+    height: 25vh;
 }
 
 @keyframes fadein {
