@@ -55,8 +55,9 @@ export default function OurWork() {
                         <li>Frontend development teaching you the basics  <code style={{ color: "#907730" }}>(Html, Css, Javascript)</code>.</li>
                         <li>From Beginner to Expert in English</li>
                         <li>Become a Fullstack developer , Learn how to create professonal Applications Using different frameworks such as <code style={{ color: "#907730" }}>(React js, Next js, Node js)</code>.</li>
-                        <li></li>
-                        <li></li>
+                        <li>A chance to work on professional Projects.</li>
+                        <li>Experience working in a professional team and how to interact with different clients .</li>
+                        <li>professional education in  Digital marketing</li>
 
                     </ul>
                 </div>
