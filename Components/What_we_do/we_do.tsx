@@ -1,6 +1,7 @@
 import styles from "../What_we_do/we_do.module.css";
 
 export default function OurWork() {
+
     return (
         <div data-aos="fade-in"  data-aos-duration="2000" id="Our_work" className={styles.container}>
             <h1 className={`${styles.header} ${"text-center"}`}>WHAT WE DO</h1>
@@ -23,6 +24,7 @@ export default function OurWork() {
                         <p className={styles.text}>Ready To Take The Next Step? You Can Learn New Things And Improve Yourself In The Future.</p>
                         <button className={styles.btn}>Learn more</button>
                     </div>
+                   
                     <img
                         src="/library.jpg"
                         alt="The education picture"

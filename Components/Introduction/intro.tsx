@@ -8,6 +8,7 @@ export default function Intro() {
                 loop={true}
                 muted={true}
                 controls={false}
+              
             >
                 <source src="/intro.mp4" type="video/mp4" />
             </video>
@@ -18,4 +19,6 @@ export default function Intro() {
             </div>
         </div>
     )
+
+    
 }

@@ -8,10 +8,11 @@ export default function Intro() {
                 loop={true}
                 muted={true}
                 controls={false}
+                className={styles.vid}
             >
                 <source src="/it.mp4" type="video/mp4" />
             </video>
-            <div className={`${styles.container} ${"w-full  flex flex-col justify-center absolute"}`}>
+            <div className={`${styles.container_2} ${"w-full  flex flex-col justify-center absolute"}`}>
                 <div data-aos="zoom-in" data-aos-duration="2000" className={styles.circle}>
                     <h1 className={styles.title}>Title</h1>
                     <img 
@@ -20,7 +21,6 @@ export default function Intro() {
                       className={styles.logo_bg}
                     />
                 </div>
-
             </div>
         </div>
     )
