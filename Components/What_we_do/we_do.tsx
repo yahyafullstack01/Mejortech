@@ -12,7 +12,7 @@ export default function OurWork() {
 
                 src={"/library.jpg"}
                 alt="The education picture"
-                className={`${styles.pic} ${changediv? `${styles.animating}`: ""}`}
+                className={`${styles.pic}`}
                 />
             )
         }
@@ -22,7 +22,7 @@ export default function OurWork() {
 
                 src={"/marketing.jpg"}
                 alt="The education picture"
-                className={`${styles.pic} ${changediv? `${styles.animating}`: ""}`}
+                className={`${styles.pic}`}
                 />
            )
         }
