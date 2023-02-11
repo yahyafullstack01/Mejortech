@@ -7,7 +7,7 @@ export default function OurWork() {
     const [changediv2, setChangediv2] = useState(false);
     const [changediv3, setChangediv3] = useState(false);
 
-
+    //Function that changes Between The picture and text in
     function LearnIT() {
         if (!changediv) {
             return (
