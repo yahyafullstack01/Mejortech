@@ -13,8 +13,8 @@ export default function OurWork() {
             return (
 
                 <img
-                    src={"/laptop.jpg"}
-                    alt="The education picture"
+                    src={"/Laptop.jpg"}
+                    alt="The It picture"
                     className={`${styles.pic}`}
                 />
             )
