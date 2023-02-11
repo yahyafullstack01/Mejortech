@@ -23,7 +23,7 @@ export default function header() {
                 <a href="/#Contact_us" className={`${styles.navigation} ${"text-sm md:text-xl  text-white"}`}>Contact Us</a>
             </nav>
             <div className={`${styles.btn_container} ${"sm:flex hidden"}`}>
-                <button className={styles.btn}>Sign In</button>
+                <button className={styles.btn}>Log In</button>
                 <button className={styles.btn}>Sign Up</button>
             </div>
             <a href="#menu" className="sm:hidden flex">
@@ -53,7 +53,7 @@ export default function header() {
                     </div>
 
                     <div className={`${styles.btn_container} ${"flex"}`}>
-                        <button className={styles.btn}>Sign In</button>
+                        <button className={styles.btn}>Log In</button>
                         <button className={styles.btn}>Sign Up</button>
                     </div>
                 </div>

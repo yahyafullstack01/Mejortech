@@ -29,27 +29,37 @@
 
 .con {
     display: flex;
+    position: relative;
     flex-direction: column;
     width: 90%;
     height: 30vw;
 }
 
+
+
 .pic {
-    display: block;
-    padding: 0;
+    display: flex;
     width: 100%;
+    border-radius: 15px;
     height: 100%;
+    transition: ease-in-out 2s;
+    z-index: 1;
+    box-shadow: white 20px 20px 30px -10px;
 }
 
 .Text_block_Learn {
     display: flex;
-    border: 2px solid white;
+    position: absolute;
+    z-index: 0;
     border-radius: 15px;
+    border: 2px solid white;
     flex-direction: column;
     padding: 2%;
     width: 100%;
     height: 100%;
     background: rgb(37, 35, 35);
+    transition: ease-in-out 2s;
+    box-shadow: #e6aa06 20px 20px 30px -10px;
 }
 
 .title_Learn {
@@ -106,26 +116,10 @@
     transform: scale(1.1);
 }
 
-/* .con {
-    display: flex;
-    position: relative;
-}
-
-.pic1 {
-    z-index: 1;
-    transition: filter 3s ease-out, opacity 3s ease-out;
-}
-
-.pic2 {
-    position: absolute;
-    z-index: 0;
-    transition: filter 3s ease-out, opacity 3s ease-out;
-}
-
 .animating {
     filter: blur(2vw);
-    opacity: 1;
-    animation: glitch 1s infinite;
+    opacity: 0;
+    animation: glitch 1s linear;
 }
 
 
@@ -173,7 +167,72 @@
     100% {
         transform: translate(1px, -2px) rotate(-1deg);
     }
-} */
+}
+
+@media (max-width:700px) {
+
+    .header {
+        font-size: 6vw;
+    }
+
+    .text {
+        font-size: 2.5vw;
+    }
+
+    .btn {
+
+        font-size: 3.5vw;
+    }
+
+    .con{
+        height: 55vh;
+        width: 100%;
+    }
+
+    .title_Learn{
+        font-size: 3vw;
+    }
+
+    .list_con_Learn{
+        font-size: 1.7vw;
+        row-gap: 2vw;
+        margin-left: 5%;
+    }
+}
+
+@media (max-width:590px) {
+    .header {
+        font-size: 7vw;
+    }
+
+    .text_block {
+        justify-content: center;
+    }
+
+    .text {
+        font-size: 2.7vw;
+    }
+
+    .btn {
+
+        font-size: 3.7vw;
+    }
+
+    .con{
+        height: 56vh;
+        width: 100%;
+    }
+
+    .title_Learn{
+        font-size: 3.5vw;
+    }
+
+    .list_con_Learn{
+        font-size: 2vw;
+        row-gap: 2vw;
+        margin-left: 5%;
+    }
+}
 
 @media(max-width:425px) {
 
@@ -215,6 +274,19 @@
         font-size: 5vw;
         margin-top: 5%;
         width: 80%;
+    }
+
+    .title_Learn{
+        font-size: 7vw;
+    }
+
+    .list_con_Learn{
+        display: flex;
+        height: inherit;
+        justify-content: space-evenly;
+        font-size: 3vw;
+        row-gap: 2vw;
+        margin-left: 5%;
     }
 
     .btn {

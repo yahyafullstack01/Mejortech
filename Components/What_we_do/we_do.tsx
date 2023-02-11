@@ -9,19 +9,16 @@ export default function OurWork() {
 
     //Function that changes Between The picture and text in
     function LearnIT() {
-        if (!changediv) {
-            return (
-
+        // if (!changediv) {
+        return (
+            <>
                 <img
                     src={"/Laptop.jpg"}
                     alt="The It picture"
-                    className={`${styles.pic}`}
+                    className={`${styles.pic} ${changediv ? `${styles.animating}` : ""}`}
                 />
-            )
-        }
-        else {
-            return (
-                <div className={styles.Text_block_Learn}>
+
+                <div className={`${styles.Text_block_Learn} ${changediv ? "" : `${styles.animating}`}`}>
                     <h1 className={styles.title_Learn}>Our Work consists Of :</h1>
                     <ul className={styles.list_con_Learn}>
                         <li>Creating Web and Mobile Application.</li>
@@ -32,24 +29,22 @@ export default function OurWork() {
                         <li>The use of Headless CMS such as <code style={{ color: "#907730" }}>(Sanity.io)</code> that helps the client to add, change or delete content in the App</li>
                     </ul>
                 </div>
-            )
-        }
+            </>
+        )
+        // }
+
 
     }
     function LearnEducation() {
-        if (!changediv2) {
-            return (
-
+        return (
+            <>
                 <img
                     src={"/library.jpg"}
                     alt="The education picture"
-                    className={`${styles.pic}`}
+                    className={`${styles.pic} ${changediv2 ? `${styles.animating}` : ""}`}
                 />
-            )
-        }
-        else {
-            return (
-                <div className={styles.Text_block_Learn}>
+
+                <div className={`${styles.Text_block_Learn} ${changediv2 ? "" : `${styles.animating}`}`}>
                     <h1 className={styles.title_Learn}>You will Learn:</h1>
                     <ul className={styles.list_con_Learn}>
                         <li>Frontend development teaching you the basics  <code style={{ color: "#907730" }}>(Html, Css, Javascript)</code>.</li>
@@ -61,28 +56,33 @@ export default function OurWork() {
 
                     </ul>
                 </div>
-            )
-        }
-
+            </>
+        )
     }
     function LearnMarketing() {
-        if (!changediv3) {
-            return (
+        return (
+            <>
                 <img
-                    src={"/marketing.jpg"}
-                    alt="The education picture"
-                    className={`${styles.pic}`}
+                    src={"/library.jpg"}
+                    alt="The Marketing picture"
+                    className={`${styles.pic} ${changediv3 ? `${styles.animating}` : ""}`}
                 />
-            )
-        }
-        else {
-            return (
-                <h1>Hello there</h1>
-            )
-        }
 
+                <div className={`${styles.Text_block_Learn} ${changediv3 ? "" : `${styles.animating}`}`}>
+                    <h1 className={styles.title_Learn}>You will Learn:</h1>
+                    <ul className={styles.list_con_Learn}>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+
+                    </ul>
+                </div>
+            </>
+        )
     }
-
 
     return (
         <div data-aos="fade-in" data-aos-duration="2000" id="Our_work" className={styles.container}>
@@ -129,3 +129,6 @@ export default function OurWork() {
         </div>
     )
 }
+
+
+
