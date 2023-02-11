@@ -51,7 +51,6 @@ export default function OurWork() {
     function LearnMarketing() {
         if (!changediv3) {
             return (
-
                 <img
                     src={"/marketing.jpg"}
                     alt="The education picture"
@@ -73,7 +72,7 @@ export default function OurWork() {
             <h1 className={`${styles.header} ${"text-center"}`}>WHAT WE DO</h1>
             <div className={styles.grid}>
 
-              {/*IT Block*/}
+                {/*IT Block*/}
                 <div data-aos="fade-right" data-aos-duration="2000" className={styles.block}>
                     {/* <img
                         src="/Laptop.jpg"
