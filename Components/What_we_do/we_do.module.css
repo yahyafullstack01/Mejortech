@@ -29,24 +29,46 @@
 
 .con {
     display: flex;
-    background: grey;
+    flex-direction: column;
     width: 90%;
     height: 30vw;
 }
 
 .pic {
     display: block;
+    padding: 0;
     width: 100%;
+    height: 100%;
 }
 
-.bgi {
-    background-color: aquamarine;
+.Text_block_Learn {
+    display: flex;
+    border: 2px solid white;
+    border-radius: 15px;
+    flex-direction: column;
+    padding: 2%;
+    width: 100%;
+    height: 100%;
+    background: rgb(37, 35, 35);
 }
 
-.bgimg {
-    background: url("/library.jpg");
-    background-position: center;
-    background-size: cover;
+.title_Learn {
+    font-size: 2vw;
+    color: #907730;
+    font-family: 'Abel', sans-serif;
+    font-weight: bold;
+}
+
+.list_con_Learn {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1vw;
+    margin-top: 3%;
+    margin-left: 3%;
+    font-size: 1.2vw;
+    color: white;
+    font-family: 'PT Sans', sans-serif;
+    font-style: italic;
 }
 
 .text_block {
