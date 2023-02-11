@@ -63,7 +63,7 @@ export default function OurWork() {
         return (
             <>
                 <img
-                    src={"/library.jpg"}
+                    src={"/marketing.jpg"}
                     alt="The Marketing picture"
                     className={`${styles.pic} ${changediv3 ? `${styles.animating}` : ""}`}
                 />
