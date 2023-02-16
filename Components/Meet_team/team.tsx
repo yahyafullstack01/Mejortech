@@ -24,12 +24,11 @@ export default function Team() {
                     <div style={{ transform: side ? "rotateY(180deg)" : "" }} className={`${styles.holder} ${"flex flex-col items-center  text-center "}`}>
                         <div className={styles.back}>
                             <ul className={styles.listcon}>
-                                <li className={styles.list}>Target audience analysis and segmentation</li>
-                                <li className={styles.list}>Landing page analysis and recommendations for filling</li>
-                                <li className={styles.list}>Development of offers and creation of layouts creatives Working with advertising account and FB links</li>
-                                <li className={styles.list}>Education and consulting</li>
-                                <li className={styles.list}>Analysis of the effectiveness of SMM promotion</li>
-                                <li className={styles.list}>Completed over 200 dissertations in economics, law and psychology on the territory</li>
+                                <li className={styles.list}>Business packaging (including outer, semantic, technical layers; USP).</li>
+                                <li className={styles.list}>SEO promotion (including checking the semantic core for relevance, accuracy and completeness).</li>
+                                <li className={styles.list}>Contextual advertising (including competitor analysis, collection of a wide semantic core and negative keywords, selection of landing pages).</li>
+                                <li className={styles.list}>SMM promotion (wide coverage of the target audience in social networks (VK, Inst, Fb, TikTok).</li>
+                                <li className={styles.list}>Target (including creating creatives, launching advertising campaigns, reporting, drawing up an advertising strategy, installing web analytics on the site).</li>
                             </ul>
                             <button onClick={() => flip()} className={styles.btn_close}>Close</button>
                         </div>
@@ -72,18 +71,22 @@ export default function Team() {
                             <button onClick={() => flip2()} className={styles.btn}>Read Info</button>
                         </div>
                     </div>
-                    {/* Samuel card*/}  
+                    {/* Samuel card*/}
                     <div style={{ transform: side3 ? "rotateY(180deg)" : "" }} className={`${styles.holder} ${"flex flex-col items-center text-center "}`}>
                         <div className={styles.back}>
-                            <h1>back</h1>
-                            <h1>orem Ipsum is simply dummy text of the printing and typesetting industry.
-                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                            </h1>
+                            <ul className={styles.listcon}>
+                                <li className={styles.list}>Demonstrated ability in business-to-business (B2B) sales</li>
+                                <li className={styles.list}>Proficiency with word processing, spreadsheet and presentation software</li>
+                                <li className={styles.list}>Problem-solving skills to propose mutually beneficial solutions</li>
+                                <li className={styles.list}>Familiarity with the industry including equipment, logistics and supply-chain management</li>
+                                <li className={styles.list}>Familiarity with project management methodologies</li>
+                                <li className={styles.list}>Impeccable verbal and written communication skills</li>
+                            </ul>
                             <button onClick={() => flip3()} className={styles.btn_close}>Close</button>
                         </div>
                         <div className={styles.front}>
                             <img
-                                src="/samuel.jpeg"
+                                src="/samuel.jpg"
                                 alt=""
                                 className={`${styles.pic}`}
                             />
@@ -100,7 +103,7 @@ export default function Team() {
                                 <li className={styles.list}>Worked with team members 1 to 1 and in small groups to enhance performance and employee satisfaction</li>
                                 <li className={styles.list}>Provided guidance on employee relations and matters of corrective action that reduced turnover rates by 8%</li>
                                 <li className={styles.list}>Assisted with new employee onboarding</li>
-                                <li className={styles.list}>Administered company-wide compensation and benefit plans</li>                                
+                                <li className={styles.list}>Administered company-wide compensation and benefit plans</li>
                             </ul>
                             <button onClick={() => flip4()} className={styles.btn_close}>Close</button>
                         </div>
@@ -141,23 +144,28 @@ export default function Team() {
                             <button onClick={() => flip5()} className={styles.btn}>Read Info</button>
                         </div>
                     </div>
-                    {/*  card*/}
+                    {/* Alina card*/}
                     <div style={{ transform: side6 ? "rotateY(180deg)" : "" }} className={`${styles.holder} ${"flex flex-col items-center text-center "}`}>
                         <div className={styles.back}>
-                            <h1>back</h1>
-                            <h1>orem Ipsum is simply dummy text of the printing and typesetting industry.
-                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                            </h1>
+                            <ul className={styles.listcon}>
+                                <li className={styles.list}>Working knowledge of test management software (e.g. qTest, Zephyr) and SQL</li>
+                                <li className={styles.list}>Familiarity with Agile frameworks and regression testing</li>
+                                <li className={styles.list}>Analytical mind and problem-solving aptitude</li>
+                                <li className={styles.list}>BSc/BA in Computer Science, Engineering or a related field</li>
+                                <li className={styles.list}>Strong organizational skills</li>
+                                <li className={styles.list}>Experience in project management and QA methodology</li>
+                                <li className={styles.list}>Excellent communication skills</li>
+                            </ul>
                             <button onClick={() => flip6()} className={styles.btn_close}>Close</button>
                         </div>
 
                         <div className={styles.front}>
                             <img
-                                src="/samuel.jpeg"
+                                src="/Alina.jpg"
                                 alt=""
-                                className={`${styles.pic}`}
+                                className={`${styles.Alina} ${styles.pic}`}
                             />
-                            <p className={styles.name}>SAMUEL</p>
+                            <p className={styles.name}>ALINA</p>
                             <span className={styles.title}>QA Tester</span>
                             <button onClick={() => flip6()} className={styles.btn}>Read Info</button>
                         </div>

@@ -93,6 +93,12 @@
     object-fit: cover;
 }
 
+
+
+.Alina{
+    object-position: top right;
+}
+
 .name {
     margin-top: 2vw;
     color: #907730;
@@ -131,6 +137,7 @@
     font-size: 1vw;
     margin-left: 2vw;
 }
+
 
 
 .btn_close {
@@ -184,7 +191,7 @@
     }
 
     .list{
-        font-size: 2vw;
+        font-size: 1.6vw;
     }
 
     .btn_close {
@@ -192,7 +199,7 @@
     }
 }
 
-@media (max-width:425px) {
+@media (max-width:450px) {
 
 
     .header {
@@ -233,7 +240,7 @@
     }
 
     .list{
-        font-size: 4vw;
+        font-size: 3.5vw;
     }
 
     .btn_close {

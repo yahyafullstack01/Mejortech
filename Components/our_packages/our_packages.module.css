@@ -1,7 +1,7 @@
 .container {
     display: flex;
     flex-direction: column;
-    padding: 5% 5%;
+    padding: 10% 5%;
 }
 
 .header {
@@ -89,6 +89,124 @@
     margin-left: 2%;
     font-size: 1.5vw;
 }
+
+
+.form_container {
+    margin-top: 10%;
+    border: 2px solid #907730;
+    padding: 2%;
+    border-radius: 10px;
+    background: #232323;
+    box-shadow: #907730 20px 20px 30px -10px;
+}
+
+.title {
+    font-weight: bold;
+    font-family: 'Abel', sans-serif;
+    font-size: 4vw;
+    color: transparent;
+    -webkit-text-stroke: 1px #907730;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5vw;
+    align-content: center;
+    margin-top: 10%;
+    width: 80%;
+}
+
+.label {
+    display: flex;
+    column-gap: 1vw;
+    align-items: center;
+    font-size: 2vw;
+    font-weight: bold;
+    font-family: 'Abel', sans-serif;
+    color: white;
+}
+
+.input {
+    background: transparent;
+    width: 50%;
+    border-bottom: 2px solid white;
+    outline: none;
+    padding: 10px;
+}
+
+.input::placeholder {
+    text-align: center;
+}
+
+.input:focus::placeholder {
+    color: #907730;
+}
+
+.input:focus {
+    border-bottom: 2px solid #907730;
+}
+
+.type_con {
+    display: flex;
+    align-items: center;
+    column-gap: 5vw;
+    list-style-type: none;
+}
+
+
+.lb {
+    display: block;
+    font-size: 2.5vw;
+    background: rgba(0, 0, 0, 0.514);
+    font-family: 'Abel', sans-serif;
+    color: white;
+    border-radius: 10%;
+}
+
+
+.lb:hover {
+    color: #907730;
+    transform: scale(1.1);
+}
+
+.type_con input[type="radio"] {
+    opacity: 0.01;
+    display: none;
+    z-index: 100;
+}
+
+.type_con input[type="radio"]:checked+label,
+.Checked+label {
+    background: black;
+    color: #907730;
+}
+
+.type_con label {
+    padding: 5px;
+    border: 1px solid #CCC;
+    cursor: pointer;
+    z-index: 90;
+}
+
+.btn {
+    font-size: 2.5vw;
+    width: fit-content;
+    border-radius: 15px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.427);
+    color: white;
+}
+
+.btn:hover {
+    color: #907730;
+    transform: scale(1.1);
+}
+
+.btn:active {
+    transform: scale(1.0);
+}
+
 
 @media (min-width:2000px) {
 
