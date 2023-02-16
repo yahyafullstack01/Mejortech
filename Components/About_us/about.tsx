@@ -1,4 +1,5 @@
 import styles from "../About_us/about.module.css";
+import Image from "next/image";
 export default function About() {
 
     return (
@@ -17,7 +18,8 @@ export default function About() {
                     They Are Going To Teach You Everything Step By Step To Reach Your Goal.
                 </p>
             </div>
-            <img src="/about.jpg" className={`${"h-screen w-auto mt-8 sm:h-98 sm:w-10/12 md:w-2/5 md:h-full md:mt-0 xl:ml-20"}`} />
+            <Image src="/about.jpg" alt="About" width={500}
+                height={500} className={`${"h-screen w-auto mt-8 sm:h-98 sm:w-10/12 md:w-2/5 md:h-full md:mt-0 xl:ml-20"}`} />
         </div>
     )
 }
