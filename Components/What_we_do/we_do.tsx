@@ -71,13 +71,11 @@ export default function OurWork() {
                 <div className={`${styles.Text_block_Learn} ${changediv3 ? "" : `${styles.animating}`}`}>
                     <h1 className={styles.title_Learn}>You will Learn:</h1>
                     <ul className={styles.list_con_Learn}>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-
+                        <li className={styles.list}>Business packaging <code style={{ color: "#907730" }}>(including outer, semantic, technical layers)</code>.</li>
+                        <li className={styles.list}>SEO promotion <code style={{ color: "#907730" }}>(including checking the semantic core for relevance, accuracy and completeness)</code>.</li>
+                        <li className={styles.list}>Contextual advertising <code style={{ color: "#907730" }}>(including competitor analysis, collection of a wide semantic core and negative keywords, selection of landing pages)</code>.</li>
+                        <li className={styles.list}>SMM promotion wide coverage of the target audience in social networks <code style={{ color: "#907730" }}>(VK, Inst, Fb, TikTok)</code>.</li>
+                        <li className={styles.list}>Target <code style={{ color: "#907730" }}>(including creating creatives, launching advertising campaigns, installing web analytics on the site)</code>.</li>
                     </ul>
                 </div>
             </>

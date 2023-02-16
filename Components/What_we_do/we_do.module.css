@@ -54,9 +54,9 @@
     border-radius: 15px;
     border: 2px solid white;
     flex-direction: column;
-    padding: 2%;
+    padding: 3% ;
     width: 100%;
-    height: 100%;
+    height: auto;
     background: rgb(37, 35, 35);
     transition: ease-in-out 2s;
     box-shadow: #e6aa06 20px 20px 30px -10px;

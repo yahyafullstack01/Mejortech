@@ -24,11 +24,12 @@ export default function Team() {
                     <div style={{ transform: side ? "rotateY(180deg)" : "" }} className={`${styles.holder} ${"flex flex-col items-center  text-center "}`}>
                         <div className={styles.back}>
                             <ul className={styles.listcon}>
-                                <li className={styles.list}>Business packaging (including outer, semantic, technical layers; USP).</li>
-                                <li className={styles.list}>SEO promotion (including checking the semantic core for relevance, accuracy and completeness).</li>
-                                <li className={styles.list}>Contextual advertising (including competitor analysis, collection of a wide semantic core and negative keywords, selection of landing pages).</li>
-                                <li className={styles.list}>SMM promotion (wide coverage of the target audience in social networks (VK, Inst, Fb, TikTok).</li>
-                                <li className={styles.list}>Target (including creating creatives, launching advertising campaigns, reporting, drawing up an advertising strategy, installing web analytics on the site).</li>
+                                <li className={styles.list}>Target audience analysis and segmentation</li>
+                                <li className={styles.list}>Landing page analysis and recommendations for filling</li>
+                                <li className={styles.list}>Development of offers and creation of layouts creatives Working with advertising account and FB links</li>
+                                <li className={styles.list}>Education and consulting</li>
+                                <li className={styles.list}>Analysis of the effectiveness of SMM promotion</li>
+                                <li className={styles.list}>Completed over 200 dissertations in economics, law and psychology on the territory</li>
                             </ul>
                             <button onClick={() => flip()} className={styles.btn_close}>Close</button>
                         </div>
