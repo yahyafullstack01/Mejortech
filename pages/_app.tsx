@@ -5,8 +5,9 @@ import 'aos/dist/aos.css'
 import Head from "../Html/html";
 import type { AppProps } from 'next/app'
 import Foot from "../Components/Footer/footer";
+import { appWithTranslation } from 'next-i18next'
 
-export default function App({ Component, pageProps }: AppProps) {
+function App({ Component, pageProps }: AppProps) {
 
   useEffect(() => {
     AOS.init({ duration: 1000, once: false });
@@ -19,12 +20,6 @@ export default function App({ Component, pageProps }: AppProps) {
       }
     });
 
-    const Form = document.getElementById('Myform');
-
-    Form?.addEventListener('submit', (e) => {
-      e.preventDefault()
-    })
-
   }, [])
 
   return (
@@ -36,3 +31,5 @@ export default function App({ Component, pageProps }: AppProps) {
   )
 
 }
+
+export default appWithTranslation(App)

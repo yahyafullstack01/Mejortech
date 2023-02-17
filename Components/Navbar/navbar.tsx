@@ -29,6 +29,10 @@ export default function header() {
                     <option value="ab">Arabic</option>
                     <option value="ru">Russian</option>
                 </select>
+                <Link className={"bg-white text-center"} passHref href="en">English</Link>
+                <Link className={"bg-white text-center"} passHref href="ru">Russian</Link>
+                <Link className={"bg-white text-center"} passHref href="es">spanish</Link>
+
             </div>
             <a href="#menu" className="sm:hidden flex">
                 <TbEqual className="sm:hidden text-4xl text-white flex" />
