@@ -12,7 +12,7 @@ export default function Why_us() {
                     <br></br>
                     <li>having amassed a sizable body of expertise, which we use to provide solutions that satisfy the demands, expectations, and financial constraints of our clients.</li>
                     <br></br>
-                    <li> Our multilingual staff that speaks English, Arabic, Russian, Spanish, French and Having many years of experience working with clients from around the world.</li>
+                    <li> Our multilingual staff speaks English, Arabic, Russian, Spanish, French and Having many years of experience working with clients from around the world.</li>
                 </ul>
                 <img
                     data-aos="fade-left"
