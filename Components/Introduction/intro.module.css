@@ -6,6 +6,7 @@
     z-index: 1;
     margin-top: 2%;
     row-gap: 4vw;
+    overflow: hidden;
 }
 
 .container_2 {
