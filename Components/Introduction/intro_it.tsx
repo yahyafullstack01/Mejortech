@@ -4,12 +4,12 @@ export default function Intro() {
     return (
         <div className="flex flex-col relative ">
             <video
-                autoPlay={true}
                 loop={true}
                 muted={true}
                 controls={false}
+                autoPlay={true}
                 className={styles.vid}
-            >
+                >
                 <source src="/it.mp4" type="video/mp4" />
             </video>
             <div className={`${styles.container_2} ${"w-full  flex flex-col justify-center "}`}>

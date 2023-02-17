@@ -81,6 +81,28 @@
     }
 }
 
+@media (max-width:1200px) {
+    .circle{
+        width: 50vw;
+    }
+}
+
+@media (max-width:768px) {
+    .circle{
+        width: 70%;
+    }
+}
+
+@media (max-width:570px) {
+
+    .circle{
+         width: 80%;
+    }
+
+    
+   
+}
+
 
 @media(max-width:425px) {
     .H1 {
@@ -89,5 +111,14 @@
 
     .H2 {
         font-size: 4vw;
+    }
+
+    .container_2{
+        justify-content: center;
+    }
+
+    .circle{
+        width: 80vw;
+        height: 50vh;
     }
 }

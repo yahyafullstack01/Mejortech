@@ -53,6 +53,9 @@
     height: 100vh;
 }
 
+
+
+
 .menu:target {
     transform: translateX(0);
 }
@@ -157,9 +160,6 @@
         margin: 1% 1%;
     }
 
-    .bar {
-        padding: 1% 1%;
-    }
 
     .menu_mobile {
         column-gap: 2%;

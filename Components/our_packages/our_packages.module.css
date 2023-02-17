@@ -147,6 +147,10 @@
     border-bottom: 2px solid #907730;
 }
 
+.package_con{
+    display: flex;
+    column-gap: 5vw;
+}
 .type_con {
     display: flex;
     align-items: center;
@@ -244,9 +248,11 @@
         margin-left: 37%;
     }
 
+
     .type {
         font-size: 8vw;
     }
+
 
     .list {
         row-gap: 2vw;
@@ -259,4 +265,41 @@
     .info {
         font-size: 4vw;
     }
+
+    .title {
+        font-size: 8vw;
+    }
+
+    .label {
+        align-items: start;
+        font-size: 5vw;
+        flex-direction: column;
+        /* background: red; */
+    }
+
+    .form{
+        row-gap: 20vw;
+        width: 100%;
+        margin-top: 10%;
+    }
+
+    .input {
+        width: 100%;
+        margin-top: 2%;
+    }
+
+    .type_con {
+        align-items: start;
+        flex-direction: column;
+        row-gap: 10vw;
+    }
+
+    .lb{
+        font-size: 6vw;
+    }
+
+    .btn{
+        font-size: 7vw;
+    }
+
 }
