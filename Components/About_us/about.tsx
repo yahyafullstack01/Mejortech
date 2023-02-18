@@ -1,11 +1,16 @@
 import styles from "../About_us/about.module.css";
 import Image from "next/image";
+import {useTranslation} from "next-i18next"
 export default function About() {
+
+    const { t, i18n } = useTranslation();
+
+    const isArabic = i18n.language === "ar";
 
     return (
         <div
             id="About"
-            className={`${styles.container} ${"h-auto items-center justify-center bg-black flex flex-col mt-10  py-10 sm:h-auto  md:flex-row md:justify-between md:h-screen"}`}
+            className={`${styles.container} ${"h-auto items-center justify-center bg-black flex flex-col mt-10  py-10 sm:h-auto  md:flex-row md:justify-between md:h-screen"} ${isArabic ? styles.ar : ""}`}
             data-aos="zoom-in"
             data-aos-duration="3000"
         >

@@ -38,6 +38,7 @@ function Header() {
                     onChange={handleChangeLanguage}
                 >
                     <option value="en">English</option>
+                    <option value="ar">Arabic</option>
                     <option value="ru">Russian</option>
                     <option value="es">Spanish</option>
                 </select>
