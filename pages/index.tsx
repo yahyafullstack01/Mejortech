@@ -38,7 +38,6 @@ export default function Home() {
     <AppContext.Provider value={{ side, side2, side3, side4, side5, side6, flip, flip2, flip3, flip4, flip5, flip6 }}>
       <div>
         <Navbar />
-       
         <Intro />
         <h1 className={"bg-orange-500 text-center"}></h1>
         <About />

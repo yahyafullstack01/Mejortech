@@ -19,8 +19,8 @@ export default function Intro() {
             </video>
             <div className={`${styles.container} ${"w-full  flex flex-col absolute"}`}>
                 <h1 className={`${styles.H1} ${"text-center w-full"} ${"animate__animated animate__lightSpeedInLeft animate__slower "}`}>{t("Home:Title")}</h1>
-                <h2 className={`${styles.H2} ${"text-center w-full"} ${"animate__animated animate__zoomInDown animate__slower"}`}>THE BEST SPOT FOR IT , EDUCATION , MARKETING AND MUCH MORE</h2>
-                <h3 className={`${styles.H2} ${"text-center w-full"} ${"animate__animated animate__zoomInDown animate__slower"}`}>JOIN US AND EXPLORE NEW HORIZONS</h3>
+                <h2 className={`${styles.H2} ${"text-center w-full"} ${"animate__animated animate__zoomInDown animate__slower"}`}>{t("Home:Para_1")}</h2>
+                <h3 className={`${styles.H2} ${"text-center w-full"} ${"animate__animated animate__zoomInDown animate__slower"}`}>{t("Home:Para_2")}</h3>
             </div>
         </div>
     )
