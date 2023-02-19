@@ -33,14 +33,12 @@ export default function OurWork() {
                 />
 
                 <div className={`${styles.Text_block_Learn} ${changediv ? "" : `${styles.animating}`}`}>
-                    <h1 className={styles.title_Learn}>Our Work consists Of :</h1>
+                    <h1 className={styles.title_Learn}>{Card_titles[0]}</h1>
                     <ul className={styles.list_con_Learn}>
-                        <li>Creating Web and Mobile Application.</li>
-                        <li>Fetching Api's from different servers.</li>
-                        <li>Storing Data in many types of softwares Like <code style={{ color: "#907730" }}>(Airtable, MongoDb, MySql)</code>.</li>
-                        <li>Working with a proprietary issue tracking product such as <code style={{ color: "#907730" }}>(Jira)</code>to manage projects when working in a team.</li>
-                        <li>Using Desgin tools such as <code style={{ color: "#907730" }}>(figma)</code> to Create or Implement App Desgins.</li>
-                        <li>The use of Headless CMS such as <code style={{ color: "#907730" }}>(Sanity.io)</code> that helps the client to add, change or delete content in the App</li>
+
+                        {Card_IT && Card_IT.map((item: string) => (
+                            <li className={styles.list}>{item}</li>
+                        ))}
                     </ul>
                 </div>
             </>
