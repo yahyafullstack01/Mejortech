@@ -1,8 +1,23 @@
 import styles from "../Meet_team/team.module.css";
 import { AppContext } from "../../Mycontext/context";
 import { useContext } from "react";
+import { useTranslation } from "next-i18next"
 
 export default function Team() {
+    const { t, i18n } = useTranslation("Home");
+    const isArabic = i18n.language === "ar";
+
+    const Names: any = t('Team_names', { returnObjects: true });
+    const Work: any = t('Work_type', { returnObjects: true });
+    const Lana_info: any = t('Lana_info', { returnObjects: true });
+    const Yahya_info: any = t('Yahya_info', { returnObjects: true });
+    const Samuel_info: any = t('Samuel_info', { returnObjects: true });
+    const Polina_info: any = t('Polina_info', { returnObjects: true });
+    const Samer_info: any = t('Samer_info', { returnObjects: true });
+    const Alina_info: any = t('Alina_info', { returnObjects: true });
+    const Team_btn: any = t('Team_btn', { returnObjects: true });
+
+
     const { side, side2, side3, side4, side5, side6, flip, flip2, flip3, flip4, flip5, flip6 } = useContext(AppContext);
     return (
         <div
@@ -18,20 +33,17 @@ export default function Team() {
             </video>
 
             <div className={`${styles.box} ${"text-white  w-full"}`}>
-                <h1 className={`${styles.header} ${"text-center"}`}>MEET THE TEAM</h1>
+                <h1 className={`${styles.header} ${"text-center"}`}>{t("Title_3")}</h1>
                 <div className={`${styles.Grid}`}>
                     {/* Lana card*/}
                     <div style={{ transform: side ? "rotateY(180deg)" : "" }} className={`${styles.holder} ${"flex flex-col items-center  text-center "}`}>
                         <div className={styles.back}>
-                            <ul className={styles.listcon}>
-                                <li className={styles.list}>Target audience analysis and segmentation</li>
-                                <li className={styles.list}>Landing page analysis and recommendations for filling</li>
-                                <li className={styles.list}>Development of offers and creation of layouts creatives Working with advertising account and FB links</li>
-                                <li className={styles.list}>Education and consulting</li>
-                                <li className={styles.list}>Analysis of the effectiveness of SMM promotion</li>
-                                <li className={styles.list}>Completed over 200 dissertations in economics, law and psychology on the territory</li>
+                            <ul className={`${styles.listcon} ${isArabic ? styles.ar : ""}`}>
+                                {Lana_info && Lana_info.map((item: string) => (
+                                    <li className={styles.list}>{item}</li>
+                                ))}
                             </ul>
-                            <button onClick={() => flip()} className={styles.btn_close}>Close</button>
+                            <button onClick={() => flip()} className={styles.btn_close}>{Team_btn[1]}</button>
                         </div>
                         <div className={styles.front}>
                             <img
@@ -39,24 +51,20 @@ export default function Team() {
                                 alt=""
                                 className={`${styles.pic}`}
                             />
-                            <p className={styles.name}>LANA</p>
-                            <span className={styles.title}>MARKETING DIRECTOR</span>
-                            <button onClick={() => flip()} className={styles.btn}>Read Info</button>
+                            <p className={styles.name}>{Names[0]}</p>
+                            <span className={styles.title}> {Work[0]}</span>
+                            <button onClick={() => flip()} className={styles.btn}>{Team_btn[0]}</button>
                         </div>
                     </div>
                     {/* Yahya card*/}
                     <div style={{ transform: side2 ? "rotateY(180deg)" : "" }} className={`${styles.holder} ${"flex flex-col items-center text-center "}`}>
                         <div className={styles.back}>
-                            <ul className={styles.listcon}>
-                                <li className={styles.list}>Bachelor's degree in computer science</li>
-                                <li className={styles.list}>Creator of Responsive web applications</li>
-                                <li className={styles.list}>Designer of UI/UX </li>
-                                <li className={styles.list}>Management of different types of projects</li>
-                                <li className={styles.list}>Three experience in React js </li>
-                                <li className={styles.list}>coordinate efforts across teams to deliver software products successfully.</li>
-                                <li className={styles.list}>Implementor of more than 25 projects in Web Development</li>
+                            <ul className={`${styles.listcon} ${isArabic ? styles.ar : ""}`}>
+                                {Yahya_info && Yahya_info.map((item: string) => (
+                                    <li className={styles.list}>{item}</li>
+                                ))}
                             </ul>
-                            <button onClick={() => flip2()} className={styles.btn_close}>Close</button>
+                            <button onClick={() => flip2()} className={styles.btn_close}>{Team_btn[1]}</button>
                         </div>
                         <div className={styles.front}>
                             <img
@@ -64,26 +72,24 @@ export default function Team() {
                                 alt=""
                                 className={`${styles.pic}`}
                             />
-                            <p className={styles.name}>YAHYA</p>
+                            <p className={styles.name}>{Names[1]}</p>
                             <span className={styles.title}>
-                                PROJECT MANAGER<br></br>
-                                FULL-STACK DEVELOPER
+                                {Work[1]}
+                                <br></br>
+                                {Work[2]}
                             </span>
-                            <button onClick={() => flip2()} className={styles.btn}>Read Info</button>
+                            <button onClick={() => flip2()} className={styles.btn}>{Team_btn[0]}</button>
                         </div>
                     </div>
                     {/* Samuel card*/}
                     <div style={{ transform: side3 ? "rotateY(180deg)" : "" }} className={`${styles.holder} ${"flex flex-col items-center text-center "}`}>
                         <div className={styles.back}>
-                            <ul className={styles.listcon}>
-                                <li className={styles.list}>Demonstrated ability in business-to-business (B2B) sales</li>
-                                <li className={styles.list}>Proficiency with word processing, spreadsheet and presentation software</li>
-                                <li className={styles.list}>Problem-solving skills to propose mutually beneficial solutions</li>
-                                <li className={styles.list}>Familiarity with the industry including equipment, logistics and supply-chain management</li>
-                                <li className={styles.list}>Familiarity with project management methodologies</li>
-                                <li className={styles.list}>Impeccable verbal and written communication skills</li>
+                            <ul className={`${styles.listcon} ${isArabic ? styles.ar : ""}`}>
+                                {Samuel_info && Samuel_info.map((item: string) => (
+                                    <li className={styles.list}>{item}</li>
+                                ))}
                             </ul>
-                            <button onClick={() => flip3()} className={styles.btn_close}>Close</button>
+                            <button onClick={() => flip3()} className={styles.btn_close}>{Team_btn[1]}</button>
                         </div>
                         <div className={styles.front}>
                             <img
@@ -91,22 +97,20 @@ export default function Team() {
                                 alt=""
                                 className={`${styles.pic}`}
                             />
-                            <p className={styles.name}>SAMUEL</p>
-                            <span className={styles.title}>BUSNISS DEVELOPER</span>
-                            <button onClick={() => flip3()} className={styles.btn}>Read Info</button>
+                            <p className={styles.name}>{Names[2]}</p>
+                            <span className={styles.title}> {Work[3]}</span>
+                            <button onClick={() => flip3()} className={styles.btn}>{Team_btn[0]}</button>
                         </div>
                     </div>
                     {/* Polina card*/}
                     <div style={{ transform: side4 ? "rotateY(180deg)" : "" }} className={`${styles.holder} ${"flex flex-col items-center text-center "}`}>
                         <div className={styles.back}>
-                            <ul className={styles.listcon}>
-                                <li className={styles.list}>Led new talent acquisition and recruitment processes for over 50 new full-time hires</li>
-                                <li className={styles.list}>Worked with team members 1 to 1 and in small groups to enhance performance and employee satisfaction</li>
-                                <li className={styles.list}>Provided guidance on employee relations and matters of corrective action that reduced turnover rates by 8%</li>
-                                <li className={styles.list}>Assisted with new employee onboarding</li>
-                                <li className={styles.list}>Administered company-wide compensation and benefit plans</li>
+                            <ul className={`${styles.listcon} ${isArabic ? styles.ar : ""}`}>
+                                {Polina_info && Polina_info.map((item: string) => (
+                                    <li className={styles.list}>{item}</li>
+                                ))}
                             </ul>
-                            <button onClick={() => flip4()} className={styles.btn_close}>Close</button>
+                            <button onClick={() => flip4()} className={styles.btn_close}>{Team_btn[1]}</button>
                         </div>
                         <div className={styles.front}>
                             <img
@@ -114,25 +118,20 @@ export default function Team() {
                                 alt="polina picture"
                                 className={`${styles.pic}`}
                             />
-                            <p className={styles.name}>Polina</p>
-                            <span className={styles.title}>HR Consultant recruitment</span>
-                            <button onClick={() => flip4()} className={styles.btn}>Read Info</button>
+                            <p className={styles.name}>{Names[3]}</p>
+                            <span className={styles.title}> {Work[4]}</span>
+                            <button onClick={() => flip4()} className={styles.btn}>{Team_btn[0]}</button>
                         </div>
                     </div>
                     {/* Samer card*/}
                     <div style={{ transform: side5 ? "rotateY(180deg)" : "" }} className={`${styles.holder} ${"flex flex-col items-center text-center "}`}>
                         <div className={styles.back}>
-                            <ul className={styles.listcon}>
-                                <li className={styles.list}>Bachelor's degree in computer science</li>
-                                <li className={styles.list}>Creator of Responsive web applications</li>
-                                <li className={styles.list}>Designer of UI/UX </li>
-                                <li className={styles.list}>Knowledge of Differet web languages</li>
-                                <li className={styles.list}>Builder and modifier of Rest Api's</li>
-                                <li className={styles.list}>Team worker with different projects and types of applications</li>
-                                <li className={styles.list}>Implementor of more than 20 projects in Web Development</li>
-
+                            <ul className={`${styles.listcon} ${isArabic ? styles.ar : ""}`}>
+                                {Samer_info && Samer_info.map((item: string) => (
+                                    <li className={styles.list}>{item}</li>
+                                ))}
                             </ul>
-                            <button onClick={() => flip5()} className={styles.btn_close}>Close</button>
+                            <button onClick={() => flip5()} className={styles.btn_close}>{Team_btn[1]}</button>
                         </div>
                         <div className={styles.front}>
                             <img
@@ -140,24 +139,20 @@ export default function Team() {
                                 alt=""
                                 className={`${styles.pic}`}
                             />
-                            <p className={styles.name}>SAMER</p>
-                            <span className={styles.title}>Front-end-developer</span>
-                            <button onClick={() => flip5()} className={styles.btn}>Read Info</button>
+                            <p className={styles.name}>{Names[4]}</p>
+                            <span className={styles.title}> {Work[5]}</span>
+                            <button onClick={() => flip5()} className={styles.btn}>{Team_btn[0]}</button>
                         </div>
                     </div>
                     {/* Alina card*/}
                     <div style={{ transform: side6 ? "rotateY(180deg)" : "" }} className={`${styles.holder} ${"flex flex-col items-center text-center "}`}>
                         <div className={styles.back}>
-                            <ul className={styles.listcon}>
-                                <li className={styles.list}>Working knowledge of test management software (e.g. qTest, Zephyr) and SQL</li>
-                                <li className={styles.list}>Familiarity with Agile frameworks and regression testing</li>
-                                <li className={styles.list}>Analytical mind and problem-solving aptitude</li>
-                                <li className={styles.list}>BSc/BA in Computer Science, Engineering or a related field</li>
-                                <li className={styles.list}>Strong organizational skills</li>
-                                <li className={styles.list}>Experience in project management and QA methodology</li>
-                                <li className={styles.list}>Excellent communication skills</li>
+                            <ul className={`${styles.listcon} ${isArabic ? styles.ar : ""}`}>
+                                {Alina_info && Alina_info.map((item: string) => (
+                                    <li className={styles.list}>{item}</li>
+                                ))}
                             </ul>
-                            <button onClick={() => flip6()} className={styles.btn_close}>Close</button>
+                            <button onClick={() => flip6()} className={styles.btn_close}>{Team_btn[1]}</button>
                         </div>
 
                         <div className={styles.front}>
@@ -166,9 +161,9 @@ export default function Team() {
                                 alt=""
                                 className={`${styles.Alina} ${styles.pic}`}
                             />
-                            <p className={styles.name}>ALINA</p>
-                            <span className={styles.title}>QA Tester</span>
-                            <button onClick={() => flip6()} className={styles.btn}>Read Info</button>
+                            <p className={styles.name}>{Names[5]}</p>
+                            <span className={styles.title}> {Work[6]}</span>
+                            <button onClick={() => flip6()} className={styles.btn}>{Team_btn[0]}</button>
                         </div>
                     </div>
                 </div>

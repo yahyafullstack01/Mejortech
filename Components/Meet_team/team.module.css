@@ -128,13 +128,26 @@
     row-gap: 1vw;
     flex-direction: column;
     text-align: left;
+    margin-left: 2vw;
+}
+
+.listcon.ar{
+    direction: rtl;
+    display: flex;
+    width: 88%;
+    margin-top: 10%;
+    row-gap: 1vw;
+    flex-direction: column;
+    text-align: right;
+    margin-right: 3vw;
 }
 
 .list {
     list-style-type:circle;
     font-size: 1vw;
-    margin-left: 2vw;
 }
+
+
 
 
 

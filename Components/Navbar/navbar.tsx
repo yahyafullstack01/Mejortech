@@ -8,7 +8,7 @@ import { useTranslation } from "next-i18next";
 
 function Header() {
     const router = useRouter();
-    const { t } = useTranslation();
+    const { t } = useTranslation("Home");
 
     const handleChangeLanguage = (e: React.ChangeEvent<HTMLSelectElement>) => {
         const lang = e.target.value;
@@ -25,10 +25,10 @@ function Header() {
                 />
             </Link>
             <nav className={"sm:flex md:w-96 w-72 2xl:w-4/12 justify-between hidden"}>
-                <a href="#About" className={`${styles.navigation} ${"text-sm md:text-xl  text-white"}`}></a>
-                <a href="#Our_work" className={`${styles.navigation} ${"text-sm md:text-xl  text-white"}`}>{t("Home:Our_Work")}</a>
-                <a href="#Team" className={`${styles.navigation} ${"text-sm md:text-xl  text-white"}`}>{t("Home:Team")}</a>
-                <a href="#Contact_us" className={`${styles.navigation} ${"text-sm md:text-xl  text-white"}`}>{t("Home:Contact_Us")}</a>
+                <a href="#About" className={`${styles.navigation} ${"text-sm md:text-xl  text-white"}`}>{t("About")}</a>
+                <a href="#Our_work" className={`${styles.navigation} ${"text-sm md:text-xl  text-white"}`}>{t("Our_Work")}</a>
+                <a href="#Team" className={`${styles.navigation} ${"text-sm md:text-xl  text-white"}`}>{t("Team")}</a>
+                <a href="#Contact_us" className={`${styles.navigation} ${"text-sm md:text-xl  text-white"}`}>{t("Contact_Us")}</a>
             </nav>
             <div className="sm:flex items-center md:text-lg hidden">
                 <BsGlobe className="text-xl text-white " />
@@ -55,16 +55,16 @@ function Header() {
                             className="w-32"
                         />
                     </a>
-                    <a href="#">
+                    <Link passHref href="/">
                         <RxCross1 className="text-4xl text-white flex" />
-                    </a>
+                    </Link>
                 </div>
 
                 <div className={`${styles.nav_mobile} ${"flex items-center justify-center flex-col gap-y-12 mt-2"}`}>
-                    <a href="#About" className="text-2xl text-center text-white  w-full">About</a>
-                    <a href="#Our_work" className="text-2xl text-center text-white  w-full">Our Work</a>
-                    <a href="#Team" className="text-2xl text-center text-white  w-full">Team</a>
-                    <a href="#Contact_us" className="text-2xl text-center text-white  w-full">Contact Us</a>
+                    <a href="#About" className="text-2xl text-center text-white  w-full">{t("About")}</a>
+                    <a href="#Our_work" className="text-2xl text-center text-white  w-full">{t("Our_Work")}</a>
+                    <a href="#Team" className="text-2xl text-center text-white  w-full">{t("Team")}</a>
+                    <a href="#Contact_us" className="text-2xl text-center text-white  w-full">{t("Contact_Us")}</a>
                 </div>
                 <div className="flex w-full justify-center mt-10 items-center text-lg  ">
                     <BsGlobe className="text-xl text-white " />
@@ -74,6 +74,7 @@ function Header() {
                         onChange={handleChangeLanguage}
                     >
                         <option value="en">English</option>
+                        <option value="ar">Arabic</option>
                         <option value="ru">Russian</option>
                         <option value="es">Spanish</option>
                     </select>

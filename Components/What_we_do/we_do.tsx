@@ -1,7 +1,21 @@
 import { useState } from "react";
 import styles from "../What_we_do/we_do.module.css";
+import { useTranslation } from "next-i18next";
 
 export default function OurWork() {
+
+    const { t, i18n } = useTranslation("Home");
+    const isArabic = i18n.language === "ar";
+
+    const Titles: any = t('Block_titles', { returnObjects: true });
+    const Info: any = t('Block_info', { returnObjects: true });
+    const Card_titles: any = t('Card_Learn_title', { returnObjects: true });
+    const Card_info: any = t('Card_Learn_info', { returnObjects: true });
+    const Card_IT: any = t('Card_IT_info', { returnObjects: true });
+    const Card_ED: any = t('Card_ED_info', { returnObjects: true });
+    const Card_MK: any = t('Card_MK_info', { returnObjects: true });
+    const Card_btn: any = t('Who_btn', { returnObjects: true });
+
 
     const [changediv, setChangediv] = useState(false);
     const [changediv2, setChangediv2] = useState(false);
@@ -71,11 +85,6 @@ export default function OurWork() {
                 <div className={`${styles.Text_block_Learn} ${changediv3 ? "" : `${styles.animating}`}`}>
                     <h1 className={styles.title_Learn}>You will Learn:</h1>
                     <ul className={styles.list_con_Learn}>
-                        <li className={styles.list}>Business packaging <code style={{ color: "#907730" }}>(including outer, semantic, technical layers)</code>.</li>
-                        <li className={styles.list}>SEO promotion <code style={{ color: "#907730" }}>(including checking the semantic core for relevance, accuracy and completeness)</code>.</li>
-                        <li className={styles.list}>Contextual advertising <code style={{ color: "#907730" }}>(including competitor analysis, collection of a wide semantic core and negative keywords, selection of landing pages)</code>.</li>
-                        <li className={styles.list}>SMM promotion wide coverage of the target audience in social networks <code style={{ color: "#907730" }}>(VK, Inst, Fb, TikTok)</code>.</li>
-                        <li className={styles.list}>Target <code style={{ color: "#907730" }}>(including creating creatives, launching advertising campaigns, installing web analytics on the site)</code>.</li>
                     </ul>
                 </div>
             </>
@@ -84,7 +93,7 @@ export default function OurWork() {
 
     return (
         <div data-aos="fade-in" data-aos-duration="2000" id="Our_work" className={styles.container}>
-            <h1 className={`${styles.header} ${"text-center"}`}>WHAT WE DO</h1>
+            <h1 className={`${styles.header} ${"text-center"}`}>{t("Title_4")}</h1>
             <div className={styles.grid}>
 
                 {/*IT Block*/}
@@ -93,18 +102,18 @@ export default function OurWork() {
                         {LearnIT()}
                     </div>
                     <div className={styles.text_block}>
-                        <h1 className={`${styles.header} ${"text-center"}`}>IT PROJECTS</h1>
-                        <p className={styles.text}>Find Out About Our Projects, Methods, And how we work.</p>
-                        <button className={styles.btn} onClick={() => setChangediv(!changediv)}>{changediv ? "Go Back" : "Learn more"}</button>
+                        <h1 className={`${styles.header} ${"text-center"}`}>{Titles[0]}</h1>
+                        <p className={styles.text}>{Info[0]}</p>
+                        <button className={styles.btn} onClick={() => setChangediv(!changediv)}>{changediv ? `${Card_btn[1]}` : `${Card_btn[0]}`}</button>
                     </div>
                 </div>
 
                 {/*Education Block*/}
                 <div data-aos="fade-left" data-aos-duration="2000" className={styles.block} >
                     <div className={styles.text_block}>
-                        <h1 className={`${styles.header} ${"text-center"}`}>EDUCATION</h1>
-                        <p className={styles.text}>Ready To Take The Next Step? You Can Learn New Things And Improve Yourself In The Future.</p>
-                        <button className={styles.btn} onClick={() => setChangediv2(!changediv2)}>{changediv2 ? "Go Back" : "Learn more"}</button>
+                        <h1 className={`${styles.header} ${"text-center"}`}>{Titles[1]}</h1>
+                        <p className={styles.text}>{Info[1]}</p>
+                        <button className={styles.btn} onClick={() => setChangediv2(!changediv2)}>{changediv ? `${Card_btn[1]}` : `${Card_btn[0]}`}</button>
                     </div>
                     <div className={`${styles.con}`}>
                         {LearnEducation()}
@@ -117,9 +126,9 @@ export default function OurWork() {
                         {LearnMarketing()}
                     </div>
                     <div className={styles.text_block}>
-                        <h1 className={`${styles.header} ${"text-center"}`}>MARKETING</h1>
-                        <p className={styles.text}>Enter  A World That Adapts This New Generation, That Opens Many Doors To Success.</p>
-                        <button className={styles.btn} onClick={() => setChangediv3(!changediv3)}>{changediv3 ? "Go Back" : "Learn more"}</button>
+                        <h1 className={`${styles.header} ${"text-center"}`}>{Titles[2]}</h1>
+                        <p className={styles.text}>{Info[2]}</p>
+                        <button className={styles.btn} onClick={() => setChangediv3(!changediv3)}>{changediv ? `${Card_btn[1]}` : `${Card_btn[0]}`}</button>
                     </div>
                 </div>
 

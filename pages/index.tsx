@@ -9,8 +9,6 @@ import Join_us from "../Components/Join_us/join";
 import Contact_Us from "../Components/Contact_us/contact";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { GetStaticProps } from "next";
-import { useTranslation } from "next-i18next";
-import Link from 'next/link';
 
 
 
@@ -31,15 +29,12 @@ export default function Home() {
   const flip6 = () => setside6(!side6);
 
 
-  const { t } = useTranslation()
-
   return (
 
     <AppContext.Provider value={{ side, side2, side3, side4, side5, side6, flip, flip2, flip3, flip4, flip5, flip6 }}>
       <div>
         <Navbar />
         <Intro />
-        <h1 className={"bg-orange-500 text-center"}></h1>
         <About />
         <Team />
         <What_we_do />
@@ -51,12 +46,12 @@ export default function Home() {
 }
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
-  const lang = locale ?? 'en'; // Add a null check for the locale parameter
+  const lang = locale ?? 'en';
 
   return {
     props: {
       ...(await serverSideTranslations(lang, ['Home'])),
-      locale, // Add the locale prop to the props object
+      // locale, 
     },
   };
 };
