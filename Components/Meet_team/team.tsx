@@ -1,24 +1,11 @@
 import styles from "../Meet_team/team.module.css";
 import { AppContext } from "../../Mycontext/context";
 import { useContext } from "react";
-import { useTranslation } from "next-i18next"
 
 export default function Team() {
-    const { t, i18n } = useTranslation("Home");
-    const isArabic = i18n.language === "ar";
-
-    const Names: any = t('Team_names', { returnObjects: true });
-    const Work: any = t('Work_type', { returnObjects: true });
-    const Lana_info: any = t('Lana_info', { returnObjects: true });
-    const Yahya_info: any = t('Yahya_info', { returnObjects: true });
-    const Samuel_info: any = t('Samuel_info', { returnObjects: true });
-    const Polina_info: any = t('Polina_info', { returnObjects: true });
-    const Samer_info: any = t('Samer_info', { returnObjects: true });
-    const Alina_info: any = t('Alina_info', { returnObjects: true });
-    const Team_btn: any = t('Team_btn', { returnObjects: true });
 
 
-    const { side, side2, side3, side4, side5, side6, flip, flip2, flip3, flip4, flip5, flip6 } = useContext(AppContext);
+    const { side, side2, side3, side4, side5, side6, flip, flip2, flip3, flip4, flip5, flip6, t, isArabic, Names, Yahya_info, Work, Lana_info, Samer_info, Samuel_info, Polina_info, Alina_info, Team_btn } = useContext(AppContext);
     return (
         <div
             id="Team" className={`${styles.container} ${"flex flex-col relative"}`}>
