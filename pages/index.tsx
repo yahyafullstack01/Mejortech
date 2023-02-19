@@ -17,7 +17,7 @@ export default function Home() {
 
 const {t} = useTranslation("Home");
 
-  // Card fliping in team section
+  // Card fliping in team section 
   const [side, setside] = useState(false);
   const [side2, setside2] = useState(false);
   const [side3, setside3] = useState(false);
