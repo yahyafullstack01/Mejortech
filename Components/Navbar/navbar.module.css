@@ -24,6 +24,11 @@
     width: 10vw;
 }
 
+
+.Nav_con.ru{
+    width:55%;
+}
+
 .navigation {
     font-family: 'Abel', sans-serif;
 }
@@ -118,7 +123,16 @@
     }
 
     .navigation {
-        font-size: 2vw;
+        font-size: 1.5vw;
+    }
+
+    .globe{
+       width: 4vw;
+       height: 2vw;
+    }
+
+    .selection{
+        font-size: 1.5vw;
     }
 }
 

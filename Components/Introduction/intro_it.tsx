@@ -16,7 +16,7 @@ export default function Intro() {
                 <div data-aos="zoom-in" data-aos-duration="2000" className={styles.circle}>
                     <h1 className={styles.title}>Title</h1>
                     <img 
-                      src="../logo.png"
+                      src="/logo.png"
                       alt=""
                       className={styles.logo_bg}
                     />

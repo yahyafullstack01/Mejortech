@@ -15,6 +15,9 @@ import { useTranslation } from "next-i18next";
 export default function Home() {
   const { t, i18n } = useTranslation("Home");
   const isArabic = i18n.language === "ar";
+  const isRussain = i18n.language === "ru";
+  const isSpanish = i18n.language === "es";
+
 
   // Card fliping in team section 
   const [side, setside] = useState(false);
@@ -52,16 +55,25 @@ export default function Home() {
   const Card_MK: any = t('Card_MK_info', { returnObjects: true });
   const Card_btn: any = t('Who_btn', { returnObjects: true });
 
+  //The arr of iformations for Join Us section
+  const Block_Join_titles: any = t('Block_Join_titles', { returnObjects: true });
+  const Block_Join_info: any = t('Block_Join_info', { returnObjects: true });
+
+
+
 
 
   return (
 
     <AppContext.Provider value={{
+      isRussain,/*Navbar*/
+      isSpanish,/*Introduction*/
       side, side2, side3, side4, side5, side6,
       flip, flip2, flip3, flip4, flip5, flip6,
       t, isArabic, Names, Yahya_info, Work, Lana_info, Samer_info, Samuel_info, Polina_info, Alina_info, Team_btn,/* Team */
       Titles, Info, Card_titles, Card_ED, Card_IT, Card_MK, Card_btn, /* What-we-do */
-      
+      Block_Join_titles, Block_Join_info,/*Join Us */
+
     }}>
       <div>
         <Navbar />
@@ -82,7 +94,6 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
   return {
     props: {
       ...(await serverSideTranslations(lang, ['Home'])),
-      // locale,   
     },
   };
 };

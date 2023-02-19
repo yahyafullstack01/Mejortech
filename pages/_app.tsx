@@ -26,6 +26,19 @@ function App({ Component, pageProps }: AppProps) {
     } else {
       document.documentElement.classList.remove('ar');
     }
+
+    if (i18n.language === 'ru') {
+      document.documentElement.classList.add('ru');
+    } else {
+      document.documentElement.classList.remove('ru');
+    }
+
+    if (i18n.language === 'es') {
+      document.documentElement.classList.add('es');
+    } else {
+      document.documentElement.classList.remove('es');
+    }
+
   }, [i18n.language]);
 
   return (

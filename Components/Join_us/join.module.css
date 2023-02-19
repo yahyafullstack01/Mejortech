@@ -130,7 +130,30 @@
     }
 }
 
-@media (max-width:425px) {
+
+@media (max-width:768px) {
+
+
+    .title {
+        font-size: 4vw;
+    }
+
+    .time {
+        font-size: 2.5vw;
+    }
+
+    .info{
+        font-size: 2vw;
+        width: 100%;
+    }
+
+    .btn{
+        font-size: 3vw
+    }
+
+}
+
+@media (max-width:500px) {
 
     .container {
         padding: 10% 1%;
@@ -138,6 +161,12 @@
 
     .header {
         font-size: 15vw;
+        text-align: center;
+    }
+
+    .header.ru{
+        font-size: 8vw;
+        text-align: center;
     }
 
     .box {
@@ -161,6 +190,7 @@
 
     .info {
         font-size: 5vw;
+        width: 80%;
         margin-bottom: 10%;
     }
 

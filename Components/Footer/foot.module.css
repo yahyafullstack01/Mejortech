@@ -62,7 +62,7 @@
     }
 }
 
-@media (max-width:425px) {
+@media (max-width:500px) {
     .container {
         padding: 4% 3%;
         align-items: start;

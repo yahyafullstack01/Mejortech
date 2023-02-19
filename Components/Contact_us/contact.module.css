@@ -131,7 +131,7 @@
     }
 }
 
-@media (max-width:425px) {
+@media (max-width:500px) {
 
     .header{
         font-size: 13vw;

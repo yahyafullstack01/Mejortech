@@ -1,16 +1,14 @@
 import styles from "../Join_us/join.module.css";
 import Link from "next/link";
-import { useTranslation } from "next-i18next"
+import { AppContext } from "../../Mycontext/context";
+import { useContext } from "react";
 
 export default function Join() {
-    const { t } = useTranslation("Home");
-
-    const Block_Join_titles: any = t('Block_Join_titles', { returnObjects: true });
-    const Block_Join_info: any = t('Block_Join_info', { returnObjects: true });
+    const { t, isRussain, Block_Join_titles, Block_Join_info } = useContext(AppContext);
 
     return (
         <div className={styles.container}>
-            <h1 data-aos="fade-down" data-aos-duration="2000" className={styles.header}>{t("Title_5")}</h1>
+            <h1 data-aos="fade-down" data-aos-duration="2000" className={`${styles.header} ${isRussain ? styles.ru : ""}`}>{t("Title_5")}</h1>
             <div className={styles.box}>
                 <div data-aos="zoom-in" data-aos-duration="2000" className={styles.card}>
                     <img

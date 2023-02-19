@@ -9,10 +9,11 @@ import { useContext } from 'react';
 
 function Header() {
     const router = useRouter();
-    const { t } = useContext(AppContext);
+    const { t, isRussain } = useContext(AppContext);
 
     const handleChangeLanguage = (e: React.ChangeEvent<HTMLSelectElement>) => {
         const lang = e.target.value;
+
         router.push(router.pathname, router.asPath, { locale: lang });
     };
 
@@ -25,14 +26,16 @@ function Header() {
                     className={`${styles.logo}`}
                 />
             </Link>
-            <nav className={"sm:flex md:w-96 w-72 2xl:w-4/12 justify-between hidden"}>
+
+            <nav className={`${styles.Nav_con} ${"sm:flex md:w-96 w-72 2xl:w-4/12 justify-between hidden"} ${isRussain ? styles.ru : ""}`} >
                 <a href="#About" className={`${styles.navigation} ${"text-sm md:text-xl  text-white"}`}>{t("About")}</a>
                 <a href="#Our_work" className={`${styles.navigation} ${"text-sm md:text-xl  text-white"}`}>{t("Our_Work")}</a>
                 <a href="#Team" className={`${styles.navigation} ${"text-sm md:text-xl  text-white"}`}>{t("Team")}</a>
                 <a href="#Contact_us" className={`${styles.navigation} ${"text-sm md:text-xl  text-white"}`}>{t("Contact_Us")}</a>
             </nav>
+
             <div className="sm:flex items-center md:text-lg hidden">
-                <BsGlobe className="text-xl text-white " />
+                <BsGlobe className={`${"text-xl text-white"} ${styles.globe} `} />
                 <select
                     className={`${styles.selection} ${"bg-transparent text-white outline-none"}`}
                     defaultValue={router.locale}
@@ -45,7 +48,7 @@ function Header() {
                 </select>
             </div>
             <a href="#menu" className="sm:hidden flex">
-                <TbEqual className="sm:hidden text-4xl text-white flex" />
+                <TbEqual className={`${"sm:hidden text-4xl text-white flex"}`} />
             </a>
             <section id="menu" className={styles.menu}>
                 <div className={`${styles.bar} ${"flex items-center justify-between"}`}>
@@ -56,9 +59,9 @@ function Header() {
                             className="w-32"
                         />
                     </a>
-                    <Link passHref href="/">
+                    <a href="#">
                         <RxCross1 className="text-4xl text-white flex" />
-                    </Link>
+                    </a>
                 </div>
 
                 <div className={`${styles.nav_mobile} ${"flex items-center justify-center flex-col gap-y-12 mt-2"}`}>
