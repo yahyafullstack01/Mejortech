@@ -4,11 +4,12 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import styles from "./navbar.module.css"
 import { BsGlobe } from 'react-icons/bs';
-import { useTranslation } from "next-i18next";
+import { AppContext } from '../../Mycontext/context';
+import { useContext } from 'react';
 
 function Header() {
     const router = useRouter();
-    const { t } = useTranslation("Home");
+    const { t } = useContext(AppContext);
 
     const handleChangeLanguage = (e: React.ChangeEvent<HTMLSelectElement>) => {
         const lang = e.target.value;

@@ -1,21 +1,12 @@
 import { useState } from "react";
 import styles from "../What_we_do/we_do.module.css";
-import { useTranslation } from "next-i18next";
-
+import { AppContext } from "../../Mycontext/context";
+import { useContext } from "react";
 export default function OurWork() {
 
-    const { t, i18n } = useTranslation("Home");
-    const isArabic = i18n.language === "ar";
+const {t, isArabic, Titles, Info, Card_titles, Card_ED, Card_IT, Card_MK, Card_btn} = useContext(AppContext);
 
-    const Titles: any = t('Block_titles', { returnObjects: true });
-    const Info: any = t('Block_info', { returnObjects: true });
-    const Card_titles: any = t('Card_Learn_title', { returnObjects: true });
-    const Card_IT: any = t('Card_IT_info', { returnObjects: true });
-    const Card_ED: any = t('Card_ED_info', { returnObjects: true });
-    const Card_MK: any = t('Card_MK_info', { returnObjects: true });
-    const Card_btn: any = t('Who_btn', { returnObjects: true });
-
-
+// for animation Card
     const [changediv, setChangediv] = useState(false);
     const [changediv2, setChangediv2] = useState(false);
     const [changediv3, setChangediv3] = useState(false);

@@ -13,8 +13,8 @@ import { useTranslation } from "next-i18next";
 
 
 export default function Home() {
-const { t, i18n } = useTranslation("Home");
-const isArabic= i18n.language === "ar";
+  const { t, i18n } = useTranslation("Home");
+  const isArabic = i18n.language === "ar";
 
   // Card fliping in team section 
   const [side, setside] = useState(false);
@@ -43,13 +43,25 @@ const isArabic= i18n.language === "ar";
   const Alina_info: any = t('Alina_info', { returnObjects: true });
   const Team_btn: any = t('Team_btn', { returnObjects: true });
 
+  // The arr of informations for What-WE-do div 
+  const Titles: any = t('Block_titles', { returnObjects: true });
+  const Info: any = t('Block_info', { returnObjects: true });
+  const Card_titles: any = t('Card_Learn_title', { returnObjects: true });
+  const Card_IT: any = t('Card_IT_info', { returnObjects: true });
+  const Card_ED: any = t('Card_ED_info', { returnObjects: true });
+  const Card_MK: any = t('Card_MK_info', { returnObjects: true });
+  const Card_btn: any = t('Who_btn', { returnObjects: true });
+
 
 
   return (
 
-    <AppContext.Provider value={{ side, side2, side3, side4, side5, side6,
-     flip, flip2, flip3, flip4, flip5, flip6,
-    t, isArabic, Names, Yahya_info, Work, Lana_info, Samer_info, Samuel_info, Polina_info, Alina_info, Team_btn
+    <AppContext.Provider value={{
+      side, side2, side3, side4, side5, side6,
+      flip, flip2, flip3, flip4, flip5, flip6,
+      t, isArabic, Names, Yahya_info, Work, Lana_info, Samer_info, Samuel_info, Polina_info, Alina_info, Team_btn,/* Team */
+      Titles, Info, Card_titles, Card_ED, Card_IT, Card_MK, Card_btn, /* What-we-do */
+      
     }}>
       <div>
         <Navbar />
