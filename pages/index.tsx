@@ -34,15 +34,7 @@ const {t} = useTranslation("Home");
 
 
   // The arr of information About the tream s
-  const Names: any = t('Team_names', { returnObjects: true });
-  const Work: any = t('Work_type', { returnObjects: true });
-  const Lana_info: any = t('Lana_info', { returnObjects: true });
-  const Yahya_info: any = t('Yahya_info', { returnObjects: true });
-  const Samuel_info: any = t('Samuel_info', { returnObjects: true });
-  const Polina_info: any = t('Polina_info', { returnObjects: true });
-  const Samer_info: any = t('Samer_info', { returnObjects: true });
-  const Alina_info: any = t('Alina_info', { returnObjects: true });
-  const Team_btn: any = t('Team_btn', { returnObjects: true });
+
 
 
 
