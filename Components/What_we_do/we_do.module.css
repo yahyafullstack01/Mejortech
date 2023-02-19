@@ -62,6 +62,10 @@
     box-shadow: #e6aa06 20px 20px 30px -10px;
 }
 
+.Text_block_Learn.ar{
+    direction: rtl;
+}
+
 .title_Learn {
     font-size: 2vw;
     color: #907730;
@@ -79,6 +83,10 @@
     color: white;
     font-family: 'PT Sans', sans-serif;
     font-style: italic;
+}
+
+.list_con_Learn.ar{
+    margin-right: 4%;
 }
 
 .text_block {

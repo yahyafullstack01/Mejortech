@@ -10,7 +10,6 @@ export default function OurWork() {
     const Titles: any = t('Block_titles', { returnObjects: true });
     const Info: any = t('Block_info', { returnObjects: true });
     const Card_titles: any = t('Card_Learn_title', { returnObjects: true });
-    const Card_info: any = t('Card_Learn_info', { returnObjects: true });
     const Card_IT: any = t('Card_IT_info', { returnObjects: true });
     const Card_ED: any = t('Card_ED_info', { returnObjects: true });
     const Card_MK: any = t('Card_MK_info', { returnObjects: true });
@@ -32,10 +31,9 @@ export default function OurWork() {
                     className={`${styles.pic} ${changediv ? `${styles.animating}` : ""}`}
                 />
 
-                <div className={`${styles.Text_block_Learn} ${changediv ? "" : `${styles.animating}`}`}>
+                <div className={`${styles.Text_block_Learn} ${changediv ? "" : `${styles.animating}`} ${isArabic ? styles.ar : ""}`}>
                     <h1 className={styles.title_Learn}>{Card_titles[0]}</h1>
-                    <ul className={styles.list_con_Learn}>
-
+                    <ul className={`${styles.list_con_Learn} ${isArabic ? styles.ar : ""}`}>
                         {Card_IT && Card_IT.map((item: string) => (
                             <li className={styles.list}>{item}</li>
                         ))}
@@ -56,16 +54,12 @@ export default function OurWork() {
                     className={`${styles.pic} ${changediv2 ? `${styles.animating}` : ""}`}
                 />
 
-                <div className={`${styles.Text_block_Learn} ${changediv2 ? "" : `${styles.animating}`}`}>
-                    <h1 className={styles.title_Learn}>You will Learn:</h1>
-                    <ul className={styles.list_con_Learn}>
-                        <li>Frontend development teaching you the basics  <code style={{ color: "#907730" }}>(Html, Css, Javascript)</code>.</li>
-                        <li>From Beginner to Expert in English</li>
-                        <li>Become a Fullstack developer , Learn how to create professonal Applications Using different frameworks such as <code style={{ color: "#907730" }}>(React js, Next js, Node js)</code>.</li>
-                        <li>A chance to work on professional Projects.</li>
-                        <li>Experience working in a professional team and how to interact with different clients .</li>
-                        <li>professional education in  Digital marketing</li>
-
+                <div className={`${styles.Text_block_Learn} ${changediv2 ? "" : `${styles.animating}`} ${isArabic ? styles.ar : ""}`}>
+                    <h1 className={styles.title_Learn}>{Card_titles[1]}</h1>
+                    <ul className={`${styles.list_con_Learn} ${isArabic ? styles.ar : ""}`}>
+                        {Card_ED && Card_ED.map((item: string) => (
+                            <li className={styles.list}>{item}</li>
+                        ))}
                     </ul>
                 </div>
             </>
@@ -80,9 +74,12 @@ export default function OurWork() {
                     className={`${styles.pic} ${changediv3 ? `${styles.animating}` : ""}`}
                 />
 
-                <div className={`${styles.Text_block_Learn} ${changediv3 ? "" : `${styles.animating}`}`}>
-                    <h1 className={styles.title_Learn}>You will Learn:</h1>
-                    <ul className={styles.list_con_Learn}>
+                <div className={`${styles.Text_block_Learn} ${changediv3 ? "" : `${styles.animating}`} ${isArabic ? styles.ar : ""}`}>
+                    <h1 className={styles.title_Learn}>{Card_titles[1]}</h1>
+                    <ul className={`${styles.list_con_Learn} ${isArabic ? styles.ar : ""}`}>
+                        {Card_MK && Card_MK.map((item: string) => (
+                            <li className={styles.list}>{item}</li>
+                        ))}
                     </ul>
                 </div>
             </>

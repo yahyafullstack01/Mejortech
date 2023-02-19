@@ -133,11 +133,6 @@
 
 .listcon.ar{
     direction: rtl;
-    display: flex;
-    width: 88%;
-    margin-top: 10%;
-    row-gap: 1vw;
-    flex-direction: column;
     text-align: right;
     margin-right: 3vw;
 }

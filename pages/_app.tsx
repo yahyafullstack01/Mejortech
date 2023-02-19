@@ -12,7 +12,7 @@ function App({ Component, pageProps }: AppProps) {
 
   useEffect(() => {
     AOS.init({ duration: 1000, once: false });
-  
+
     window.addEventListener('hashchange', () => {
       if (window.location.hash === '#menu') {
         document.body.style.overflowY = 'hidden';
@@ -20,7 +20,7 @@ function App({ Component, pageProps }: AppProps) {
         document.body.style.overflowY = 'auto';
       }
     });
-  
+
     if (i18n.language === 'ar') {
       document.documentElement.classList.add('ar');
     } else {
