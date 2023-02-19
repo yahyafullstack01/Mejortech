@@ -1,1 +1,125 @@
-{"About":"Acerca de","Alina_info":["Conocimiento práctico del software de gestión de pruebas (por ejemplo, qTest, Zephyr) y SQL","Familiaridad con marcos ágiles y pruebas de regresión.","Mente analítica y aptitud para resolver problemas.","BSc/BA en Informática, Ingeniería o un campo relacionado","Fuertes habilidades organizativas.","Experiencia en gestión de proyectos y metodología QA.","Excelentes habilidades de comunicación"],"Block_info":["Conoce Nuestros Proyectos, Métodos Y Cómo Trabajamos","¿Listo para dar el siguiente paso? Puedes aprender cosas nuevas y mejorar en el futuro","Ingrese a un mundo que se adapta a esta nueva generación, que abre muchas puertas al éxito"],"Block_titles":["TI PROYECTOS","EDUCACIÓN","MARKETING"],"Card_ED_info":["Desarrollo frontend que te enseña los conceptos básicos (Html, Css, Javascript)","De principiante a experto en inglés","Conviértase en un desarrollador Fullstack, aprenda a crear aplicaciones profesionales utilizando diferentes marcos como (React js, Next js, Node js)","Una oportunidad de trabajar en proyectos profesionales.","Experiencia trabajando en un equipo profesional y cómo interactuar con diferentes clientes.","formación profesional en marketing digital"],"Card_IT_info":["Creación de aplicaciones web y móviles","Obtener Api de diferentes servidores","Almacenamiento de datos en muchos tipos de software como (Airtable, MongoDb, MySql)"],"Card_Learn_title":["Nuestro trabajo consiste en:","Aprenderás :"],"Card_MK_info":["Empaquetado empresarial (incluidas las capas exterior, semántica y técnica)","Promoción de SEO (incluida la verificación del núcleo semántico para determinar su relevancia, precisión e integridad)","Publicidad contextual (incluido el análisis de la competencia, recopilación de un núcleo semántico amplio y palabras clave negativas, selección de páginas de destino)","Promoción SMM amplia cobertura del público objetivo en redes sociales (VK, Inst, Fb, TikTok)","Objetivo (incluida la creación de creatividades, el lanzamiento de campañas publicitarias, la instalación de análisis web en el sitio)"],"Contact_Us":"Contáctenos","Lana_info":["Análisis y segmentación del público objetivo","Análisis de landing page y recomendaciones para el llenado","Desarrollo de ofertas y creación de diseños creativos. Trabajo con cuenta publicitaria y enlaces de FB.","Educación y consultoría","Análisis de la efectividad de la promoción de SMM","Completó más de 200 disertaciones en economía, derecho y psicología en el territorio."],"Our_Work":"Nuestro trabajo","Para_1":"EL MEJOR LUGAR PARA TI, EDUCACIÓN, MARKETING Y MUCHO MÁS","Para_2":"ÚNASE A NOSOTROS Y EXPLORE NUEVOS HORIZONTES","Para_3":"Una empresa en ascenso, con la combinación de gente joven y experiencia, equipo de desarrolladores, profesores y mucho más de diferentes países.","Para_4":"Tenemos éxito en proyectos tecnológicos que incluyen convertir ideas difíciles en realidad","Para_5":"Tenemos profesores que tienen diferente conocimiento y experiencia","Para_6":"Te Van A Enseñar Todo Paso A Paso Para Alcanzar Tu Meta","Polina_info":["Lideró los procesos de adquisición y reclutamiento de nuevos talentos para más de 50 nuevas contrataciones a tiempo completo.","Trabajé con los miembros del equipo 1 a 1 y en pequeños grupos para mejorar el rendimiento y la satisfacción de los empleados.","Proporcionó orientación sobre relaciones con los empleados y asuntos de acción correctiva que redujeron las tasas de rotación en un 8 %.","Asistencia en la incorporación de nuevos empleados","Planes de compensación y beneficios administrados en toda la compañía"],"Samer_info":["Licenciatura en informática","Creador de aplicaciones web Responsive","Diseñador de UI/UX","Conocimiento de diferentes lenguajes web","Constructor y modificador de Rest Api's","Trabajador en equipo con diferentes proyectos y tipos de aplicaciones.","Implementador de más de 20 proyectos en Desarrollo Web"],"Samuel_info":["Capacidad demostrada en ventas de empresa a empresa (B2B)","Competencia con software de procesamiento de textos, hojas de cálculo y presentaciones.","Habilidades de resolución de problemas para proponer soluciones mutuamente beneficiosas.","Familiaridad con la industria, incluidos los equipos, la logística y la gestión de la cadena de suministro.","Familiaridad con las metodologías de gestión de proyectos.","Habilidades impecables de comunicación verbal y escrita."],"Team":"Equipo","Team_btn":["Leer información","Cerado"],"Team_names":["LANA","YAHYA","SAMUEL","POLINA","SAMER","Alina"],"Title":"BIENVENIDOS A EL MEJOR TECH","Title_2":"SOBRE NOSOTROS","Title_3":"CONOCER AL EQUIPO","Title_4":"QUE HACEMOS","Who_btn":["Aprende más","Regresa"],"Work_type":["DIRECTOR DE MARKETING","GERENTE DE PROYECTO","DESARROLLADOR DE PILA COMPLETA","DESARROLLADOR BUSNISS","Selección de consultores de RRHH","Desarrollador front-end","Probador de control de calidad"],"Yahya_info":["Licenciatura en informática","Creador de aplicaciones web Responsive","Diseñador de UI/UX","Gestión de diferentes tipos de proyectos.","Tres experiencias en React js","coordinar esfuerzos entre equipos para entregar productos de software con éxito","Implementador de más de 25 proyectos en Desarrollo Web"]}
+{
+    "About": "Acerca de",
+    "Alina_info": [
+        "Conocimiento práctico del software de gestión de pruebas (por ejemplo, qTest, Zephyr) y SQL",
+        "Familiaridad con marcos ágiles y pruebas de regresión.",
+        "Mente analítica y aptitud para resolver problemas.",
+        "BSc/BA en Informática, Ingeniería o un campo relacionado",
+        "Fuertes habilidades organizativas.",
+        "Experiencia en gestión de proyectos y metodología QA.",
+        "Excelentes habilidades de comunicación"
+    ],
+    "Block_info": [
+        "Conoce Nuestros Proyectos, Métodos Y Cómo Trabajamos",
+        "¿Listo para dar el siguiente paso? Puedes aprender cosas nuevas y mejorar en el futuro",
+        "Ingrese a un mundo que se adapta a esta nueva generación, que abre muchas puertas al éxito"
+    ],
+    "Block_titles": [
+        "TI PROYECTOS",
+        "EDUCACIÓN",
+        "MARKETING"
+    ],
+    "Card_ED_info": [
+        "Desarrollo frontend que te enseña los conceptos básicos (Html, Css, Javascript)",
+        "De principiante a experto en inglés",
+        "Conviértase en un desarrollador Fullstack, aprenda a crear aplicaciones profesionales utilizando diferentes marcos como (React js, Next js, Node js)",
+        "Una oportunidad de trabajar en proyectos profesionales.",
+        "Experiencia trabajando en un equipo profesional y cómo interactuar con diferentes clientes.",
+        "formación profesional en marketing digital"
+    ],
+    "Card_IT_info": [
+        "Creación de aplicaciones web y móviles",
+        "Obtener Api de diferentes servidores",
+        "Almacenamiento de datos en muchos tipos de software como (Airtable, MongoDb, MySql)"
+    ],
+    "Card_Learn_title": [
+        "Nuestro trabajo consiste en:",
+        "Aprenderás :"
+    ],
+    "Card_MK_info": [
+        "Empaquetado empresarial (incluidas las capas exterior, semántica y técnica)",
+        "Promoción de SEO (incluida la verificación del núcleo semántico para determinar su relevancia, precisión e integridad)",
+        "Publicidad contextual (incluido el análisis de la competencia, recopilación de un núcleo semántico amplio y palabras clave negativas, selección de páginas de destino)",
+        "Promoción SMM amplia cobertura del público objetivo en redes sociales (VK, Inst, Fb, TikTok)",
+        "Objetivo (incluida la creación de creatividades, el lanzamiento de campañas publicitarias, la instalación de análisis web en el sitio)"
+    ],
+    "Contact_Us": "Contáctenos",
+    "Lana_info": [
+        "Análisis y segmentación del público objetivo",
+        "Análisis de landing page y recomendaciones para el llenado",
+        "Desarrollo de ofertas y creación de diseños creativos. Trabajo con cuenta publicitaria y enlaces de FB.",
+        "Educación y consultoría",
+        "Análisis de la efectividad de la promoción de SMM",
+        "Completó más de 200 disertaciones en economía, derecho y psicología en el territorio."
+    ],
+    "Our_Work": "Nuestro trabajo",
+    "Para_1": "EL MEJOR LUGAR PARA TI, EDUCACIÓN, MARKETING Y MUCHO MÁS",
+    "Para_2": "ÚNASE A NOSOTROS Y EXPLORE NUEVOS HORIZONTES",
+    "Para_3": "Una empresa en ascenso, con la combinación de gente joven y experiencia, equipo de desarrolladores, profesores y mucho más de diferentes países.",
+    "Para_4": "Tenemos éxito en proyectos tecnológicos que incluyen convertir ideas difíciles en realidad",
+    "Para_5": "Tenemos profesores que tienen diferente conocimiento y experiencia",
+    "Para_6": "Te Van A Enseñar Todo Paso A Paso Para Alcanzar Tu Meta",
+    "Polina_info": [
+        "Lideró los procesos de adquisición y reclutamiento de nuevos talentos para más de 50 nuevas contrataciones a tiempo completo.",
+        "Trabajé con los miembros del equipo 1 a 1 y en pequeños grupos para mejorar el rendimiento y la satisfacción de los empleados.",
+        "Proporcionó orientación sobre relaciones con los empleados y asuntos de acción correctiva que redujeron las tasas de rotación en un 8 %.",
+        "Asistencia en la incorporación de nuevos empleados",
+        "Planes de compensación y beneficios administrados en toda la compañía"
+    ],
+    "Samer_info": [
+        "Licenciatura en informática",
+        "Creador de aplicaciones web Responsive",
+        "Diseñador de UI/UX",
+        "Conocimiento de diferentes lenguajes web",
+        "Constructor y modificador de Rest Api's",
+        "Trabajador en equipo con diferentes proyectos y tipos de aplicaciones.",
+        "Implementador de más de 20 proyectos en Desarrollo Web"
+    ],
+    "Samuel_info": [
+        "Capacidad demostrada en ventas de empresa a empresa (B2B)",
+        "Competencia con software de procesamiento de textos, hojas de cálculo y presentaciones.",
+        "Habilidades de resolución de problemas para proponer soluciones mutuamente beneficiosas.",
+        "Familiaridad con la industria, incluidos los equipos, la logística y la gestión de la cadena de suministro.",
+        "Familiaridad con las metodologías de gestión de proyectos.",
+        "Habilidades impecables de comunicación verbal y escrita."
+    ],
+    "Team": "Equipo",
+    "Team_btn": [
+        "Leer información",
+        "Cerado"
+    ],
+    "Team_names": [
+        "LANA",
+        "YAHYA",
+        "SAMUEL",
+        "POLINA",
+        "SAMER",
+        "Alina"
+    ],
+    "Title": "BIENVENIDOS A EL MEJOR TECH",
+    "Title_2": "SOBRE NOSOTROS",
+    "Title_3": "CONOCER AL EQUIPO",
+    "Title_4": "QUE HACEMOS",
+    "Who_btn": [
+        "Aprende más",
+        "Regresa"
+    ],
+    "Work_type": [
+        "DIRECTOR DE MARKETING",
+        "GERENTE DE PROYECTO",
+        "DESARROLLADOR DE PILA COMPLETA",
+        "DESARROLLADOR BUSNISS",
+        "Selección de consultores de RRHH",
+        "Desarrollador front-end",
+        "Probador de control de calidad"
+    ],
+    "Yahya_info": [
+        "Licenciatura en informática",
+        "Creador de aplicaciones web Responsive",
+        "Diseñador de UI/UX",
+        "Gestión de diferentes tipos de proyectos.",
+        "Tres experiencias en React js",
+        "coordinar esfuerzos entre equipos para entregar productos de software con éxito",
+        "Implementador de más de 25 proyectos en Desarrollo Web"
+    ]
+}
