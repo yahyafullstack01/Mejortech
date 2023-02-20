@@ -19,7 +19,9 @@ export default function Join() {
                     <h1 className={styles.title}>{Block_Join_titles[0]}</h1>
                     <span className={styles.time}>10.21 7:00-8:00PM</span>
                     <p className={styles.info}>{Block_Join_info[0]}</p>
-                    <Link className={styles.link} passHref href="/IT_Page/IT"><button className={styles.btn}>{t("Join_btn")}</button></Link>
+                    <Link className={styles.link} passHref href="/IT_Page/IT">
+                        <button className={styles.btn}>{t("Join_btn")}</button>
+                    </Link>
                 </div>
                 <div data-aos="zoom-in" data-aos-duration="2000" className={styles.card}>
                     <img
@@ -30,7 +32,9 @@ export default function Join() {
                     <h1 className={styles.title}>{Block_Join_titles[1]}</h1>
                     <span className={styles.time}>10.21 7:00-8:00PM</span>
                     <p className={styles.info}>{Block_Join_info[1]}</p>
-                    <Link className={styles.link} passHref href="/Education_Page/Education"><button className={styles.btn}>{t("Join_btn")}</button></Link>
+                    <Link className={styles.link} passHref href="/Education_Page/Education">
+                        <button className={styles.btn}>{t("Join_btn")}</button>
+                    </Link>
                 </div>
                 <div data-aos="zoom-in" data-aos-duration="2000" className={styles.card}>
                     <img
@@ -41,7 +45,9 @@ export default function Join() {
                     <h1 className={styles.title}>{Block_Join_titles[2]}</h1>
                     <span className={styles.time}>10.21 7:00-8:00PM</span>
                     <p className={styles.info}>{Block_Join_info[2]}</p>
-                    <Link className={styles.link} passHref href="/Marketing_Page/Marketing"><button className={styles.btn}>{t("Join_btn")}</button></Link>
+                    <Link className={styles.link} passHref href="/Marketing_Page/Marketing">
+                        <button className={styles.btn}>{t("Join_btn")}</button>
+                    </Link>
                 </div>
             </div>
         </div>

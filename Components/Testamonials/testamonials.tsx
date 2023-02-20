@@ -12,7 +12,7 @@ export default function Join() {
                 controls={false}
                 className={styles.vid}
             >
-                <source src="/testamonials.mp4" type="video/mp4" />
+                <source src="/testa.mp4" type="video/mp4" />
             </video>
             <div className={`${styles.box} ${"text-white"}`}>
 
