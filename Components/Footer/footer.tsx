@@ -17,48 +17,51 @@ export default function foot() {
                     <span className={`${styles.date_time} ${"items-white text-white"}`}>10am – 6pm</span>
                 </div>
 
-                <div className={`${styles.bar_4} ${"flex flex-col"}`}>
+                <div className={`${styles.bar_4}`}>
                     <h1 className={`${styles.title_2} ${"items-white text-white"}`}>FOLLOW</h1>
-                    <a
-                        className={`${styles.mail} ${"text-white"}`}
-                        href="https://twitter.com/MejorTechnology"
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        LinkedIn
-                    </a>
-                    <a
-                        className={`${styles.mail} ${"text-white"}`}
-                        href="https://www.facebook.com/profile.php?id=100089158682345"
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        Facebook
-                    </a>
-                    <a
-                        className={`${styles.mail} ${"text-white"}`}
-                        href="https://www.instagram.com/mejortechnologies"
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        Instagram
-                    </a>
-                    <a
-                        className={`${styles.mail} ${"text-white"}`}
-                        href="https://twitter.com/MejorTechnology"
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        twitter
-                    </a>
-                    <a
-                        className={`${styles.mail} ${"text-white"}`}
-                        href="https://twitter.com/MejorTechnology"
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        telegram
-                    </a>
+                    <div className={styles.link_con}>
+                        <a
+                            className={`${styles.mail} ${"text-white"}`}
+                            href="https://twitter.com/MejorTechnology"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            LinkedIn
+                        </a>
+                        <a
+                            className={`${styles.mail} ${"text-white"}`}
+                            href="https://www.facebook.com/profile.php?id=100089158682345"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            Facebook
+                        </a>
+                        <a
+                            className={`${styles.mail} ${"text-white"}`}
+                            href="https://www.instagram.com/mejortechnologies"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            Instagram
+                        </a>
+                        <a
+                            className={`${styles.mail} ${"text-white"}`}
+                            href="https://twitter.com/MejorTechnology"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            twitter
+                        </a>
+                        <a
+                            className={`${styles.mail} ${"text-white"}`}
+                            href="https://twitter.com/MejorTechnology"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            telegram
+                        </a>
+                    </div>
+
                 </div>
             </div>
         </div>

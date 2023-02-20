@@ -18,6 +18,12 @@
 
 .bar_4 {
     display: flex;    
+    flex-direction: column;
+}
+
+.link_con{
+    display: flex;
+    flex-direction: column;
 }
 
 .title {
@@ -89,6 +95,15 @@
         margin-top: 7vw;
         row-gap: 2vw;
     }
+
+    .link_con{
+        flex-direction: row;
+        width: 80%;
+        column-gap: 5vw;
+        row-gap: 2vh;
+        flex-wrap: wrap;
+    }
+  
 
     .date_time{
         font-size: 4vw;
