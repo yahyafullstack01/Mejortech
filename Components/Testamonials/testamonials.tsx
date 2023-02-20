@@ -21,7 +21,7 @@ export default function Join() {
                         src="/test_1.jpg"
                         alt="The picture of a man"
                         className={`${styles.pic}`}
-                    />
+                    /> 
                     <div className="flex  items-center justify-between">
                         <h1 className={`${styles.name} ${"text-white"}`}>John Smith</h1>
                         <div className={styles.star_con}>
