@@ -17,10 +17,10 @@ export default function header() {
                 />
             </Link>
             <nav className={"sm:flex md:w-96 w-72 2xl:w-4/12 justify-between hidden"}>
-                <a href="/#About" className={`${styles.navigation} ${"text-sm md:text-xl  text-white"}`}>About</a>
-                <a href="/#Our_work" className={`${styles.navigation} ${"text-sm md:text-xl  text-white"}`}>Our Work</a>
-                <a href="/#Team" className={`${styles.navigation} ${"text-sm md:text-xl  text-white"}`}>Team</a>
-                <a href="/#Contact_us" className={`${styles.navigation} ${"text-sm md:text-xl  text-white"}`}>Contact Us</a>
+                <Link passHref href="/#About" className={`${styles.navigation} ${"text-sm md:text-xl  text-white"}`}>About</Link>
+                <Link passHref href="/#Our_work" className={`${styles.navigation} ${"text-sm md:text-xl  text-white"}`}>Our Work</Link>
+                <Link passHref href="/#Team" className={`${styles.navigation} ${"text-sm md:text-xl  text-white"}`}>Team</Link>
+                <Link passHref href="/#Contact_us" className={`${styles.navigation} ${"text-sm md:text-xl  text-white"}`}>Contact Us</Link>
             </nav>
             <div className={`${styles.btn_container} ${"sm:flex hidden"}`}>
                 <button className={styles.btn}>Log In</button>

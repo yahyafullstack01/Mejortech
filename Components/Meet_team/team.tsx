@@ -28,7 +28,7 @@ export default function Team() {
                         <div className={styles.back}>
                             <ul className={`${styles.listcon} ${isArabic ? styles.ar : ""}`}>
                                 {Lana_info && Lana_info.map((item: string) => (
-                                    <li className={`${styles.list} ${isArabic ? styles.ar : ""}`}>{item}</li>
+                                    <li key={item} className={`${styles.list} ${isArabic ? styles.ar : ""}`}>{item}</li>
                                 ))}
                             </ul>
                             <button onClick={() => flip()} className={styles.btn_close}>{Team_btn[1]}</button>
@@ -49,7 +49,7 @@ export default function Team() {
                         <div className={styles.back}>
                             <ul className={`${styles.listcon} ${isArabic ? styles.ar : ""}`}>
                                 {Yahya_info && Yahya_info.map((item: string) => (
-                                    <li className={`${styles.list} ${isArabic ? styles.ar : ""}`}>{item}</li>))}
+                                    <li key={item} className={`${styles.list} ${isArabic ? styles.ar : ""}`}>{item}</li>))}
                             </ul>
                             <button onClick={() => flip2()} className={styles.btn_close}>{Team_btn[1]}</button>
                         </div>
@@ -73,7 +73,7 @@ export default function Team() {
                         <div className={styles.back}>
                             <ul className={`${styles.listcon} ${isArabic ? styles.ar : ""}`}>
                                 {Samuel_info && Samuel_info.map((item: string) => (
-                                    <li className={`${styles.list} ${isArabic ? styles.ar : ""}`}>{item}</li>
+                                    <li key={item} className={`${styles.list} ${isArabic ? styles.ar : ""}`}>{item}</li>
                                 ))}
                             </ul>
                             <button onClick={() => flip3()} className={styles.btn_close}>{Team_btn[1]}</button>
@@ -94,7 +94,7 @@ export default function Team() {
                         <div className={styles.back}>
                             <ul className={`${styles.listcon} ${isArabic ? styles.ar : ""}`}>
                                 {Polina_info && Polina_info.map((item: string) => (
-                                    <li className={`${styles.list} ${isArabic ? styles.ar : ""}`}>{item}</li>
+                                    <li key={item} className={`${styles.list} ${isArabic ? styles.ar : ""}`}>{item}</li>
                                 ))}
                             </ul>
                             <button onClick={() => flip4()} className={styles.btn_close}>{Team_btn[1]}</button>
@@ -115,7 +115,7 @@ export default function Team() {
                         <div className={styles.back}>
                             <ul className={`${styles.listcon} ${isArabic ? styles.ar : ""}`}>
                                 {Samer_info && Samer_info.map((item: string) => (
-                                    <li className={`${styles.list} ${isArabic ? styles.ar : ""}`}>{item}</li>
+                                    <li key={item} className={`${styles.list} ${isArabic ? styles.ar : ""}`}>{item}</li>
                                 ))}
                             </ul>
                             <button onClick={() => flip5()} className={styles.btn_close}>{Team_btn[1]}</button>
@@ -136,7 +136,7 @@ export default function Team() {
                         <div className={styles.back}>
                             <ul className={`${styles.listcon} ${isArabic ? styles.ar : ""}`}>
                                 {Alina_info && Alina_info.map((item: string) => (
-                                    <li className={`${styles.list} ${isArabic ? styles.ar : ""}`}>{item}</li>
+                                    <li key={item} className={`${styles.list} ${isArabic ? styles.ar : ""}`}>{item}</li>
                                 ))}
                             </ul>
                             <button onClick={() => flip6()} className={styles.btn_close}>{Team_btn[1]}</button>
