@@ -14,12 +14,17 @@ export default function Intro() {
             </video>
             <div className={`${styles.container_2} ${"w-full  flex flex-col justify-center "}`}>
                 <div data-aos="zoom-in" data-aos-duration="2000" className={styles.circle}>
-                    <h1 className={styles.title}>Title</h1>
+                    <h1 className={styles.title}>WE<br></br> AT</h1>
                     <img
                         src="/logo.png"
                         alt=""
                         className={styles.logo_bg}
                     />
+                </div>
+                <div className={styles.wrapper}>
+                    <div className={styles.ticker}>
+                        <p className={styles.text_ticker}>Turn Your Ideas Into Reality</p>
+                    </div>
                 </div>
             </div>
         </div>
