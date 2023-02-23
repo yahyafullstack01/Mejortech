@@ -1,15 +1,13 @@
 import styles from "../Testamonials/testamonials.module.css";
 import { IoIosStar } from "react-icons/io";
-import { AppContext } from "../../Mycontext/context";
+import { AppContext } from "../../../Mycontext/context";
 import { useContext } from "react";
 
 export default function Join() {
-    const { Signing, Intro_info,
-        WhyUs_list, OurPakages_types,
-        OurPakages_list, OurPakages_Title,
-        Form_Labels, Form_btns, Form_title,
+    const {
+        isArabic,
         Testemon_title, Testemoniels_names,
-        Testemoniels_Quotes, WhyUs_title } = useContext(AppContext);
+        Testemoniels_Quotes } = useContext(AppContext);
     return (
         <div className={`${styles.container} ${"flex flex-col relative"}`}>
             <h1 data-aos="fade-right" className={styles.header}>{Testemon_title}</h1>
@@ -41,7 +39,7 @@ export default function Join() {
                         </div>
                     </div>
                     <hr></hr>
-                    <div className={styles.txt_con}>
+                    <div className={`${styles.txt_con} ${isArabic ? styles.ar : ""}`}>
                         {Testemoniels_Quotes[0]}
                     </div>
                 </div>
@@ -63,7 +61,7 @@ export default function Join() {
                         </div>
                     </div>
                     <hr></hr>
-                    <div className={styles.txt_con}>
+                    <div className={`${styles.txt_con} ${isArabic ? styles.ar : ""}`}>
                         {Testemoniels_Quotes[1]}
                     </div>
                 </div>
@@ -85,7 +83,7 @@ export default function Join() {
                         </div>
                     </div>
                     <hr></hr>
-                    <div className={styles.txt_con}>
+                    <div className={`${styles.txt_con} ${isArabic ? styles.ar : ""}`}>
                         {Testemoniels_Quotes[2]}
                     </div>
                 </div>
@@ -107,7 +105,7 @@ export default function Join() {
                         </div>
                     </div>
                     <hr></hr>
-                    <div className={styles.txt_con}>
+                    <div className={`${styles.txt_con} ${isArabic ? styles.ar : ""}`}>
                         {Testemoniels_Quotes[3]}
                     </div>
                 </div>

@@ -1,6 +1,6 @@
 import styles from "../Join_us/join.module.css";
 import Link from "next/link";
-import { AppContext } from "../../Mycontext/context";
+import { AppContext } from "../../../Mycontext/context";
 import { useContext } from "react";
 
 export default function Join() {

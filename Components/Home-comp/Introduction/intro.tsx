@@ -1,6 +1,6 @@
 import styles from "../Introduction/intro.module.css"
 import { useTranslation } from "next-i18next";
-import { AppContext } from "../../Mycontext/context";
+import { AppContext } from "../../../Mycontext/context";
 import { useContext } from 'react';
 
 

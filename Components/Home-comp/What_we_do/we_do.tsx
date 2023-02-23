@@ -1,12 +1,12 @@
 import { useState } from "react";
 import styles from "../What_we_do/we_do.module.css";
-import { AppContext } from "../../Mycontext/context";
+import { AppContext } from "../../../Mycontext/context";
 import { useContext } from "react";
 export default function OurWork() {
 
-const {t, isArabic, Titles, Info, Card_titles, Card_ED, Card_IT, Card_MK, Card_btn} = useContext(AppContext);
+    const { t, isArabic, Titles, Info, Card_titles, Card_ED, Card_IT, Card_MK, Card_btn } = useContext(AppContext);
 
-// for animation Card
+    // for animation Card
     const [changediv, setChangediv] = useState(false);
     const [changediv2, setChangediv2] = useState(false);
     const [changediv3, setChangediv3] = useState(false);
@@ -26,7 +26,7 @@ const {t, isArabic, Titles, Info, Card_titles, Card_ED, Card_IT, Card_MK, Card_b
                     <h1 className={styles.title_Learn}>{Card_titles[0]}</h1>
                     <ul className={`${styles.list_con_Learn} ${isArabic ? styles.ar : ""}`}>
                         {Card_IT && Card_IT.map((item: string) => (
-                            <li className={styles.list}>{item}</li>
+                            <li key={item} className={styles.list}>{item}</li>
                         ))}
                     </ul>
                 </div>
@@ -49,7 +49,7 @@ const {t, isArabic, Titles, Info, Card_titles, Card_ED, Card_IT, Card_MK, Card_b
                     <h1 className={styles.title_Learn}>{Card_titles[1]}</h1>
                     <ul className={`${styles.list_con_Learn} ${isArabic ? styles.ar : ""}`}>
                         {Card_ED && Card_ED.map((item: string) => (
-                            <li className={styles.list}>{item}</li>
+                            <li key={item} className={styles.list}>{item}</li>
                         ))}
                     </ul>
                 </div>
@@ -69,7 +69,7 @@ const {t, isArabic, Titles, Info, Card_titles, Card_ED, Card_IT, Card_MK, Card_b
                     <h1 className={styles.title_Learn}>{Card_titles[1]}</h1>
                     <ul className={`${styles.list_con_Learn} ${isArabic ? styles.ar : ""}`}>
                         {Card_MK && Card_MK.map((item: string) => (
-                            <li className={styles.list}>{item}</li>
+                            <li key={item} className={styles.list}>{item}</li>
                         ))}
                     </ul>
                 </div>

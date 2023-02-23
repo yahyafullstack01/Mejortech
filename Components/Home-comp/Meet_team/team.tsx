@@ -1,5 +1,5 @@
 import styles from "../Meet_team/team.module.css";
-import { AppContext } from "../../Mycontext/context";
+import { AppContext } from "../../../Mycontext/context";
 import { useContext } from "react";
 
 

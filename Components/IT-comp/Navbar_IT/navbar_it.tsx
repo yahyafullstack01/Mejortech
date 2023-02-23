@@ -1,16 +1,16 @@
-import styles from "./navbar.module.css"
+import styles from "../../Home-comp/Navbar/navbar.module.css"
 import { BsGlobe } from 'react-icons/bs';
 import { TbEqual } from 'react-icons/tb';
 import { RxCross1 } from 'react-icons/rx';
 import Link from "next/link";
-import { AppContext } from "../../Mycontext/context";
+import { AppContext } from "../../../Mycontext/context";
 import { useContext } from "react";
 import { useTranslation } from "next-i18next";
 
 
 export default function header() {
-    const  {t, i18n } = useTranslation("Home");
-    const { Signing} = useContext(AppContext);
+    const { t, i18n } = useTranslation("Home");
+    const { Signing } = useContext(AppContext);
     return (
 
         <div className={`${styles.container2} ${"items-center justify-between flex"}`}>

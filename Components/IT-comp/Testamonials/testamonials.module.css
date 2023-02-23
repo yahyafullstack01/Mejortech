@@ -96,6 +96,10 @@
 }
 
 
+.txt_con.ar{
+    direction: rtl;
+}
+
 
 @media(max-width:500px){
 

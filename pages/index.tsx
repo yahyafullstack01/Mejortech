@@ -1,15 +1,16 @@
 import { useState } from "react";
 import { AppContext } from "../Mycontext/context";
-import Navbar from "../Components/Navbar/navbar";
-import Intro from "../Components/Introduction/intro";
-import About from "../Components/About_us/about";
-import Team from "../Components/Meet_team/team";
-import What_we_do from "../Components/What_we_do/we_do";
-import Join_us from "../Components/Join_us/join";
-import Contact_Us from "../Components/Contact_us/contact";
+import Navbar from "../Components/Home-comp/Navbar/navbar";
+import Intro from "../Components/Home-comp/Introduction/intro";
+import About from "../Components/Home-comp/About_us/about";
+import Team from "../Components/Home-comp/Meet_team/team";
+import What_we_do from  "../Components/Home-comp/What_we_do/we_do";
+import Join_us from "../Components/Home-comp/Join_us/join";
+import Contact_Us from "../Components/Home-comp/Contact_us/contact";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { GetStaticProps } from "next";
 import { useTranslation } from "next-i18next";
+
 
 
 export default function Home() {
@@ -59,6 +60,8 @@ export default function Home() {
   const Block_Join_titles: any = t('Block_Join_titles', { returnObjects: true });
   const Block_Join_info: any = t('Block_Join_info', { returnObjects: true });
 
+  //The arr of information inside the Contact Us section
+  const CONTACT_labels: any = t('CONTACT_labels', { returnObjects: true });
 
 
 
@@ -73,6 +76,7 @@ export default function Home() {
       t, isArabic, Names, Yahya_info, Work, Lana_info, Samer_info, Samuel_info, Polina_info, Alina_info, Team_btn,/* Team */
       Titles, Info, Card_titles, Card_ED, Card_IT, Card_MK, Card_btn, /* What-we-do */
       Block_Join_titles, Block_Join_info,/*Join Us */
+      CONTACT_labels,/*Contact Us*/
 
     }}>
       <div>

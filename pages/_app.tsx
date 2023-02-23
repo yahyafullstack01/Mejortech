@@ -4,6 +4,8 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Head from "../Html/html";
 import type { AppProps } from "next/app";
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { GetStaticProps } from "next";
 import Foot from "../Components/Footer/footer";
 import { appWithTranslation, useTranslation } from "next-i18next";
 
@@ -45,7 +47,7 @@ function App({ Component, pageProps }: AppProps) {
     <>
       <Head />
       <Component {...pageProps} />
-      <Foot />
+      <Foot/>
     </>
   );
 }

@@ -1,10 +1,9 @@
 import styles from "../our_packages/our_packages.module.css";
 import { TfiCheck } from "react-icons/tfi";
 import { useContext } from "react";
-import { AppContext } from "../../Mycontext/context";
+import { AppContext } from "../../../Mycontext/context";
 export default function Join() {
-    const {OurPakages_types, 
-        OurPakages_list, OurPakages_Title,} = useContext(AppContext);
+    const { OurPakages_types, OurPakages_Title, } = useContext(AppContext);
     return (
         <div className={styles.container}>
             <h1 data-aos="fade-right" className={styles.header}>{OurPakages_Title}</h1>
@@ -108,39 +107,7 @@ export default function Join() {
                 </div>
             </div>
 
-            <div data-aos="fade-right" data-aos-duration="2000" className={`${styles.form_container} ${"flex flex-col items-center"}`}>
-                <h1 className={styles.title}>Enter your Info here</h1>
-                <form action="" method="Get" className={styles.form}>
 
-                    <label className={styles.label} htmlFor={"Name"}>Name:
-                        <input type={"text"} id="Name" name="name" className={styles.input} placeholder="Enter Your Name" />
-                    </label>
-
-                    <label className={styles.label} htmlFor={"Email"}>E-mail:
-                        <input type={"email"} id="Email" name="email" className={styles.input} placeholder="Enter Your Email" />
-                    </label>
-
-                    <ul className={styles.type_con}>
-                        <p className={styles.label} >Choose your Package:</p>
-                        <div className={styles.package_con}>
-                            <li>
-                                <input type="radio" id="Basic" name="type" value="Basic" />
-                                <label className={styles.lb} htmlFor={"Basic"}>Basic</label>
-                            </li>
-                            <li>
-                                <input type="radio" id="Standard" name="type" value="Standard" />
-                                <label className={styles.lb} htmlFor={"Standard"}>Standard</label>
-                            </li>
-                            <li>
-                                <input type="radio" id="Premium" name="type" value="Premium" />
-                                <label className={styles.lb} htmlFor={"Premium"}>Premium</label>
-                            </li>
-                        </div>
-
-                    </ul>
-                    <button className={styles.btn}>Send</button>
-                </form>
-            </div>
         </div>
     )
 }

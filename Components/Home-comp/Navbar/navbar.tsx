@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import styles from "./navbar.module.css"
 import { BsGlobe } from 'react-icons/bs';
-import { AppContext } from '../../Mycontext/context';
+import { AppContext } from '../../../Mycontext/context';
 import { useContext } from 'react';
 
 function Header() {
