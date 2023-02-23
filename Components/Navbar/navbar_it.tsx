@@ -3,9 +3,14 @@ import { BsGlobe } from 'react-icons/bs';
 import { TbEqual } from 'react-icons/tb';
 import { RxCross1 } from 'react-icons/rx';
 import Link from "next/link";
+import { AppContext } from "../../Mycontext/context";
+import { useContext } from "react";
+import { useTranslation } from "next-i18next";
+
 
 export default function header() {
-
+    const  {t, i18n } = useTranslation("Home");
+    const { Signing} = useContext(AppContext);
     return (
 
         <div className={`${styles.container2} ${"items-center justify-between flex"}`}>
@@ -17,14 +22,14 @@ export default function header() {
                 />
             </Link>
             <nav className={"sm:flex md:w-96 w-72 2xl:w-4/12 justify-between hidden"}>
-                <Link passHref href="/#About" className={`${styles.navigation} ${"text-sm md:text-xl  text-white"}`}>About</Link>
-                <Link passHref href="/#Our_work" className={`${styles.navigation} ${"text-sm md:text-xl  text-white"}`}>Our Work</Link>
-                <Link passHref href="/#Team" className={`${styles.navigation} ${"text-sm md:text-xl  text-white"}`}>Team</Link>
-                <Link passHref href="/#Contact_us" className={`${styles.navigation} ${"text-sm md:text-xl  text-white"}`}>Contact Us</Link>
+                <Link passHref href="/#About" className={`${styles.navigation} ${"text-sm md:text-xl  text-white"}`}>{t('About')}</Link>
+                <Link passHref href="/#Our_work" className={`${styles.navigation} ${"text-sm md:text-xl  text-white"}`}>{t("Our_Work")}</Link>
+                <Link passHref href="/#Team" className={`${styles.navigation} ${"text-sm md:text-xl  text-white"}`}>{t("Team")}</Link>
+                <Link passHref href="/#Contact_us" className={`${styles.navigation} ${"text-sm md:text-xl  text-white"}`}>{t("Contact_Us")}</Link>
             </nav>
             <div className={`${styles.btn_container} ${"sm:flex hidden"}`}>
-                <button className={styles.btn}>Log In</button>
-                <button className={styles.btn}>Sign Up</button>
+                <button className={styles.btn}>{Signing[0]}</button>
+                <button className={styles.btn}>{Signing[1]}</button>
             </div>
             <a href="#menu" className="sm:hidden flex">
                 <TbEqual className="sm:hidden text-4xl text-white flex" />

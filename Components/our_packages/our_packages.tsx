@@ -1,10 +1,13 @@
 import styles from "../our_packages/our_packages.module.css";
 import { TfiCheck } from "react-icons/tfi";
-
+import { useContext } from "react";
+import { AppContext } from "../../Mycontext/context";
 export default function Join() {
+    const {OurPakages_types, 
+        OurPakages_list, OurPakages_Title,} = useContext(AppContext);
     return (
         <div className={styles.container}>
-            <h1 data-aos="fade-right" className={styles.header}>Our Packages</h1>
+            <h1 data-aos="fade-right" className={styles.header}>{OurPakages_Title}</h1>
 
             <div className={styles.grid}>
                 <div data-aos="zoom-out-down" data-aos-duration="2000" className={styles.card}>
@@ -14,7 +17,7 @@ export default function Join() {
                         className={`${styles.pic}`}
                     />
                     <h1 className={`${styles.price} ${styles.price1}`}>50$</h1>
-                    <h2 className={styles.type}>Basic</h2>
+                    <h2 className={styles.type}>{OurPakages_types[0]}</h2>
 
                     <ul className={`${styles.list} ${"flex flex-col "}`}>
                         <li className="flex items-center text-cneter text-white">
@@ -39,7 +42,7 @@ export default function Join() {
                         className={`${styles.pic}`}
                     />
                     <h1 className={`${styles.price} ${styles.price2}`}>130$</h1>
-                    <h2 className={styles.type}>Standard</h2>
+                    <h2 className={styles.type}>{OurPakages_types[1]}</h2>
 
                     <ul className={`${styles.list} ${"flex flex-col "}`}>
                         <li className="flex items-center text-cneter text-white">
@@ -73,7 +76,7 @@ export default function Join() {
                         className={`${styles.pic}`}
                     />
                     <h1 className={`${styles.price} ${styles.price2}`}>500$</h1>
-                    <h2 className={styles.type}>Premium</h2>
+                    <h2 className={styles.type}>{OurPakages_types[2]}</h2>
 
                     <ul className={`${styles.list} ${"flex flex-col "}`}>
                         <li className="flex items-center text-cneter text-white">
