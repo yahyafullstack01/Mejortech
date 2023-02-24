@@ -69,7 +69,7 @@ export default function SignUp() {
                     </div>
 
                 </ul>
-                <button className={styles.btn_nm}>{Form_btns[3]}</button>
+                <button className={styles.btn_nm}>{Form_btns[4]}</button>
             </form>
         </div>
     )
