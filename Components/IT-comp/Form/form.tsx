@@ -8,8 +8,8 @@ export default function Form() {
     const { isArabic, Form_title, Form_Labels, Form_place_holders, Form_btns } = useContext(AppContext);
     return (
         <div className={styles.container}>
-
-            {/*<div data-aos="fade-right" data-aos-duration="2000" className={`${styles.form_container} ${"flex flex-col items-center"}`}>
+            {/* The data without Sign In or Sign Up */}
+            {/* <div data-aos="fade-right" data-aos-duration="2000" className={`${styles.form_container} ${"flex flex-col items-center"}`}>
                 <h1 className={styles.title}>{Form_title}</h1>
                 <form action="" method="Get" className={`${styles.form} ${isArabic ? styles.ar : ""}`}>
 
@@ -41,11 +41,12 @@ export default function Form() {
                     </ul>
                     <button className={styles.btn}>{Form_btns[3]}</button>
                 </form>
-            </div>*/}
-            <div data-aos="fade-right" data-aos-duration="2000" className={`${styles.form_container} ${"flex flex-col items-center"}`}>
+            </div> */}
+
+            {/*The data With Sign Up */}
+            {/* <div data-aos="fade-right" data-aos-duration="2000" className={`${styles.form_container} ${"flex flex-col items-center"}`}>
                 <h1 className={styles.title}>Create New acount</h1>
                 <form action="" method="Get" className={`${styles.form} ${isArabic ? styles.ar : ""}`}>
-
                     <label className={styles.label} htmlFor={"Name"}>{Form_Labels[0]}
                         <input type={"text"} id="Name" name="name" className={styles.input} placeholder={`${Form_place_holders[0]}`} />
                     </label>
@@ -56,9 +57,6 @@ export default function Form() {
                     <label className={styles.label} htmlFor={"Password"}>Password:
                         <input type={"password"} id="Password" name="password" className={styles.input} placeholder={"enter your password"} />
                     </label>
-                    {/*<label className={styles.label} htmlFor={"Confirm Password"}>Confirm Password:
-                    <input type={"password"} id="Confirm Password" name="Confirm Password" className={styles.input} placeholder={"confirm your password"} />
-                    </label>*/}
                     <label className={`${styles.label}`} htmlFor={"Language"}>
                         <label>prefered language:</label>
                         <input type={"checkbox"} id="English" name="English" value={"English"} className={`${styles.input} ${styles.fixlanguages}`} />
@@ -71,15 +69,15 @@ export default function Form() {
                         <label htmlFor={"Russia"} className={`${styles.fixlanguages}`}>Russian</label>
                     </label>
                     <label htmlFor={"from where"} className={`${styles.label}`} >Where did you hear of us:
-                    <select name="from where" className={"text-[#907730;]"}   id="from where" >
-                        <option value="LinkedIn">LinkedIn</option>
-                        <option value="Google">Google</option>
-                        <option value="Facebook">Facebook</option>
-                        <option value="Instagram">Instagram</option>
-                        <option value="Through a friend">Through a friend</option>
-                        <option value="Other">Other</option>
+                        <select name="from where" className={"text-[#907730;]"} id="from where" >
+                            <option value="LinkedIn">LinkedIn</option>
+                            <option value="Google">Google</option>
+                            <option value="Facebook">Facebook</option>
+                            <option value="Instagram">Instagram</option>
+                            <option value="Through a friend">Through a friend</option>
+                            <option value="Other">Other</option>
 
-                    </select>
+                        </select>
                     </label>
                     <ul className={styles.type_con}>
                         <p className={styles.label} >{Form_Labels[2]}</p>
@@ -101,9 +99,25 @@ export default function Form() {
                     </ul>
                     <button className={styles.btn}>{Form_btns[3]}</button>
                 </form>
+            </div> */}
+
+            {/* //The data With Sign In */}
+            <div data-aos="fade-right" data-aos-duration="2000" className={`${styles.form_container} ${"flex flex-col items-center"}`}>
+                <h1 className={styles.title}>Log In here</h1>
+                <form action="" method="Get" className={`${styles.form} ${isArabic ? styles.ar : ""}`}>
+
+
+                    <label className={styles.label} htmlFor={"Email"}>E-mail:
+                        <input type={"email"} id="Email" name="email" className={styles.input} placeholder={"Enter your Email"}/>
+                    </label>
+
+                    <label className={styles.label} htmlFor={"Name"}>Password:
+                        <input type={"password"} id="Name" name="name" className={styles.input} placeholder={"Enter your Password"} />
+                    </label>
+
+                    <button className={styles.btn}>Log In</button>
+                </form>
             </div>
-
-
         </div>
     )
 }
