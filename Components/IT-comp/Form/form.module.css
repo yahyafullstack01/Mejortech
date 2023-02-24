@@ -297,6 +297,10 @@
         background: green;
     }
 
+    .selection{
+        margin-top: 3%;
+    }
+
     .type_con {
         align-items: start;
         flex-direction: column;

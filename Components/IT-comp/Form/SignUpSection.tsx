@@ -34,7 +34,6 @@ export default function SignUp() {
                         <input type={"checkbox"} id="Arabic" name="Arabic" value={"Arabic"} className={`${styles.input} ${styles.fixlanguages}`} placeholder={"confirm your password"} />
                         <label htmlFor={"Arabic"} className={`${styles.fixlanguages}`}>Arabic</label>
                     </div>
-                    
                     <div className={styles.checkbox_con}>
                         <input type={"checkbox"} id="Russian" name="Russian" value={"Russian"} className={`${styles.input} ${styles.fixlanguages}`} placeholder={"confirm your password"} />
                         <label htmlFor={"Russia"} className={`${styles.fixlanguages}`}>Russian</label>
@@ -42,7 +41,7 @@ export default function SignUp() {
 
                 </label>
                 <label htmlFor={"from where"} className={`${styles.label}`} >Where did you hear of us:
-                    <select name="from where" className={"text-[#907730;]"} id="from where" >
+                    <select name="from where" className={`${styles.selection} ${"text-[#907730;]"}`} id="from where" >
                         <option value="LinkedIn">LinkedIn</option>
                         <option value="Google">Google</option>
                         <option value="Facebook">Facebook</option>
