@@ -122,7 +122,7 @@ export default function Form() {
                         <input type={"password"} id="Name" name="name" className={styles.input} placeholder={"Enter your Password"} />
                     </label>
 
-                    <div className={styles.btn_container}>
+                    <div className={styles.btn_container}>  
                         <div className={styles.signin_btns_con}>
                             <button className={styles.btn}>Log In</button>
                             <a className={styles.forget}>Forget password</a>
