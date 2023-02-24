@@ -22,18 +22,25 @@ export default function LogIn() {
 
                 <div className={styles.btn_container}>
                     <div className={styles.signin_btns_con}>
-                        <button className={styles.btn}>Log In</button>
+                        <button className={styles.btn}>Log in</button>
                         <a className={styles.forget}>Forget password</a>
+                        
+
+                        <div className={styles.desk}>
                         <br></br>
                         <br></br>
-                        <hr></hr>
-                        <p className={`${styles.forget} ${styles.account}`}>Don't have an account</p>
-                        <button className={`${styles.btn} ${styles.up}`}>Sign Up here</button>
+                            <hr></hr>
+                            <p className={`${styles.forget} ${styles.account}`}>Don't have an account</p>
+                            <button className={`${styles.btn} ${styles.up}`}>Sign Up here</button>
+                        </div>
+
                     </div>
 
-                    <p className={styles.h1}>Or Log In Using </p>
+
 
                     <div className={styles.signother_con}>
+
+                        <p className={styles.h1}>Or Log In Using </p>
 
                         <button className={styles.btn_gf}>
                             <FcGoogle />
@@ -45,6 +52,13 @@ export default function LogIn() {
                             <span>With LinkedIn</span>
                         </button>
                     </div>
+
+                    <div className={styles.mobile}>
+                        <hr></hr>
+                        <p className={`${styles.forget} ${styles.account}`}>Don't have an account</p>
+                        <button className={`${styles.btn} ${styles.up}`}>Sign Up here</button>
+                    </div>
+
                 </div>
             </form>
         </div>

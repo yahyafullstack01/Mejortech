@@ -12,7 +12,7 @@ function Header() {
     const { t, isRussain } = useContext(AppContext);
 
     const handleChangeLanguage = (e: React.ChangeEvent<HTMLSelectElement>) => {
-        const lang = e.target.value;
+        const lang = e.target.value; 
 
         router.push(router.pathname, router.asPath, { locale: lang });
     };

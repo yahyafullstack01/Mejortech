@@ -63,8 +63,12 @@ export default function header() {
                     </div>*/}
 
                     <div className={`${styles.btn_container} ${"flex"}`}>
-                        <button className={styles.btn}>Log In</button>
-                        <button className={styles.btn}>Sign Up</button>
+                        <a href="#FormDiv" className={styles.btn}>
+                            <button onClick={() => { LogForm() }} >Log In</button>
+                        </a>
+                        <a href="#FormDiv" className={styles.btn}>
+                            <button onClick={() => { SignForm() }}>Sign Up</button>
+                        </a>
                     </div>
                 </div>
 

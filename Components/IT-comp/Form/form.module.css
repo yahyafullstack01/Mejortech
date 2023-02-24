@@ -38,7 +38,7 @@
     margin-top: 5%;
 }
 
-.checkbox_con{
+.checkbox_con {
     display: flex;
     margin-left: 5%;
     column-gap: 1vw;
@@ -156,7 +156,8 @@
 
 .signother_con {
     display: flex;
-    width: 50%;
+    align-items: center;
+    width: 70%;
     column-gap: 1vw;
     justify-content: space-evenly;
 }
@@ -178,6 +179,10 @@
     transform: scale(1.1);
     border-bottom: 2px solid #907730;
     color: #907730;
+}
+
+.mobile{
+    display: none;
 }
 
 
@@ -214,6 +219,7 @@
     display: block;
     padding: 10px;
     font-size: 1.5vw;
+    align-items: center;
     color: white;
     border-bottom: 2px solid white;
     border-radius: 5px;
@@ -283,9 +289,27 @@
         margin-bottom: 2%;
     }
 
-    .checkbox_con{
+    .checkbox_con {
         margin-left: 0;
         margin-top: 2%;
+    }
+
+    .h1 {
+        font-size: 4vw;
+    }
+
+    .signother_con {
+        justify-content: flex-start;
+        flex-direction: column;
+        row-gap: 5vw;
+        margin-top: 5%;
+        width: 100%;
+    }
+
+    .btn_gf {
+        width:50%;
+        justify-content: center;
+        font-size: 4vw;
     }
 
     .input {
@@ -297,7 +321,7 @@
         background: green;
     }
 
-    .selection{
+    .selection {
         margin-top: 3%;
     }
 
@@ -309,6 +333,39 @@
 
     .lb {
         font-size: 6vw;
+    }
+
+    .desk {
+        display: none;
+    }
+
+    .mobile{
+        display: flex;
+        width: 100%;
+        margin-top: 5%;
+        flex-direction: column;
+    }
+
+    .forget.account{
+        align-self: center;
+        font-size: 4vw;
+    }
+
+    .btn.up{
+        font-size: 5vw;
+        align-self: center;
+        width: 70%;
+    }
+
+    .btn_container {
+        align-items: start;
+        flex-direction: column;
+       
+    }
+
+    .forget {
+        font-size: 2vw;
+        margin-top: 5%;
     }
 
     .btn {
