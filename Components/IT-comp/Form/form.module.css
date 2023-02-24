@@ -43,6 +43,7 @@
     font-weight: bold;
     font-family: 'Abel', sans-serif;
     color: white;
+    
 }
 
 .input {
@@ -51,6 +52,12 @@
     border-bottom: 2px solid white;
     outline: none;
     padding: 10px;
+}
+
+.input.fixlanguages{
+background-color: black;
+width: auto;
+margin-left: 5%;
 }
 
 .input::placeholder {
