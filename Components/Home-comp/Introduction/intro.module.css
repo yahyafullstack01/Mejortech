@@ -113,7 +113,7 @@
     }
 
     25% {
-        transform: translateX(60%);
+        transform: translateX(65%);
     }
 
     50% {
@@ -121,7 +121,7 @@
     }
 
     80% {
-        transform: translateX(60%);
+        transform: translateX(65%);
     }
 
 }
