@@ -45,9 +45,11 @@ export default function IT() {
     const Testemoniels_Quotes: any = t('Testa_Block_Quotes', { returnObjects: true });
 
     const [FormContainer, setFormContainer] = useState(<SectionContact/>);
-
+    
+    const ContactIt = ()=>setFormContainer(<SectionContact/>);;
     const LogForm = ()=>setFormContainer(<LogInSection/>);
     const SignForm = ()=>setFormContainer(<SignUpSection/>);
+    
 
 
 
@@ -62,7 +64,7 @@ export default function IT() {
             Testemoniels_Quotes, WhyUs_title,
 
             SectionContact, SignUpSection, LogInSection,FormContainer,
-            LogForm, SignForm,
+            LogForm, SignForm,ContactIt
         }}>
             <div>
                 <Navbar />

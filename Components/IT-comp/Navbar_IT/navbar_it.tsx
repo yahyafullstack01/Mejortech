@@ -10,7 +10,7 @@ import { useTranslation } from "next-i18next";
 
 export default function header() {
     const { t, i18n } = useTranslation("Home");
-    const { Signing, LogForm, SignForm, } = useContext(AppContext);
+    const { Signing, LogForm, SignForm, ContactIt} = useContext(AppContext);
     return (
 
         <div className={`${styles.container2} ${"items-center justify-between flex"}`}>
@@ -25,7 +25,7 @@ export default function header() {
                 <Link passHref href="/#About" className={`${styles.navigation} ${"text-sm md:text-xl  text-white"}`}>{t('About')}</Link>
                 <Link passHref href="/#Our_work" className={`${styles.navigation} ${"text-sm md:text-xl  text-white"}`}>{t("Our_Work")}</Link>
                 <Link passHref href="/#Team" className={`${styles.navigation} ${"text-sm md:text-xl  text-white"}`}>{t("Team")}</Link>
-                <Link passHref href="/#Contact_us" className={`${styles.navigation} ${"text-sm md:text-xl  text-white"}`}>{t("Contact_Us")}</Link>
+                <Link passHref href="#FormDiv" className={`${styles.navigation} ${"text-sm md:text-xl  text-white"}`} onClick={()=> {ContactIt()}}>{t("Contact_Us")}</Link>
             </nav>
             <div className={`${styles.btn_container} ${"sm:flex hidden"}`}>
                 <a href="#FormDiv" className={styles.btn}>

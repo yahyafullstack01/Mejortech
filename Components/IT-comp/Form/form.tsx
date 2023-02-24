@@ -8,15 +8,7 @@ export default function Form() {
     
     return (
         <div className={styles.container} id="FormDiv">
-            {/* The Contact Section */}
             {FormContainer}
-
-            {/*The sign up section
- 
-        
-           //The Log In section 
-            <LogInSection/>*/}
-
         </div>
     )
 }
