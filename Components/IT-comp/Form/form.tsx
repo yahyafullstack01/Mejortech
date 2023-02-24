@@ -1,6 +1,10 @@
 import styles from "../Form/form.module.css";
 import { AppContext } from "../../../Mycontext/context";
 import { useContext } from "react";
+import { FcGoogle } from "react-icons/fc";
+import { BsLinkedin } from "react-icons/bs";
+
+
 
 
 export default function Form() {
@@ -39,18 +43,17 @@ export default function Form() {
                         </div>
 
                     </ul>
-                    <button className={styles.btn}>{Form_btns[3]}</button>
+                    <button className={styles.btn_nm}>{Form_btns[3]}</button>
                 </form>
             </div> */}
 
             {/*The data With Sign Up */}
-            {/* <div data-aos="fade-right" data-aos-duration="2000" className={`${styles.form_container} ${"flex flex-col items-center"}`}>
+            <div data-aos="fade-right" data-aos-duration="2000" className={`${styles.form_container} ${"flex flex-col items-center"}`}>
                 <h1 className={styles.title}>Create New acount</h1>
-                <form action="" method="Get" className={`${styles.form} ${isArabic ? styles.ar : ""}`}>
+                <form action="" method="Get" className={`${styles.form} ${isArabic ? styles.ar : ""}  ${styles.form_signUp}`}>
                     <label className={styles.label} htmlFor={"Name"}>{Form_Labels[0]}
                         <input type={"text"} id="Name" name="name" className={styles.input} placeholder={`${Form_place_holders[0]}`} />
                     </label>
-
                     <label className={styles.label} htmlFor={"Email"}>{Form_Labels[1]}
                         <input type={"email"} id="Email" name="email" className={styles.input} placeholder={`${Form_place_holders[1]}`} />
                     </label>
@@ -59,12 +62,17 @@ export default function Form() {
                     </label>
                     <label className={`${styles.label}`} htmlFor={"Language"}>
                         <label>prefered language:</label>
-                        <input type={"checkbox"} id="English" name="English" value={"English"} className={`${styles.input} ${styles.fixlanguages}`} />
-                        <label htmlFor={"English"} className={`${styles.fixlanguages}`}>English</label>
+                        <div className={"flex"}>
+                            <input type={"checkbox"} id="English" name="English" value={"English"} className={`${styles.input} ${styles.fixlanguages}`} />
+                            <label htmlFor={"English"} className={`${styles.fixlanguages}`}>English</label>
+                        </div>
+
                         <input type={"checkbox"} id="Spanish" name="Spanish" value={"Spanish"} className={`${styles.input} ${styles.fixlanguages}`} placeholder={"confirm your password"} />
                         <label htmlFor={"Spanish"} className={`${styles.fixlanguages}`}>Spanish</label>
+
                         <input type={"checkbox"} id="Arabic" name="Arabic" value={"Arabic"} className={`${styles.input} ${styles.fixlanguages}`} placeholder={"confirm your password"} />
                         <label htmlFor={"Arabic"} className={`${styles.fixlanguages}`}>Arabic</label>
+
                         <input type={"checkbox"} id="Russian" name="Russian" value={"Russian"} className={`${styles.input} ${styles.fixlanguages}`} placeholder={"confirm your password"} />
                         <label htmlFor={"Russia"} className={`${styles.fixlanguages}`}>Russian</label>
                     </label>
@@ -97,27 +105,54 @@ export default function Form() {
                         </div>
 
                     </ul>
-                    <button className={styles.btn}>{Form_btns[3]}</button>
+                    <button className={styles.btn_nm}>{Form_btns[3]}</button>
                 </form>
-            </div> */}
+            </div>
 
             {/* //The data With Sign In */}
-            <div data-aos="fade-right" data-aos-duration="2000" className={`${styles.form_container} ${"flex flex-col items-center"}`}>
+            {/* <div data-aos="fade-right" data-aos-duration="2000" className={`${styles.form_container} ${"flex flex-col items-center"}`}>
                 <h1 className={styles.title}>Log In here</h1>
-                <form action="" method="Get" className={`${styles.form} ${isArabic ? styles.ar : ""}`}>
-
+                <form action="" method="Get" className={`${styles.form} ${isArabic ? styles.ar : ""} ${styles.form_signIn}`}>
 
                     <label className={styles.label} htmlFor={"Email"}>E-mail:
-                        <input type={"email"} id="Email" name="email" className={styles.input} placeholder={"Enter your Email"}/>
+                        <input type={"email"} id="Email" name="email" className={styles.input} placeholder={"Enter your Email"} />
                     </label>
 
                     <label className={styles.label} htmlFor={"Name"}>Password:
                         <input type={"password"} id="Name" name="name" className={styles.input} placeholder={"Enter your Password"} />
                     </label>
 
-                    <button className={styles.btn}>Log In</button>
+                    <div className={styles.btn_container}>
+                        <div className={styles.signin_btns_con}>
+                            <button className={styles.btn}>Log In</button>
+                            <a className={styles.forget}>Forget password</a>
+                            <br></br>
+                            <br></br>
+                            <hr></hr>
+                            <p className={`${styles.forget} ${styles.account}`}>Don't have an account</p>
+                            <button className={`${styles.btn} ${styles.up}`}>Sign Up here</button>
+                        </div>
+
+                        <p className={styles.h1}>Or Log In Using </p>
+
+                        <div className={styles.signother_con}>
+
+                            <button className={styles.btn_gf}>
+                                <FcGoogle />
+                                <span>With Google</span>
+                            </button>
+
+                            <button className={styles.btn_gf}>
+                                <BsLinkedin className={"text-sky-600"} />
+                                <span>With LinkedIn</span>
+                            </button>
+
+
+
+                        </div>
+                    </div>
                 </form>
-            </div>
+            </div> */}
         </div>
     )
 }

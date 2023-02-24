@@ -30,6 +30,14 @@
     width: 80%;
 }
 
+.form.form_signIn {
+    margin-top: 5%;
+}
+
+.form.form_signUp {
+    margin-top: 5%;
+}
+
 
 .form.ar {
     direction: rtl;
@@ -51,6 +59,12 @@
     border-bottom: 2px solid white;
     outline: none;
     padding: 10px;
+}
+
+.input.fixlanguages {
+    background-color: black;
+    width: auto;
+    margin-left: 5%;
 }
 
 .input::placeholder {
@@ -112,17 +126,117 @@
     z-index: 90;
 }
 
+.btn_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -3%;
+}
+
+
+.signin_btns_con {
+    display: flex;
+    flex-direction: column;
+    column-gap: 2vw;
+}
+
+.signother_con {
+    display: flex;
+    width: 50%;
+    column-gap: 1vw;
+    justify-content: space-evenly;
+}
+
+.btn_gf {
+    display: flex;
+    padding: 10px;
+    column-gap: 1vw;
+    align-items: center;
+    width: fit-content;
+    font-size: 1.5vw;
+    background: transparent;
+    border-radius: 15%;
+    color: white;
+    border-bottom: 2px solid white;
+}
+
+.btn_gf:hover {
+    transform: scale(1.1);
+    border-bottom: 2px solid #907730;
+    color: #907730;
+}
+
+
+.forget {
+    margin-top: 3%;
+    color: white;
+    font-size: 1vw;
+    cursor: pointer;
+    font-family: 'Abel', sans-serif;
+    width: fit-content;
+}
+
+.forget.account {
+    font-size: 1.5vw;
+}
+
+.forget.account:hover {
+    transform: none;
+    border-bottom: none;
+}
+
+
+.forget:hover {
+    transform: scale(1.1);
+    border-bottom: 1px solid white;
+}
+
+.h1 {
+    color: white;
+    font-size: 1.5vw;
+}
+
 .btn {
+    display: block;
+    padding: 10px;
+    font-size: 1.5vw;
+    color: white;
+    border-bottom: 2px solid white;
+    border-radius: 5px;
+}
+
+.btn.up {
+    width: 100%;
+    background: #907730;
+    margin-top: 2%;
+    font-size: 1.2vw;
+    border-bottom: none;
+}
+
+.btn_nm {
     font-size: 2.5vw;
     width: fit-content;
     border-radius: 15px;
     padding: 10px;
+    color: white;
+    cursor: pointer;
     background-color: rgba(0, 0, 0, 0.427);
+}
+
+.btn_nm:hover {
+    transform: scale(1.1);
+    color: #907730;
+}
+
+.btn.up:hover {
+    transform: scale(1.1);
     color: white;
 }
 
+
 .btn:hover {
     color: #907730;
+    border-bottom: 2px solid #907730;
     transform: scale(1.1);
 }
 
@@ -149,9 +263,19 @@
         margin-top: 10%;
     }
 
+    .form.form_signUp {
+        margin-top: 5%;
+        padding-left: 2%;
+        margin-bottom: 2%;
+    }
+
     .input {
         width: 100%;
         margin-top: 2%;
+    }
+
+    .input.fixlanguages {
+        background: green;
     }
 
     .type_con {
@@ -165,6 +289,10 @@
     }
 
     .btn {
+        font-size: 7vw;
+    }
+
+    .btn_nm {
         font-size: 7vw;
     }
 
