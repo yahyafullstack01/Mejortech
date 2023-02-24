@@ -48,7 +48,7 @@ export default function Form() {
             </div> */}
 
             {/*The data With Sign Up */}
-            <div data-aos="fade-right" data-aos-duration="2000" className={`${styles.form_container} ${"flex flex-col items-center"}`}>
+            {/* <div data-aos="fade-right" data-aos-duration="2000" className={`${styles.form_container} ${"flex flex-col items-center"}`}>
                 <h1 className={styles.title}>Create New acount</h1>
                 <form action="" method="Get" className={`${styles.form} ${isArabic ? styles.ar : ""}  ${styles.form_signUp}`}>
                     <label className={styles.label} htmlFor={"Name"}>{Form_Labels[0]}
@@ -107,10 +107,10 @@ export default function Form() {
                     </ul>
                     <button className={styles.btn_nm}>{Form_btns[3]}</button>
                 </form>
-            </div>
+            </div> */}
 
             {/* //The data With Sign In */}
-            {/* <div data-aos="fade-right" data-aos-duration="2000" className={`${styles.form_container} ${"flex flex-col items-center"}`}>
+            <div data-aos="fade-right" data-aos-duration="2000" className={`${styles.form_container} ${"flex flex-col items-center"}`}>
                 <h1 className={styles.title}>Log In here</h1>
                 <form action="" method="Get" className={`${styles.form} ${isArabic ? styles.ar : ""} ${styles.form_signIn}`}>
 
@@ -152,7 +152,7 @@ export default function Form() {
                         </div>
                     </div>
                 </form>
-            </div> */}
+            </div> 
         </div>
     )
 }
