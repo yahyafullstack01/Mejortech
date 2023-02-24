@@ -8,7 +8,10 @@ import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { GetStaticProps } from "next";
 import { AppContext } from "../../Mycontext/context";
-
+import SectionContact from "../../Components/IT-comp/Form/SectionContact";
+import SignUpSection from "../../Components/IT-comp/Form/SignUpSection";
+import LogInSection from "../../Components/IT-comp/Form/LogInSection";
+import { useState } from "react";
 
 export default function IT() {
     const { t, i18n } = useTranslation("ITPage");
@@ -41,6 +44,12 @@ export default function IT() {
     const Testemoniels_names: any = t('Testa_Block_names', { returnObjects: true });
     const Testemoniels_Quotes: any = t('Testa_Block_Quotes', { returnObjects: true });
 
+    const [FormContainer, setFormContainer] = useState(<SectionContact/>);
+
+    const LogForm = ()=>setFormContainer(<LogInSection/>);
+    const SignForm = ()=>setFormContainer(<SignUpSection/>);
+
+
 
 
     return (
@@ -50,7 +59,10 @@ export default function IT() {
             OurPakages_list, OurPakages_Title,
             Form_Labels,Form_place_holders, Form_btns, Form_title,
             Testemon_title, Testemoniels_names,
-            Testemoniels_Quotes, WhyUs_title
+            Testemoniels_Quotes, WhyUs_title,
+
+            SectionContact, SignUpSection, LogInSection,FormContainer,
+            LogForm, SignForm,
         }}>
             <div>
                 <Navbar />

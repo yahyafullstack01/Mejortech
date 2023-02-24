@@ -10,7 +10,7 @@ import { useTranslation } from "next-i18next";
 
 export default function header() {
     const { t, i18n } = useTranslation("Home");
-    const { Signing } = useContext(AppContext);
+    const { Signing, SignUpSection, LogInSection, FormContainer, LogForm, SignForm,} = useContext(AppContext);
     return (
 
         <div className={`${styles.container2} ${"items-center justify-between flex"}`}>
@@ -28,8 +28,13 @@ export default function header() {
                 <Link passHref href="/#Contact_us" className={`${styles.navigation} ${"text-sm md:text-xl  text-white"}`}>{t("Contact_Us")}</Link>
             </nav>
             <div className={`${styles.btn_container} ${"sm:flex hidden"}`}>
-                <button className={styles.btn}>{Signing[0]}</button>
-                <button className={styles.btn}>{Signing[1]}</button>
+                <a href="#FormDiv" className={styles.btn}>
+                <button  onClick={()=>{LogForm()}}>{Signing[0]}</button>
+                </a>
+                <a href="#FormDiv" className={styles.btn}>
+                <button  onClick={()=>{SignForm()}}>{Signing[1]}</button>
+                </a>
+
             </div>
             <a href="#menu" className="sm:hidden flex">
                 <TbEqual className="sm:hidden text-4xl text-white flex" />
@@ -48,14 +53,14 @@ export default function header() {
                     </a>
                 </div>
                 <div className={`${styles.menu_mobile} ${"flex w-full justify-center mt-10 items-center text-lg"}`}>
-                    <div className="flex items-center">
+                    {/* <div className="flex items-center">
                         <BsGlobe className="text-xl text-white " />
                         <select className={`${styles.selection} ${"bg-transparent text-white outline-none"}`}>
                             <option value="en">English</option>
                             <option value="ab">Arabic</option>
                             <option value="ru">Russian</option>
                         </select>
-                    </div>
+                    </div>*/}
 
                     <div className={`${styles.btn_container} ${"flex"}`}>
                         <button className={styles.btn}>Log In</button>
