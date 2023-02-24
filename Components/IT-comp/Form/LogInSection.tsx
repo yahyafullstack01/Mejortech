@@ -44,9 +44,6 @@ export default function LogIn() {
                             <BsLinkedin className={"text-sky-600"} />
                             <span>With LinkedIn</span>
                         </button>
-
-
-
                     </div>
                 </div>
             </form>

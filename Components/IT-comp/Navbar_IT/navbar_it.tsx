@@ -10,7 +10,7 @@ import { useTranslation } from "next-i18next";
 
 export default function header() {
     const { t, i18n } = useTranslation("Home");
-    const { Signing, SignUpSection, LogInSection, FormContainer, LogForm, SignForm,} = useContext(AppContext);
+    const { Signing, LogForm, SignForm, } = useContext(AppContext);
     return (
 
         <div className={`${styles.container2} ${"items-center justify-between flex"}`}>
@@ -29,10 +29,10 @@ export default function header() {
             </nav>
             <div className={`${styles.btn_container} ${"sm:flex hidden"}`}>
                 <a href="#FormDiv" className={styles.btn}>
-                <button  onClick={()=>{LogForm()}}>{Signing[0]}</button>
+                    <button onClick={() => { LogForm() }}>{Signing[0]}</button>
                 </a>
                 <a href="#FormDiv" className={styles.btn}>
-                <button  onClick={()=>{SignForm()}}>{Signing[1]}</button>
+                    <button onClick={() => { SignForm() }}>{Signing[1]}</button>
                 </a>
 
             </div>

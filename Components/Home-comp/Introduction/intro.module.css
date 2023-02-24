@@ -56,7 +56,7 @@
     height: 60vh;
     margin-bottom: 5%;
     border-radius: 50%;
-    z-index: 5;
+    z-index: 1;
 }
 
 .title {
@@ -66,7 +66,6 @@
     text-align: center;
     align-items: center;
     font-size: 5vw;
-    /* color: white; */
 }
 
 .logo_bg {
@@ -88,7 +87,7 @@
     border-top: 2px solid rgba(255, 255, 255, 0.333);
     background: rgba(0, 0, 0, 0.453);
     overflow: hidden;
-    z-index: 1;
+    z-index: 0;
 }
 
 .ticker {
@@ -136,6 +135,12 @@
     }
 }
 
+@media (min-width:2000px) {
+        .circle {
+        width: 50vw;
+    }
+}
+
 @media (max-width:1200px) {
     .circle {
         width: 50vw;
@@ -144,7 +149,12 @@
 
 @media (max-width:768px) {
     .circle {
-        width: 70%;
+        width: 60%;
+    }
+
+    .title {
+        font-size: 10vw;
+       
     }
 }
 
@@ -154,8 +164,36 @@
         width: 80%;
     }
 
-}
+    .title {
+        font-size: 15vw;
+       
+    }
 
+    .ticker{
+        font-size: 5vw;
+        animation: marquee 15s linear infinite;
+    }
+
+    @keyframes marquee {
+        0% {
+            transform: translateX(0%);
+        }
+    
+        25% {
+            transform: translateX(40%);
+        }
+    
+        50% {
+            transform: translateX(0%);
+        }
+    
+        80% {
+            transform: translateX(40%);
+        }
+    
+    }
+
+}
 
 @media(max-width:500px) {
 
@@ -167,6 +205,10 @@
         width: 90%;
     }
 
+    .container_2 {
+        height: 80vh;
+    }
+
     .H1 {
         font-size: 10vw;
     }
@@ -175,12 +217,37 @@
         font-size: 4vw;
     }
 
-    .container_2 {
-        justify-content: center;
-    }
-
     .circle {
         width: 80vw;
-        height: 50vh;
+        height: 45vh;
+    }
+
+    .title {
+        font-size: 15vw;
+       
+    }
+
+    .ticker{
+        font-size: 6vw;
+        animation: marquee 5s linear infinite;
+    }
+
+    @keyframes marquee {
+        0% {
+            transform: translateX(0%);
+        }
+    
+        25% {
+            transform: translateX(20%);
+        }
+    
+        50% {
+            transform: translateX(0%);
+        }
+    
+        80% {
+            transform: translateX(20%);
+        }
+    
     }
 }

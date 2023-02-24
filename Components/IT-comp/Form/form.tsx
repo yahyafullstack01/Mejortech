@@ -1,13 +1,9 @@
 import styles from "../Form/form.module.css";
 import { AppContext } from "../../../Mycontext/context";
 import { useContext } from "react";
-import { useState } from "react";
-
-
-
 
 export default function Form() {
-    const { isArabic, Form_title, Form_Labels, Form_place_holders, Form_btns, SectionContact, SignUpSection, LogInSection,FormContainer } = useContext(AppContext);
+    const { FormContainer } = useContext(AppContext);
     
     
     return (

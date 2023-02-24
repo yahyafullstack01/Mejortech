@@ -19,19 +19,27 @@ export default function SignUp() {
                 </label>
                 <label className={`${styles.label}`} htmlFor={"Language"}>
                     <label>prefered language:</label>
-                    <div className={"flex"}>
+
+                    <div className={styles.checkbox_con}>
                         <input type={"checkbox"} id="English" name="English" value={"English"} className={`${styles.input} ${styles.fixlanguages}`} />
                         <label htmlFor={"English"} className={`${styles.fixlanguages}`}>English</label>
                     </div>
 
-                    <input type={"checkbox"} id="Spanish" name="Spanish" value={"Spanish"} className={`${styles.input} ${styles.fixlanguages}`} placeholder={"confirm your password"} />
-                    <label htmlFor={"Spanish"} className={`${styles.fixlanguages}`}>Spanish</label>
+                    <div className={styles.checkbox_con}>
+                        <input type={"checkbox"} id="Spanish" name="Spanish" value={"Spanish"} className={`${styles.input} ${styles.fixlanguages}`} placeholder={"confirm your password"} />
+                        <label htmlFor={"Spanish"} className={`${styles.fixlanguages}`}>Spanish</label>
+                    </div>
 
-                    <input type={"checkbox"} id="Arabic" name="Arabic" value={"Arabic"} className={`${styles.input} ${styles.fixlanguages}`} placeholder={"confirm your password"} />
-                    <label htmlFor={"Arabic"} className={`${styles.fixlanguages}`}>Arabic</label>
+                    <div className={styles.checkbox_con}>
+                        <input type={"checkbox"} id="Arabic" name="Arabic" value={"Arabic"} className={`${styles.input} ${styles.fixlanguages}`} placeholder={"confirm your password"} />
+                        <label htmlFor={"Arabic"} className={`${styles.fixlanguages}`}>Arabic</label>
+                    </div>
+                    
+                    <div className={styles.checkbox_con}>
+                        <input type={"checkbox"} id="Russian" name="Russian" value={"Russian"} className={`${styles.input} ${styles.fixlanguages}`} placeholder={"confirm your password"} />
+                        <label htmlFor={"Russia"} className={`${styles.fixlanguages}`}>Russian</label>
+                    </div>
 
-                    <input type={"checkbox"} id="Russian" name="Russian" value={"Russian"} className={`${styles.input} ${styles.fixlanguages}`} placeholder={"confirm your password"} />
-                    <label htmlFor={"Russia"} className={`${styles.fixlanguages}`}>Russian</label>
                 </label>
                 <label htmlFor={"from where"} className={`${styles.label}`} >Where did you hear of us:
                     <select name="from where" className={"text-[#907730;]"} id="from where" >
