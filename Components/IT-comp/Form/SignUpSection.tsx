@@ -36,7 +36,7 @@ export default function SignUp() {
                     </div>
                     <div className={styles.checkbox_con}>
                         <input type={"checkbox"} id="Russian" name="Russian" value={"Russian"} className={`${styles.input} ${styles.fixlanguages}`} placeholder={"confirm your password"} />
-                        <label htmlFor={"Russia"} className={`${styles.fixlanguages}`}>Russian</label>
+                        <label htmlFor={"Russian"} className={`${styles.fixlanguages}`}>Russian</label>
                     </div>
 
                 </label>
@@ -52,7 +52,7 @@ export default function SignUp() {
                     </select>
                 </label>
                 <ul className={styles.type_con}>
-                    <p className={styles.label} >{Form_Labels[2]}</p>
+                    <p className={styles.label} >{Form_Labels[8]}</p>
                     <div className={styles.package_con}>
                         <li>
                             <input type="radio" id="Basic" name="type" value="Basic" />
