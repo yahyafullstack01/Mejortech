@@ -38,7 +38,7 @@ export default function LogIn() {
 
                     <div className={styles.signother_con}>
 
-                        <p className={styles.h1}>{Form_Labels[5]}</p>
+                        <p className={styles.h1}>{Form_Labels[6]}</p>
 
                         <button className={styles.btn_gf}>
                             <FcGoogle />
