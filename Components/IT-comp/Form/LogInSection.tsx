@@ -30,7 +30,7 @@ export default function LogIn() {
                             <br></br>
                             <br></br>
                             <hr></hr>
-                            <p className={`${styles.forget} ${styles.account}`}>{Form_Labels[6]}</p>
+                            <p className={`${styles.forget} ${styles.account}`}>{Form_Labels[7]}</p>
                             <button className={`${styles.btn} ${styles.up}`}>{Form_btns[5]}</button>
                         </div>
 
@@ -54,7 +54,7 @@ export default function LogIn() {
                     <div className={styles.mobile}>
                         <hr></hr>
                         <p className={`${styles.forget} ${styles.account}`}>{Form_Labels[6]}</p>
-                        <button className={`${styles.btn} ${styles.up}`}>Sign Up here</button>
+                        <button className={`${styles.btn} ${styles.up}`}>{Form_btns[5]}</button>
                     </div>
 
                 </div>
