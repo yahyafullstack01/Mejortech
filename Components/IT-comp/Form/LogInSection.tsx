@@ -42,12 +42,12 @@ export default function LogIn() {
 
                         <button className={styles.btn_gf}>
                             <FcGoogle />
-                            <span>{Form_Labels[8]}</span>
+                            <span>{Form_Labels[9]}</span>
                         </button>
 
                         <button className={styles.btn_gf}>
                             <BsLinkedin className={"text-sky-600"} />
-                            <span>{Form_Labels[9]}</span>
+                            <span>{Form_Labels[10]}</span>
                         </button>
                     </div>
 
