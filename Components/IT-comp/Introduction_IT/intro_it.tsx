@@ -1,5 +1,11 @@
 import styles from "../../Home-comp/Introduction/intro.module.css"
+import { AppContext } from "../../../Mycontext/context"
+import { useContext } from "react"
+
+
 export default function Intro() {
+
+    const { Intro_info } = useContext(AppContext);
 
     return (
         <div className="flex flex-col relative ">
@@ -14,7 +20,7 @@ export default function Intro() {
             </video>
             <div className={`${styles.container_2} ${"w-full  flex flex-col justify-center "}`}>
                 <div data-aos="zoom-in" data-aos-duration="2000" className={styles.circle}>
-                    <h1 className={styles.title}>WE<br></br> AT</h1>
+                    <h1 className={styles.title}>{Intro_info[0]}<br></br>{Intro_info[1]}</h1>
                     <img
                         src="/logo.png"
                         alt=""
@@ -23,7 +29,7 @@ export default function Intro() {
                 </div>
                 <div className={styles.wrapper}>
                     <div className={styles.ticker}>
-                        <p className={styles.text_ticker}>Turn Your Ideas Into Reality</p>
+                        <p className={styles.text_ticker}>{Intro_info[2]}</p>
                     </div>
                 </div>
             </div>

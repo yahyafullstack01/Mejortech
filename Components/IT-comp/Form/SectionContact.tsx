@@ -6,7 +6,7 @@ export default function SectionContact() {
     const { isArabic, Form_title, Form_Labels, Form_place_holders, Form_btns } = useContext(AppContext);
     return (
         <div data-aos="fade-right" data-aos-duration="2000" className={`${styles.form_container} ${"flex flex-col items-center"}`}>
-            <h1 className={styles.title}>{Form_title}</h1>
+            <h1 className={styles.title}>{Form_title[0]}</h1>
             <form action="" method="Get" className={`${styles.form} ${isArabic ? styles.ar : ""}`}>
 
                 <label className={styles.label} htmlFor={"Name"}>{Form_Labels[0]}

@@ -53,30 +53,21 @@ export default function header() {
                     </a>
                 </div>
                 <div className={`${styles.menu_mobile} ${"flex w-full justify-center mt-10 items-center text-lg"}`}>
-                    {/* <div className="flex items-center">
-                        <BsGlobe className="text-xl text-white " />
-                        <select className={`${styles.selection} ${"bg-transparent text-white outline-none"}`}>
-                            <option value="en">English</option>
-                            <option value="ab">Arabic</option>
-                            <option value="ru">Russian</option>
-                        </select>
-                    </div>*/}
-
                     <div className={`${styles.btn_container} ${"flex"}`}>
                         <a href="#FormDiv" className={styles.btn}>
-                            <button onClick={() => { LogForm() }} >Log In</button>
+                            <button onClick={() => { LogForm() }} >{Signing[0]}</button>
                         </a>
                         <a href="#FormDiv" className={styles.btn}>
-                            <button onClick={() => { SignForm() }}>Sign Up</button>
+                            <button onClick={() => { SignForm() }}>{Signing[1]}</button>
                         </a>
                     </div>
                 </div>
 
                 <div className={`${styles.nav_mobile} ${"flex flex-col gap-y-12 mt-2"}`}>
-                    <a href="/#About" className={`${styles.mob_hover} ${"text-2xl text-center text-white  w-full"}`}>About</a>
-                    <a href="/#Our_work" className={`${styles.mob_hover} ${"text-2xl text-center text-white  w-full"}`}>Our Work</a>
-                    <a href="/#Team" className={`${styles.mob_hover} ${"text-2xl text-center text-white  w-full"}`}>Team</a>
-                    <a href="/#Contact_us" className={`${styles.mob_hover} ${"text-2xl text-center text-white  w-full"}`}>Contact Us</a>
+                    <a href="/#About" className={`${styles.mob_hover} ${"text-2xl text-center text-white  w-full"}`}>{t('About')}</a>
+                    <a href="/#Our_work" className={`${styles.mob_hover} ${"text-2xl text-center text-white  w-full"}`}>{t("Our_Work")}</a>
+                    <a href="/#Team" className={`${styles.mob_hover} ${"text-2xl text-center text-white  w-full"}`}>{t("Team")}</a>
+                    <a href="/#Contact_us" className={`${styles.mob_hover} ${"text-2xl text-center text-white  w-full"}`}>{t("Contact_Us")}</a>
                 </div>
 
             </section>

@@ -33,23 +33,23 @@ export default function IT() {
     const OurPakages_list: any = t('OurPk_block_list', { returnObjects: true });
 
     //The arr information of the Form section
-    const Form_title: string = t('Form_title');
+    const Form_title: any = t('Form_title', { returnObjects: true });
     const Form_Labels: any = t('Form_Labels', { returnObjects: true });
     const Form_place_holders: any = t('Form_place_holders', { returnObjects: true });
     const Form_btns: any = t('Form_btns', { returnObjects: true });
 
-    
+
     //The arr information of the Testamonials section
     const Testemon_title: string = t('Testamon_title');
     const Testemoniels_names: any = t('Testa_Block_names', { returnObjects: true });
     const Testemoniels_Quotes: any = t('Testa_Block_Quotes', { returnObjects: true });
 
-    const [FormContainer, setFormContainer] = useState(<SectionContact/>);
-    
-    const ContactIt = ()=>setFormContainer(<SectionContact/>);;
-    const LogForm = ()=>setFormContainer(<LogInSection/>);
-    const SignForm = ()=>setFormContainer(<SignUpSection/>);
-    
+    const [FormContainer, setFormContainer] = useState(<SectionContact />);
+
+    const ContactIt = () => setFormContainer(<SectionContact />);;
+    const LogForm = () => setFormContainer(<LogInSection />);
+    const SignForm = () => setFormContainer(<SignUpSection />);
+
 
 
 
@@ -59,12 +59,12 @@ export default function IT() {
             t, Signing, Intro_info,
             WhyUs_list, isArabic, OurPakages_types,
             OurPakages_list, OurPakages_Title,
-            Form_Labels,Form_place_holders, Form_btns, Form_title,
+            Form_Labels, Form_place_holders, Form_btns, Form_title,
             Testemon_title, Testemoniels_names,
             Testemoniels_Quotes, WhyUs_title,
 
-            SectionContact, SignUpSection, LogInSection,FormContainer,
-            LogForm, SignForm,ContactIt
+            SectionContact, SignUpSection, LogInSection, FormContainer,
+            LogForm, SignForm, ContactIt
         }}>
             <div>
                 <Navbar />

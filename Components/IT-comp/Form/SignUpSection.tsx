@@ -6,7 +6,7 @@ export default function SignUp() {
     const { isArabic, Form_title, Form_Labels, Form_place_holders, Form_btns } = useContext(AppContext);
     return (
         <div data-aos="fade-right" data-aos-duration="2000" className={`${styles.form_container} ${"flex flex-col items-center"}`}>
-            <h1 className={styles.title}>Create New acount</h1>
+            <h1 className={styles.title}>{Form_title[2]}</h1>
             <form action="" method="Get" className={`${styles.form} ${isArabic ? styles.ar : ""}  ${styles.form_signUp}`}>
                 <label className={styles.label} htmlFor={"Name"}>{Form_Labels[0]}
                     <input type={"text"} id="Name" name="name" className={styles.input} placeholder={`${Form_place_holders[0]}`} />
@@ -14,11 +14,11 @@ export default function SignUp() {
                 <label className={styles.label} htmlFor={"Email"}>{Form_Labels[1]}
                     <input type={"email"} id="Email" name="email" className={styles.input} placeholder={`${Form_place_holders[1]}`} />
                 </label>
-                <label className={styles.label} htmlFor={"Password"}>Password:
-                    <input type={"password"} id="Password" name="password" className={styles.input} placeholder={"enter your password"} />
+                <label className={styles.label} htmlFor={"Password"}>{Form_Labels[2]}
+                    <input type={"password"} id="Password" name="password" className={styles.input} placeholder={Form_place_holders[2]}/>
                 </label>
                 <label className={`${styles.label}`} htmlFor={"Language"}>
-                    <label>prefered language:</label>
+                    <label>{Form_Labels[4]}</label>
 
                     <div className={styles.checkbox_con}>
                         <input type={"checkbox"} id="English" name="English" value={"English"} className={`${styles.input} ${styles.fixlanguages}`} />
@@ -40,7 +40,7 @@ export default function SignUp() {
                     </div>
 
                 </label>
-                <label htmlFor={"from where"} className={`${styles.label}`} >Where did you hear of us:
+                <label htmlFor={"from where"} className={`${styles.label}`} >{Form_Labels[5]}
                     <select name="from where" className={`${styles.selection} ${"text-[#907730;]"}`} id="from where" >
                         <option value="LinkedIn">LinkedIn</option>
                         <option value="Google">Google</option>
