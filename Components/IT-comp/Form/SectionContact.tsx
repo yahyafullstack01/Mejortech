@@ -18,7 +18,7 @@ export default function SectionContact() {
                 </label>
 
                 <ul className={styles.type_con}>
-                    <p className={styles.label} >{Form_Labels[2]}</p>
+                    <p className={styles.label} >{Form_Labels[8]}</p>
                     <div className={styles.package_con}>
                         <li>
                             <input type="radio" id="Basic" name="type" value="Basic" />

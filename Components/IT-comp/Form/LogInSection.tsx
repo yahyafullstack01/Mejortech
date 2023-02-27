@@ -3,10 +3,11 @@ import { AppContext } from "../../../Mycontext/context";
 import { useContext } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { BsLinkedin } from "react-icons/bs";
-
+import { useRouter } from 'next/router'
 export default function LogIn() {
 
-    const { isArabic, Form_title, Form_Labels, Form_place_holders, Form_btns, Signing } = useContext(AppContext);
+    const router = useRouter()
+    const { isArabic, Form_title, Form_Labels, Form_place_holders, Form_btns, Signing, SignForm } = useContext(AppContext);
     return (
         <div data-aos="fade-right" data-aos-duration="2000" className={`${styles.form_container} ${"flex flex-col items-center"}`}>
             <h1 className={styles.title}>{Form_title[1]}</h1>
@@ -22,7 +23,9 @@ export default function LogIn() {
 
                 <div className={styles.btn_container}>
                     <div className={styles.signin_btns_con}>
+                        <a href="/IT_Pages/IT_User">
                         <button className={styles.btn}>{Signing[0]}</button>
+                        </a>
                         <a className={styles.forget}>{Form_Labels[3]}</a>
 
 
@@ -31,7 +34,7 @@ export default function LogIn() {
                             <br></br>
                             <hr></hr>
                             <p className={`${styles.forget} ${styles.account}`}>{Form_Labels[7]}</p>
-                            <button className={`${styles.btn} ${styles.up}`}>{Form_btns[5]}</button>
+                            <button className={`${styles.btn} ${styles.up}`} onClick={() => SignForm()}>{Form_btns[5]}</button>
                         </div>
 
                     </div>

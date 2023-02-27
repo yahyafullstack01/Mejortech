@@ -9,6 +9,7 @@ import { useTranslation } from "next-i18next";
 
 
 export default function header() {
+
     const { t, i18n } = useTranslation("Home");
     const { Signing, LogForm, SignForm, ContactIt} = useContext(AppContext);
     return (
