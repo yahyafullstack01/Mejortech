@@ -7,7 +7,7 @@ import { useRouter } from 'next/router'
 export default function LogIn() {
 
     const router = useRouter()
-    const { isArabic, Form_title, Form_Labels, Form_place_holders, Form_btns, Signing, SignForm } = useContext(AppContext);
+    const { isArabic, Form_title, Form_Labels, Form_place_holders, Form_btns, Signing, SignForm,SignUpwithgoogle,auth } = useContext(AppContext);
     return (
         <div data-aos="fade-right" data-aos-duration="2000" className={`${styles.form_container} ${"flex flex-col items-center"}`}>
             <h1 className={styles.title}>{Form_title[1]}</h1>
@@ -23,10 +23,8 @@ export default function LogIn() {
 
                 <div className={styles.btn_container}>
                     <div className={styles.signin_btns_con}>
-                        <a href="/IT_Pages/IT_User">
-                        <button className={styles.btn}>{Signing[0]}</button>
-                        </a>
-                        <a className={styles.forget}>{Form_Labels[3]}</a>
+                        <button className={styles.btn} type="button" onClick={() => SignUpwithgoogle()}>{Signing[0]}</button>
+                        <a className={styles.forget}href="">{Form_Labels[3]}</a>
 
 
                         <div className={styles.desk}>

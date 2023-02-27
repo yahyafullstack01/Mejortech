@@ -12,8 +12,20 @@ import SectionContact from "../../Components/IT-comp/Form/SectionContact";
 import SignUpSection from "../../Components/IT-comp/Form/SignUpSection";
 import LogInSection from "../../Components/IT-comp/Form/LogInSection";
 import { useState } from "react";
+import { app, auth } from "../../firebaseConfig";
+import {
+    getAuth,
+    createUserWithEmailAndPassword,
+    GoogleAuthProvider,
+    signInWithPopup,
+} from "firebase/auth";
+
+import { useRouter } from "next/router";
 
 export default function IT() {
+
+    const router = useRouter();
+
     const { t, i18n } = useTranslation("ITPage");
     const isArabic = i18n.language === "ar";
 
@@ -43,12 +55,22 @@ export default function IT() {
     const Testemon_title: string = t('Testamon_title');
     const Testemoniels_names: any = t('Testa_Block_names', { returnObjects: true });
     const Testemoniels_Quotes: any = t('Testa_Block_Quotes', { returnObjects: true });
-
+    //changing contactdiv inItpage to registration or Login 
     const [FormContainer, setFormContainer] = useState(<SectionContact />);
-
     const ContactIt = () => setFormContainer(<SectionContact />);;
     const LogForm = () => setFormContainer(<LogInSection />);
     const SignForm = () => setFormContainer(<SignUpSection />);
+
+    // signUp with google (firebase)
+    const Googlesign = new GoogleAuthProvider();
+    const SignUpwithgoogle = () => {
+        signInWithPopup(auth, Googlesign)
+        .then((response)=>{
+            alert("yes"+ response.user);
+            router.push('_User');
+        })
+    }
+
 
 
 
@@ -64,7 +86,8 @@ export default function IT() {
             Testemoniels_Quotes, WhyUs_title,
 
             SectionContact, SignUpSection, LogInSection, FormContainer,
-            LogForm, SignForm, ContactIt
+            LogForm, SignForm, ContactIt,
+            SignUpwithgoogle,auth
         }}>
             <div>
                 <Navbar />
