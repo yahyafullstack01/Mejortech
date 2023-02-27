@@ -21,8 +21,8 @@ export default function IT_User() {
     //The arr information of the Intro_it section
     const Intro_info: any = t('Intro_info', { returnObjects: true });
 
+    // The function that switches components depending on the button type clicked inside the It_pages
     const [FormContainer, setFormContainer] = useState(<SectionContact />);
-
     const ContactIt = () => setFormContainer(<SectionContact />);;
     const LogForm = () => setFormContainer(<LogInSection />);
     const SignForm = () => setFormContainer(<SignUpSection />);
