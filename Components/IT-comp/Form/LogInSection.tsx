@@ -14,11 +14,11 @@ export default function LogIn() {
             <form action="" method="Get" className={`${styles.form} ${isArabic ? styles.ar : ""} ${styles.form_signIn}`}>
 
                 <label className={styles.label} htmlFor={"Email"}>{Form_Labels[1]}
-                    <input type={"email"} id="Email" name="email" className={styles.input} placeholder={Form_place_holders[1]} />
+                    <input type={"email"} id="Email" required name="email" className={styles.input} placeholder={Form_place_holders[1]} />
                 </label>
 
                 <label className={styles.label} htmlFor={"Name"}>{Form_Labels[2]}
-                    <input type={"password"} id="Name" name="name" className={styles.input} placeholder={Form_place_holders[2]}  />
+                    <input type={"password"} id="Name" required name="name" className={styles.input} placeholder={Form_place_holders[2]}  />
                 </label>
 
                 <div className={styles.btn_container}>

@@ -9,13 +9,13 @@ export default function SignUp() {
             <h1 className={styles.title}>{Form_title[2]}</h1>
             <form action="" method="Get" className={`${styles.form} ${isArabic ? styles.ar : ""}  ${styles.form_signUp}`}>
                 <label className={styles.label} htmlFor={"Name"}>{Form_Labels[0]}
-                    <input type={"text"} id="Name" name="name" className={styles.input} placeholder={`${Form_place_holders[0]}`} />
+                    <input type={"text"} required id="Name" name="name" className={styles.input} placeholder={`${Form_place_holders[0]}`} />
                 </label>
                 <label className={styles.label} htmlFor={"Email"}>{Form_Labels[1]}
-                    <input type={"email"} id="Email" name="email" className={styles.input} placeholder={`${Form_place_holders[1]}`} />
+                    <input type={"email"} required id="Email" name="email" className={styles.input} placeholder={`${Form_place_holders[1]}`} />
                 </label>
                 <label className={styles.label} htmlFor={"Password"}>{Form_Labels[2]}
-                    <input type={"password"} id="Password" name="password" className={styles.input} placeholder={Form_place_holders[2]}/>
+                    <input type={"password"} required id="Password" name="password" className={styles.input} placeholder={Form_place_holders[2]}/>
                 </label>
                 <label className={`${styles.label}`} htmlFor={"Language"}>
                     <label>{Form_Labels[4]}</label>
@@ -51,7 +51,7 @@ export default function SignUp() {
 
                     </select>
                 </label>
-                <ul className={styles.type_con}>
+                <ul className={styles.type_con} >
                     <p className={styles.label} >{Form_Labels[8]}</p>
                     <div className={styles.package_con}>
                         <li>
