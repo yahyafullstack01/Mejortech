@@ -70,7 +70,10 @@ export default function IT() {
         signInWithPopup(auth, Googlesign)
         .then((response)=>{
             alert("yes"+ response.user);
-            router.push('_User');
+            router.push('/IT_Pages/IT_User');
+        })
+        .catch((err)=>{
+            console.log(err);
         })
     }
 

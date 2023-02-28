@@ -1,0 +1,29 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Abel', sans-serif;
+    padding: 5% 5%;
+    border-bottom: 2px solid white;
+}
+
+.btn{
+    border: 2px solid white;
+    border-radius:30px;
+    padding:  10px;
+    color: white;
+    width: 20%;
+    font-weight: bold;
+    font-size: 1.5vw;
+    box-shadow: 0 0 50px 10px #e1b53b;
+}
+
+.btn:hover{
+    box-shadow: 0 0 50px 15px #907730;
+    background: #907730;
+}
+
+.btn:focus {
+    box-shadow: 0 0 50px 15px #907730;
+    background: #907730;
+    transform: scale(1.2);
+}

@@ -1,5 +1,6 @@
 import Navbar from "../../Components/IT-comp/Navbar_IT/navbar_it";
 import Intro from "../../Components/IT-comp/Introduction_IT/intro_it";
+import UserNavbar from  "../../Components/IT-User/UserNavbar/UserNavbar";
 import { AppContext } from "../../Mycontext/context";
 import { useTranslation } from "next-i18next";
 import { useState } from "react";
@@ -38,6 +39,7 @@ export default function IT_User() {
             <>
                 <Navbar />
                 <Intro />
+                <UserNavbar/>
             </>
         </AppContext.Provider>
 
