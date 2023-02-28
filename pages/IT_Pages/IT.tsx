@@ -12,13 +12,14 @@ import SectionContact from "../../Components/IT-comp/Form/SectionContact";
 import SignUpSection from "../../Components/IT-comp/Form/SignUpSection";
 import LogInSection from "../../Components/IT-comp/Form/LogInSection";
 import { useState } from "react";
-import { app, auth } from "../../firebaseConfig";
+import { app } from "../../firebaseConfig";
 import {
     getAuth,
     createUserWithEmailAndPassword,
+    signInWithEmailAndPassword,
     GoogleAuthProvider,
     signInWithPopup,
-} from "firebase/auth";
+  } from "firebase/auth"
 
 import { useRouter } from "next/router";
 
@@ -62,7 +63,9 @@ export default function IT() {
     const SignForm = () => setFormContainer(<SignUpSection />);
 
     // signUp with google (firebase)
+    const auth = getAuth(app);
     const Googlesign = new GoogleAuthProvider();
+
     const SignUpwithgoogle = () => {
         signInWithPopup(auth, Googlesign)
         .then((response)=>{
@@ -87,7 +90,7 @@ export default function IT() {
 
             SectionContact, SignUpSection, LogInSection, FormContainer,
             LogForm, SignForm, ContactIt,
-            SignUpwithgoogle,auth
+            SignUpwithgoogle
         }}>
             <div>
                 <Navbar />
