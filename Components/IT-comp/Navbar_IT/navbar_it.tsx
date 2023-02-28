@@ -6,12 +6,70 @@ import Link from "next/link";
 import { AppContext } from "../../../Mycontext/context";
 import { useContext } from "react";
 import { useTranslation } from "next-i18next";
+import {useRouter} from "next/router";
 
 
 export default function header() {
+    const router = useRouter();
+    let UserIT_route : string = "/IT_Pages/IT_User";
+
+    
+    function registrationItPage() {
+        return(
+        <div id="itpagereg">
+            <a href="#FormDiv" className={styles.btn}>
+                <button onClick={() => { LogForm() }}>{Signing[0]}</button>
+            </a>
+            <a href="#FormDiv" className={styles.btn}>
+                <button onClick={() => { SignForm() }}>{Signing[1]}</button>
+            </a>
+        </div>
+        )
+
+    }
+    function RegistrationItUser (){
+        return(
+          <div id="Itusernav">
+              <a href="#FormDiv" >
+                  <button>User</button>
+              </a>
+              <a href="#FormDiv">
+                  <button>Log out </button>
+              </a>
+          </div>
+          )
+    }
+// function for chnage the buttons of registration between navbar Itpage and UserItpage
+    function Changeregistration(){
+        if( router.asPath==UserIT_route){
+            return(
+                <div id="Itusernav">
+                    <a href="#FormDiv" >
+                        <button>User</button>
+                    </a>
+                    <a href="#FormDiv">
+                        <button>Log out </button>
+                    </a>
+                </div>
+                )
+
+        }
+        else{
+            return(
+                <>
+                    <a href="#FormDiv" className={styles.btn}>
+                        <button onClick={() => { LogForm() }}>{Signing[0]}</button>
+                    </a>
+                    <a href="#FormDiv" className={styles.btn}>
+                        <button onClick={() => { SignForm() }}>{Signing[1]}</button>
+                    </a>
+                </>
+            );
+        }
+    }
 
     const { t, i18n } = useTranslation("Home");
-    const { Signing, LogForm, SignForm, ContactIt} = useContext(AppContext);
+    const { Signing, LogForm, SignForm, ContactIt } = useContext(AppContext);
     return (
 
         <div className={`${styles.container2} ${"items-center justify-between flex"}`}>
@@ -26,16 +84,10 @@ export default function header() {
                 <Link passHref href="/#About" className={`${styles.navigation} ${"text-sm md:text-xl  text-white"}`}>{t('About')}</Link>
                 <Link passHref href="/#Our_work" className={`${styles.navigation} ${"text-sm md:text-xl  text-white"}`}>{t("Our_Work")}</Link>
                 <Link passHref href="/#Team" className={`${styles.navigation} ${"text-sm md:text-xl  text-white"}`}>{t("Team")}</Link>
-                <Link passHref href="#FormDiv" className={`${styles.navigation} ${"text-sm md:text-xl  text-white"}`} onClick={()=> {ContactIt()}}>{t("Contact_Us")}</Link>
+                <Link passHref href="#FormDiv" className={`${styles.navigation} ${"text-sm md:text-xl  text-white"}`} onClick={() => { ContactIt() }}>{t("Contact_Us")}</Link>
             </nav>
-            <div className={`${styles.btn_container} ${"sm:flex hidden"}`}>
-                <a href="#FormDiv" className={styles.btn}>
-                    <button onClick={() => { LogForm() }}>{Signing[0]}</button>
-                </a>
-                <a href="#FormDiv" className={styles.btn}>
-                    <button onClick={() => { SignForm() }}>{Signing[1]}</button>
-                </a>
-
+            <div className={`${styles.btn_container} ${"sm:flex hidden"}`} id="registration buttons">
+                {Changeregistration()};
             </div>
             <a href="#menu" className="sm:hidden flex">
                 <TbEqual className="sm:hidden text-4xl text-white flex" />
