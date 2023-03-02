@@ -12,13 +12,14 @@ import SectionContact from "../../Components/IT-comp/Form/SectionContact";
 import SignUpSection from "../../Components/IT-comp/Form/SignUpSection";
 import LogInSection from "../../Components/IT-comp/Form/LogInSection";
 import { useState } from "react";
-import { app } from "../../firebaseConfig";
+import { useEffect } from "react";
+import { app, dataBase } from "../../firebaseConfig";
 import {
     getAuth,
     createUserWithEmailAndPassword,
-    signInWithEmailAndPassword,
     GoogleAuthProvider,
     signInWithPopup,
+    
   } from "firebase/auth"
 
 import { useRouter } from "next/router";
@@ -68,14 +69,44 @@ export default function IT() {
 
     const SignUpwithgoogle = () => {
         signInWithPopup(auth, Googlesign)
-        .then((response)=>{
+        .then((response:any)=>{
             alert("yes"+ response.user);
+            sessionStorage.setItem('Token', response.user.accessToken);
             router.push('/IT_Pages/IT_User');
         })
         .catch((err)=>{
             console.log(err);
         })
     }
+
+    // signUp with email and password
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const valueEmail = (e:any)=> {setEmail(e.target.value)}
+    const valuePassword = (e:any) => {setPassword(e.target.value)}
+
+    const signUp = () => {
+        createUserWithEmailAndPassword(auth, email , password)
+        .then((response:any)=>{
+            alert("yes"+ response.user);
+            sessionStorage.setItem('Token', response.user.accessToken);
+            router.push('/IT_Pages/IT_User');
+
+        })
+        .catch((err)=>{
+            console.log(err);
+        })
+    }
+
+    //useEffect for detecting if the user is already authenticated
+
+    useEffect(()=> {
+        let token = sessionStorage.getItem('Token');
+        if(token) {
+            router.push('/IT_Pages/IT_User');
+        }
+
+    },[])
 
 
 
@@ -93,7 +124,7 @@ export default function IT() {
 
             SectionContact, SignUpSection, LogInSection, FormContainer,
             LogForm, SignForm, ContactIt,
-            SignUpwithgoogle
+            SignUpwithgoogle,signUp, valueEmail, valuePassword, email, password
         }}>
             <div>
                 <Navbar />

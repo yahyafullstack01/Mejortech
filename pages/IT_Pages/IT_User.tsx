@@ -4,6 +4,8 @@ import UserNavbar from  "../../Components/IT-User/UserNavbar/UserNavbar";
 import { AppContext } from "../../Mycontext/context";
 import { useTranslation } from "next-i18next";
 import { useState } from "react";
+import { useEffect } from "react";
+import { useRouter } from "next/router";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { GetStaticProps } from "next";
 import SectionContact from "../../Components/IT-comp/Form/SectionContact";
@@ -11,8 +13,10 @@ import SignUpSection from "../../Components/IT-comp/Form/SignUpSection";
 import LogInSection from "../../Components/IT-comp/Form/LogInSection";
 
 
+
 export default function IT_User() {
 
+    const router = useRouter();
     const { t, i18n } = useTranslation("ITPage");
     const isArabic = i18n.language === "ar";
 
@@ -27,6 +31,14 @@ export default function IT_User() {
     const ContactIt = () => setFormContainer(<SectionContact />);;
     const LogForm = () => setFormContainer(<LogInSection />);
     const SignForm = () => setFormContainer(<SignUpSection />);
+
+    useEffect(()=> {
+        let token = sessionStorage.getItem('Token');
+        if(!token) {
+            router.push('/IT_Pages/IT');
+        }
+
+    },[])
 
 
     return (

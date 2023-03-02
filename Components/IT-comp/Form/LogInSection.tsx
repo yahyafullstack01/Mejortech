@@ -7,7 +7,8 @@ import { useRouter } from 'next/router'
 export default function LogIn() {
 
     const router = useRouter()
-    const { isArabic, Form_title, Form_Labels, Form_place_holders, Form_btns, Signing, SignForm,SignUpwithgoogle,auth } = useContext(AppContext);
+    const { isArabic, Form_title, Form_Labels, Form_place_holders, Form_btns,
+        Signing, SignForm, SignUpwithgoogle,} = useContext(AppContext);
     return (
         <div data-aos="fade-right" data-aos-duration="2000" className={`${styles.form_container} ${"flex flex-col items-center"}`}>
             <h1 className={styles.title}>{Form_title[1]}</h1>
@@ -18,13 +19,13 @@ export default function LogIn() {
                 </label>
 
                 <label className={styles.label} htmlFor={"Name"}>{Form_Labels[2]}
-                    <input type={"password"} id="Name" required name="name" className={styles.input} placeholder={Form_place_holders[2]}  />
+                    <input type={"password"} id="Name" required name="name" className={styles.input} placeholder={Form_place_holders[2]} />
                 </label>
 
                 <div className={styles.btn_container}>
                     <div className={styles.signin_btns_con}>
-                        <button className={styles.btn} type="button" onClick={() => SignUpwithgoogle()}>{Signing[0]}</button>
-                        <a className={styles.forget}href="">{Form_Labels[3]}</a>
+                        <button className={styles.btn} type="button" onClick={() => router.push('/IT_Pages/IT_User')}>{Signing[0]}</button>
+                        <a className={styles.forget} href="">{Form_Labels[3]}</a>
 
 
                         <div className={styles.desk}>
@@ -41,7 +42,7 @@ export default function LogIn() {
 
                         <p className={styles.h1}>{Form_Labels[6]}</p>
 
-                        <button className={styles.btn_gf}>
+                        <button className={styles.btn_gf} type="button" onClick={() => SignUpwithgoogle()}>
                             <FcGoogle />
                             <span>{Form_Labels[9]}</span>
                         </button>

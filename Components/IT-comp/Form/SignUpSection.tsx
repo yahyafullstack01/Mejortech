@@ -3,7 +3,9 @@ import { AppContext } from "../../../Mycontext/context";
 import { useContext } from "react";
 
 export default function SignUp() {
-    const { isArabic, Form_title, Form_Labels, Form_place_holders, Form_btns } = useContext(AppContext);
+    const { isArabic, Form_title, Form_Labels, Form_place_holders, Form_btns,
+        signUp,
+        valueEmail, valuePassword, email, password } = useContext(AppContext);
     return (
         <div data-aos="fade-right" data-aos-duration="2000" className={`${styles.form_container} ${"flex flex-col items-center"}`}>
             <h1 className={styles.title}>{Form_title[2]}</h1>
@@ -15,7 +17,7 @@ export default function SignUp() {
                     <input type={"email"} required id="Email" name="email" className={styles.input} placeholder={`${Form_place_holders[1]}`} />
                 </label>
                 <label className={styles.label} htmlFor={"Password"}>{Form_Labels[2]}
-                    <input type={"password"} required id="Password" name="password" className={styles.input} placeholder={Form_place_holders[2]}/>
+                    <input type={"password"} required id="Password" name="password" className={styles.input} placeholder={Form_place_holders[2]} />
                 </label>
                 <label className={`${styles.label}`} htmlFor={"Language"}>
                     <label>{Form_Labels[4]}</label>
