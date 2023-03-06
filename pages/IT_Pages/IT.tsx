@@ -11,9 +11,9 @@ import { AppContext } from "../../Mycontext/context";
 import SectionContact from "../../Components/IT-comp/Form/SectionContact";
 import SignUpSection from "../../Components/IT-comp/Form/SignUpSection";
 import LogInSection from "../../Components/IT-comp/Form/LogInSection";
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import { app, dataBase } from "../../firebaseConfig";
+import { collection, addDoc } from "firebase/firestore";
 import {
     getAuth,
     createUserWithEmailAndPassword,
@@ -78,17 +78,68 @@ export default function IT() {
             console.log(err);
         })
     }
-
-    // signUp with email and password
+    // for database add data
+    const dataRef = collection(dataBase, 'CRUD data');
+    const [UserName, setUserName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const[UserLanguage, setUserLanguage] = useState({
+        English:false,
+        Spanish:false,
+        Arabic:false,
+        Russian:false,
+    });
+    const [Source, setSource] = useState('');
+    const [UserPackage, setUserPackage] = useState('');
+    const valueUserName = (e:any)=> {setUserName(e.target.value)};
+    const valueUserLanguage = (e:any)=> {setUserLanguage(e.target.checked)};
+    const valueSource = (e:any)=> {setSource(e.target.value)};
+    const valueUserPackage = (e:any)=> {setUserPackage(e.target.value)};
     const valueEmail = (e:any)=> {setEmail(e.target.value)}
     const valuePassword = (e:any) => {setPassword(e.target.value)}
+
+
+
+    
+
+
+
+
+
+    
+
+    const Adddata = () => {
+        addDoc(dataRef, {
+            name : UserName,
+            userEmail : email,
+            userPassword: password,
+            preferedLanguage : UserLanguage,
+            userSource : Source,
+            Package : UserPackage, 
+
+        })
+        .then(()=>{
+            alert("data sent")
+            setUserName('');
+            setEmail('');
+            setPassword('');
+            setUserLanguage(Object);
+            setSource('');
+            setUserPackage('');
+
+        })
+        .catch((err)=>{
+            console.log(err)
+        })
+    }
+    // signUp with email and password
+
 
     const signUp = () => {
         createUserWithEmailAndPassword(auth, email , password)
         .then((response:any)=>{
             alert("yes"+ response.user);
+            Adddata();
             sessionStorage.setItem('Token', response.user.accessToken);
             router.push('/IT_Pages/IT_User');
 
@@ -126,7 +177,8 @@ export default function IT() {
 
             SectionContact, SignUpSection, LogInSection, FormContainer,
             LogForm, SignForm, ContactIt,
-            SignUpwithgoogle,signUp, valueEmail, valuePassword, email, password
+            SignUpwithgoogle,signUp, valueEmail, valuePassword, valueSource,valueUserName, valueUserLanguage, valueUserPackage, email, password,
+            UserLanguage, UserName, UserPackage, Source,
         }}>
             <div>
                 <Navbar />
