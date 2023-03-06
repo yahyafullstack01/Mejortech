@@ -12,44 +12,17 @@ import {useRouter} from "next/router";
 export default function header() {
     const router = useRouter();
     let UserIT_route : string = "/IT_Pages/IT_User";
+    const { t, i18n } = useTranslation("Home");
+    const { Signing, LogForm, SignForm, ContactIt,Logout, } = useContext(AppContext);
 
     
-    function registrationItPage() {
-        return(
-        <div id="itpagereg">
-            <a href="#FormDiv" className={styles.btn}>
-                <button onClick={() => { LogForm() }}>{Signing[0]}</button>
-            </a>
-            <a href="#FormDiv" className={styles.btn}>
-                <button onClick={() => { SignForm() }}>{Signing[1]}</button>
-            </a>
-        </div>
-        )
 
-    }
-    function RegistrationItUser (){
-        return(
-          <div id="Itusernav">
-              <a href="#FormDiv" >
-                  <button>User</button>
-              </a>
-              <a href="#FormDiv">
-                  <button>Log out </button>
-              </a>
-          </div>
-          )
-    }
 // function for chnage the buttons of registration between navbar Itpage and UserItpage
     function Changeregistration(){
         if( router.asPath==UserIT_route){
             return(
                 <div id="Itusernav">
-                    <a href="#FormDiv" >
-                        <button>User</button>
-                    </a>
-                    <a href="#FormDiv">
-                        <button>Log out </button>
-                    </a>
+                        <button onClick={()=> Logout()}>Log out </button>
                 </div>
                 )
         }
@@ -69,8 +42,7 @@ export default function header() {
         }
     }
 
-    const { t, i18n } = useTranslation("Home");
-    const { Signing, LogForm, SignForm, ContactIt } = useContext(AppContext);
+
     return (
 
         <div className={`${styles.container2} ${"items-center justify-between flex"}`}>

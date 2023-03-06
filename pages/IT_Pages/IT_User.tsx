@@ -3,14 +3,19 @@ import Intro from "../../Components/IT-comp/Introduction_IT/intro_it";
 import UserNavbar from  "../../Components/IT-User/UserNavbar/UserNavbar";
 import { AppContext } from "../../Mycontext/context";
 import { useTranslation } from "next-i18next";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { GetStaticProps } from "next";
-import SectionContact from "../../Components/IT-comp/Form/SectionContact";
-import SignUpSection from "../../Components/IT-comp/Form/SignUpSection";
-import LogInSection from "../../Components/IT-comp/Form/LogInSection";
+import { app, dataBase } from "../../firebaseConfig";
+import {
+    getAuth,
+    createUserWithEmailAndPassword,
+    GoogleAuthProvider,
+    signInWithPopup,
+    
+  } from "firebase/auth";
 
 
 
@@ -19,6 +24,7 @@ export default function IT_User() {
     const router = useRouter();
     const { t, i18n } = useTranslation("ITPage");
     const isArabic = i18n.language === "ar";
+    const auth = getAuth(app);
 
     //The arr information of the Navbar_it section
     const Signing: any = t('Signing', { returnObjects: true });
@@ -26,11 +32,14 @@ export default function IT_User() {
     //The arr information of the Intro_it section
     const Intro_info: any = t('Intro_info', { returnObjects: true });
 
-    // The function that switches components depending on the button type clicked inside the It_pages
-    const [FormContainer, setFormContainer] = useState(<SectionContact />);
-    const ContactIt = () => setFormContainer(<SectionContact />);;
-    const LogForm = () => setFormContainer(<LogInSection />);
-    const SignForm = () => setFormContainer(<SignUpSection />);
+    // log out function firebase ItuserPage
+    const Logout = () =>{
+        let remove = sessionStorage.removeItem('Token')
+        console.log('remove');
+        router.push('/IT_Pages/IT');
+    }
+    
+    
 
     useEffect(()=> {
         let token = sessionStorage.getItem('Token');
@@ -44,9 +53,7 @@ export default function IT_User() {
     return (
         <AppContext.Provider value={{
             t, Signing, Intro_info,
-            isArabic,
-            SectionContact, SignUpSection, LogInSection, FormContainer,
-            LogForm, SignForm, ContactIt
+            isArabic,Logout
         }}>
             <>
                 <Navbar />

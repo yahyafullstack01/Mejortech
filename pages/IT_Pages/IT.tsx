@@ -98,6 +98,8 @@ export default function IT() {
         })
     }
 
+    // log out function firebase ItuserPage
+
     //useEffect for detecting if the user is already authenticated
 
     useEffect(()=> {
