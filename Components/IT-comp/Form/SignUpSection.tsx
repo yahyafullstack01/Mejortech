@@ -2,7 +2,7 @@ import styles from "../Form/form.module.css";
 import { AppContext } from "../../../Mycontext/context";
 import { useContext } from "react";
 
-export default function SignUp() {
+export default function SignUp() {  
     const { isArabic, Form_title, Form_Labels, Form_place_holders, Form_btns,
         signUp,
         valueEmail, valuePassword, valueSource,valueUserName, valueUserLanguage, valueUserPackage, email, password,
