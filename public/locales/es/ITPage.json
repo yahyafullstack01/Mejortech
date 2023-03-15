@@ -1,1 +1,75 @@
-{"Form_btns":["Básico","Estándar","De primera calidad","Enviar","Inscribirse","Registrate aquí"],"Form_Labels":["Nombre:","Correo electrónico:","Contraseña:","Contraseña olvidada","Idioma preferido:","Donde nos escuchaste:","O inicie sesión usando","no tengo una cuenta","Elige tu Paquete:","Con Google","Con LinkedIn"],"Form_place_holders":["Introduzca su nombre","Introduce tu correo electrónico","Ingresa tu contraseña"],"Form_title":["Ingrese su información aquí","Entre aquí","Crear una nueva cuenta"],"Intro_info":["NOSOTROS","EN","convierte tus ideas en realidad"],"OurPk_block_list":["Diseño de respuesta","páginas (4)","Modificación (2)","optimización de motores de búsqueda","Incluir código fuente","Incluir Alojamiento"],"OurPk_block_types":["Básico","Estándar","De primera calidad"],"OurPk_title":"Nuestros Paquetes","Signing":["Acceso","Inscribirse"],"Testa_Block_names":["John Smith","samantha bill","han gris","Alexia Peterson"],"Testa_Block_Quotes":["“Equipo genial y amigable que ama lo que está creando”","\"Primero obtuve el paquete Premium por un excelente servicio. Fueron muy amables y serviciales. Me sorprendió cuando elegí el paquete básico esta vez y tuve el mismo servicio de bienvenida\"","“Entrega del proyecto a tiempo y sin errores, lo recomiendo encarecidamente”","“Amable, paciente y un equipo acogedor con quien trabajar, la mejor experiencia de mi vida”"],"Testamon_title":"Testimonios","WhyUs_list":["Somos ingenieros altamente calificados que poseen una experiencia técnica superior y una comprensión práctica de los estándares de software más recientes.","habiendo acumulado un considerable cuerpo de experiencia, que utilizamos para brindar soluciones que satisfacen las demandas, expectativas y limitaciones financieras de nuestros clientes","Nuestro personal multilingüe habla inglés, árabe, ruso, español, francés y tiene muchos años de experiencia trabajando con clientes de todo el mundo."],"WhyUs_title":"Por qué elegirnos"}
+{
+    "Form_btns": [
+        "Básico",
+        "Estándar",
+        "De primera calidad",
+        "Enviar",
+        "Inscribirse",
+        "Registrate aquí"
+    ],
+    "Form_Labels": [
+        "Nombre:",
+        "Correo electrónico:",
+        "Contraseña:",
+        "Contraseña olvidada",
+        "Idioma preferido:",
+        "Donde nos escuchaste:",
+        "O inicie sesión usando",
+        "no tengo una cuenta",
+        "Elige tu Paquete:",
+        "Con Google",
+        "Con LinkedIn"
+    ],
+    "Form_place_holders": [
+        "Introduzca su nombre",
+        "Introduce tu correo electrónico",
+        "Ingresa tu contraseña"
+    ],
+    "Form_title": [
+        "Ingrese su información aquí",
+        "Entre aquí",
+        "Crear una nueva cuenta"
+    ],
+    "Intro_info": [
+        "NOSOTROS",
+        "EN",
+        "convierte tus ideas en realidad"
+    ],
+    "OurPk_block_list": [
+        "Diseño de respuesta",
+        "páginas (4)",
+        "Modificación (2)",
+        "optimización de motores de búsqueda",
+        "Incluir código fuente",
+        "Incluir Alojamiento"
+    ],
+    "OurPk_block_types": [
+        "Básico",
+        "Estándar",
+        "De primera calidad"
+    ],
+    "OurPk_title": "Nuestros Paquetes",
+    "Signing": [
+        "Acceso",
+        "Inscribirse"
+    ],
+    "Testa_Block_names": [
+        "John Smith",
+        "samantha bill",
+        "han gris",
+        "Alexia Peterson"
+    ],
+    "Testa_Block_Quotes": [
+        "“Equipo genial y amigable que ama lo que está creando”",
+        "\"Primero obtuve el paquete Premium por un excelente servicio. Fueron muy amables y serviciales. Me sorprendió cuando elegí el paquete básico esta vez y tuve el mismo servicio de bienvenida\"",
+        "“Entrega del proyecto a tiempo y sin errores, lo recomiendo encarecidamente”",
+        "“Amable, paciente y un equipo acogedor con quien trabajar, la mejor experiencia de mi vida”"
+    ],
+    "Testamon_title": "Testimonios",
+    "WhyUs_list": [
+        "Somos ingenieros altamente calificados que poseen una experiencia técnica superior y una comprensión práctica de los estándares de software más recientes.",
+        "habiendo acumulado un considerable cuerpo de experiencia, que utilizamos para brindar soluciones que satisfacen las demandas, expectativas y limitaciones financieras de nuestros clientes",
+        "Nuestro personal multilingüe habla inglés, árabe, ruso, español, francés y tiene muchos años de experiencia trabajando con clientes de todo el mundo."
+    ],
+    "WhyUs_title": "Por qué elegirnos"
+}

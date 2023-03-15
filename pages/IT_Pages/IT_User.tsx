@@ -37,7 +37,7 @@ export default function IT_User() {
         let remove = sessionStorage.removeItem('Token')
         console.log('remove');
         router.push('/IT_Pages/IT');
-    }
+    }    
     
     
 
