@@ -1,6 +1,6 @@
 import Navbar from "../../Components/IT-comp/Navbar_IT/navbar_it";
 import Intro from "../../Components/IT-comp/Introduction_IT/intro_it";
-import UserNavbar from  "../../Components/IT-User/UserNavbar/UserNavbar";
+import UserNavbar from "../../Components/IT-User/UserNavbar/UserNavbar";
 import { AppContext } from "../../Mycontext/context";
 import { useTranslation } from "next-i18next";
 import { useContext, useState } from "react";
@@ -14,8 +14,8 @@ import {
     createUserWithEmailAndPassword,
     GoogleAuthProvider,
     signInWithPopup,
-    
-  } from "firebase/auth";
+
+} from "firebase/auth";
 
 
 
@@ -33,37 +33,36 @@ export default function IT_User() {
     const Intro_info: any = t('Intro_info', { returnObjects: true });
 
     // log out function firebase ItuserPage
-    const Logout = () =>{
+    const Logout = () => {
         let remove = sessionStorage.removeItem('Token')
         console.log('remove');
         router.push('/IT_Pages/IT');
-    }    
-    
-    
+    }
 
-    useEffect(()=> {
+
+
+    useEffect(() => {
         let token = sessionStorage.getItem('Token');
-        if(!token) {
+        if (!token) {
             router.push('/IT_Pages/IT');
         }
-
-    },[])
+    }, [])
 
 
     return (
         <AppContext.Provider value={{
             t, Signing, Intro_info,
-            isArabic,Logout
+            isArabic, Logout
         }}>
             <>
                 <Navbar />
                 <Intro />
-                <UserNavbar/>
+                <UserNavbar />
             </>
         </AppContext.Provider>
 
     )
-} 
+}
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
     const lang = locale ?? 'en';

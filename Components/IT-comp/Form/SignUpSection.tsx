@@ -51,7 +51,6 @@ export default function SignUp() {
                         <option value="Instagram">Instagram</option>
                         <option value="Through a friend">Through a friend</option>
                         <option value="Other">Other</option>
-
                     </select>
                 </label>
                 <ul className={styles.type_con} >
@@ -70,7 +69,6 @@ export default function SignUp() {
                             <label className={styles.lb} htmlFor={"Premium"}>{Form_btns[2]}</label>
                         </li>
                     </div>
-
                 </ul>
                 <button className={styles.btn_nm} type="button" onClick={()=>signUp()}>{Form_btns[4]}</button>
             </form>

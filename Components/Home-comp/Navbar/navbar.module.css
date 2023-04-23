@@ -25,8 +25,8 @@
 }
 
 
-.Nav_con.ru{
-    width:55%;
+.Nav_con.ru {
+    width: 55%;
 }
 
 .navigation {
@@ -134,12 +134,12 @@
         font-size: 1.5vw;
     }
 
-    .globe{
-       width: 4vw;
-       height: 2vw;
+    .globe {
+        width: 4vw;
+        height: 2vw;
     }
 
-    .selection{
+    .selection {
         font-size: 1.5vw;
     }
 }

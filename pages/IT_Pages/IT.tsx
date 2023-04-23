@@ -19,8 +19,8 @@ import {
     createUserWithEmailAndPassword,
     GoogleAuthProvider,
     signInWithPopup,
-    
-  } from "firebase/auth"
+
+} from "firebase/auth"
 
 import { useRouter } from "next/router";
 
@@ -57,6 +57,7 @@ export default function IT() {
     const Testemon_title: string = t('Testamon_title');
     const Testemoniels_names: any = t('Testa_Block_names', { returnObjects: true });
     const Testemoniels_Quotes: any = t('Testa_Block_Quotes', { returnObjects: true });
+
     //changing contactdiv inItpage to registration or Login 
     const [FormContainer, setFormContainer] = useState(<SectionContact />);
     const ContactIt = () => setFormContainer(<SectionContact />);;
@@ -69,97 +70,91 @@ export default function IT() {
 
     const SignUpwithgoogle = () => {
         signInWithPopup(auth, Googlesign)
-        .then((response:any)=>{
-            alert("yes"+ response.user);
-            sessionStorage.setItem('Token', response.user.accessToken);
-            router.push('/IT_Pages/IT_User');
-        })
-        .catch((err)=>{
-            console.log(err);
-        })
+            .then((response: any) => {
+                alert("yes" + response.user);
+                sessionStorage.setItem('Token', response.user.accessToken);
+                router.push('/IT_Pages/IT_User');
+            })
+            .catch((err) => {
+                console.log(err);
+            })
     }
-    // for database add data
+    // for Adding Data in the Firestore
     const dataRef = collection(dataBase, 'CRUD data');
     const [UserName, setUserName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const[UserLanguage, setUserLanguage] = useState({
-        English:false,
-        Spanish:false,
-        Arabic:false,
-        Russian:false,
-    });
+    const [UserLanguage, setUserLanguage] = useState<string[]>([]);
     const [Source, setSource] = useState('');
     const [UserPackage, setUserPackage] = useState('');
-    const valueUserName = (e:any)=> {setUserName(e.target.value)};
-    const valueUserLanguage = (e:any)=> {setUserLanguage(e.target.checked)};
-    const valueSource = (e:any)=> {setSource(e.target.value)};
-    const valueUserPackage = (e:any)=> {setUserPackage(e.target.value)};
-    const valueEmail = (e:any)=> {setEmail(e.target.value)}
-    const valuePassword = (e:any) => {setPassword(e.target.value)}
+    const valueUserName = (e: any) => { setUserName(e.target.value) };
+    const valueSource = (e: any) => { setSource(e.target.value) };
+    const valueUserPackage = (e: any) => { setUserPackage(e.target.value) };
+    const valueEmail = (e: any) => { setEmail(e.target.value) }
+    const valuePassword = (e: any) => { setPassword(e.target.value) }
 
+    const valueUserLanguage = (e: any) => {
+        const language = e.target.value;
+        const isChecked = e.target.checked;
 
-
-    
-
-
-
-
-
-    
+        if (isChecked) {
+            setUserLanguage((prevLanguages) => [...prevLanguages, language]);
+        } else {
+            setUserLanguage((prevLanguages) =>
+                prevLanguages.filter((prevLanguage) => prevLanguage !== language)
+            );
+        }
+    };
 
     const Adddata = () => {
         addDoc(dataRef, {
-            name : UserName,
-            userEmail : email,
+            name: UserName,
+            userEmail: email,
             userPassword: password,
-            preferedLanguage : UserLanguage,
-            userSource : Source,
-            Package : UserPackage, 
-
+            preferedLanguage: UserLanguage,
+            userSource: Source,
+            Package: UserPackage,
         })
-        .then(()=>{
-            alert("data sent")
-            setUserName('');
-            setEmail('');
-            setPassword('');
-            setUserLanguage(Object);
-            setSource('');
-            setUserPackage('');
-
-        })
-        .catch((err)=>{
-            console.log(err)
-        })
+            .then(() => {
+                alert("data sent");
+                setUserName('');
+                setEmail('');
+                setPassword('');
+                setUserLanguage([]);
+                setSource('');
+                setUserPackage('');
+            })
+            .catch((err) => {
+                console.log(err)
+            })
     }
+
     // signUp with email and password
-
-
     const signUp = () => {
-        createUserWithEmailAndPassword(auth, email , password)
-        .then((response:any)=>{
-            alert("yes"+ response.user);
-            Adddata();
-            sessionStorage.setItem('Token', response.user.accessToken);
-            router.push('/IT_Pages/IT_User');
+        createUserWithEmailAndPassword(auth, email, password)
+            .then((response: any) => {
+                alert("yes" + response.user);
+                Adddata();
+                sessionStorage.setItem('Token', response.user.accessToken);
+                router.push('/IT_Pages/IT_User');
 
-        })
-        .catch((err)=>{
-            console.log(err);
-        })
+            })
+            .catch((err) => {
+                console.log(err);
+            })
     }
 
     // log out function firebase ItuserPage
 
     //useEffect for detecting if the user is already authenticated
 
-    useEffect(()=> {
+    useEffect(() => {
         let token = sessionStorage.getItem('Token');
-        if(token) {
+        if (token) {
             router.push('/IT_Pages/IT_User');
         }
 
-    },[])
+    }, [])
 
 
 
@@ -177,7 +172,7 @@ export default function IT() {
 
             SectionContact, SignUpSection, LogInSection, FormContainer,
             LogForm, SignForm, ContactIt,
-            SignUpwithgoogle,signUp, valueEmail, valuePassword, valueSource,valueUserName, valueUserLanguage, valueUserPackage, email, password,
+            SignUpwithgoogle, signUp, valueEmail, valuePassword, valueSource, valueUserName, valueUserLanguage, valueUserPackage, email, password,
             UserLanguage, UserName, UserPackage, Source,
         }}>
             <div>

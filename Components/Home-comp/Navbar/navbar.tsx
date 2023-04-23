@@ -47,6 +47,7 @@ function Header() {
                     <option value="es">Spanish</option>
                 </select>
             </div>
+            
             <a href="#menu" className="sm:hidden flex">
                 <TbEqual className={`${"sm:hidden text-4xl text-white flex"}`} />
             </a>

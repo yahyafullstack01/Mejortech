@@ -28,7 +28,6 @@ function App({ Component, pageProps }: AppProps) {
   const { i18n } = useTranslation();
 
 
-
     const { t, } = useTranslation("ITPage");
     const isArabic = i18n.language === "ar";
     const auth = getAuth(app);
