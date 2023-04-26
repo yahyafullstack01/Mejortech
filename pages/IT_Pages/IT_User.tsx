@@ -7,7 +7,7 @@ import { useEffect } from "react";
 import { useRouter } from "next/router";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { GetStaticProps } from "next";
-import { useAuth } from "../../Use_Auth/auth";
+import { useAuth } from "../../Use_Auth/ITauth";
 
 
 

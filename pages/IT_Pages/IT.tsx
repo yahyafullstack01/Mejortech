@@ -14,7 +14,7 @@ import LogInSection from "../../Components/IT-comp/Form/LogInSection";
 import { useState, useEffect } from "react";
 
 import { useRouter } from "next/router";
-import { useAuth } from "../../Use_Auth/auth";
+import { useAuth } from "../../Use_Auth/ITauth";
 
 export default function IT() {
 
