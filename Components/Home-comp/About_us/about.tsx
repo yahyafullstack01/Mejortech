@@ -4,8 +4,7 @@ import { useTranslation } from "next-i18next"
 export default function About() {
 
     const { t, i18n } = useTranslation("Home");
-    
-    const isArabic = i18n.language === "ar"; 
+    const isArabic = i18n.language === "ar";
 
     return (
         <div

@@ -6,30 +6,28 @@ import Link from "next/link";
 import { AppContext } from "../../../Mycontext/context";
 import { useContext } from "react";
 import { useTranslation } from "next-i18next";
-import {useRouter} from "next/router";
+import { useRouter } from "next/router";
 
 
 export default function header() {
     const router = useRouter();
-    let UserIT_route : string = "/IT_Pages/IT_User";
-    const { t, i18n } = useTranslation("Home");
-    const { Signing, LogForm, SignForm, ContactIt,Logout, } = useContext(AppContext);
+    let UserIT_route: string = "/IT_Pages/IT_User";
+    const { t } = useTranslation("Home");
+    const { Signing, LogForm, SignForm, ContactIt, Logout, } = useContext(AppContext);
 
-    
 
-// function for chnage the buttons of registration between navbar Itpage and UserItpage
-    function Changeregistration(){
-        if( router.asPath==UserIT_route){
-            return(
+
+    // function for change the buttons of registration between navbar Itpage and UserItpage
+    function Changeregistration() {
+        if (router.asPath == UserIT_route) {
+            return (
                 <div id="Itusernav">
-                        <button onClick={()=> Logout()}>Log out </button>
+                    <button onClick={() => Logout()}>Log out </button>
                 </div>
-                )
+            )
         }
-
-        
-        else{
-            return(
+        else {
+            return (
                 <>
                     <a href="#FormDiv" className={styles.btn}>
                         <button onClick={() => { LogForm() }}>{Signing[0]}</button>

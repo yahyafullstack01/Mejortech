@@ -12,21 +12,31 @@ import SectionContact from "../../Components/IT-comp/Form/SectionContact";
 import SignUpSection from "../../Components/IT-comp/Form/SignUpSection";
 import LogInSection from "../../Components/IT-comp/Form/LogInSection";
 import { useState, useEffect } from "react";
-import { app, dataBase } from "../../firebaseConfig";
-import { collection, addDoc } from "firebase/firestore";
-import {
-    getAuth,
-    createUserWithEmailAndPassword,
-    GoogleAuthProvider,
-    signInWithPopup,
-
-} from "firebase/auth"
 
 import { useRouter } from "next/router";
+import { useAuth } from "../../Use_Auth/auth";
 
 export default function IT() {
 
     const router = useRouter();
+    const auth = useAuth();
+
+    // The Firebase Authentication and Data implementation
+    const SignUpwithgoogle = auth.SignUpwithgoogle;
+    const signUp = auth.signUp;
+    const valueEmail = auth.valueEmail;
+    const valuePassword = auth.valuePassword;
+    const valueSource = auth.valueSource;
+    const valueUserName = auth.valueUserName;
+    const valueUserLanguage = auth.valueUserLanguage;
+    const valueUserPackage = auth.valueUserPackage;
+    const email = auth.email;
+    const password = auth.password;
+    const UserLanguage = auth.UserLanguage;
+    const UserName = auth.UserName;
+    const UserPackage = auth.UserPackage;
+    const Source = auth.Source;
+
 
     const { t, i18n } = useTranslation("ITPage");
     const isArabic = i18n.language === "ar";
@@ -64,102 +74,14 @@ export default function IT() {
     const LogForm = () => setFormContainer(<LogInSection />);
     const SignForm = () => setFormContainer(<SignUpSection />);
 
-    // signUp with google (firebase)
-    const auth = getAuth(app);
-    const Googlesign = new GoogleAuthProvider();
-
-    const SignUpwithgoogle = () => {
-        signInWithPopup(auth, Googlesign)
-            .then((response: any) => {
-                alert("yes" + response.user);
-                sessionStorage.setItem('Token', response.user.accessToken);
-                router.push('/IT_Pages/IT_User');
-            })
-            .catch((err) => {
-                console.log(err);
-            })
-    }
-    // for Adding Data in the Firestore
-    const dataRef = collection(dataBase, 'CRUD data');
-    const [UserName, setUserName] = useState('');
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [UserLanguage, setUserLanguage] = useState<string[]>([]);
-    const [Source, setSource] = useState('');
-    const [UserPackage, setUserPackage] = useState('');
-    const valueUserName = (e: any) => { setUserName(e.target.value) };
-    const valueSource = (e: any) => { setSource(e.target.value) };
-    const valueUserPackage = (e: any) => { setUserPackage(e.target.value) };
-    const valueEmail = (e: any) => { setEmail(e.target.value) }
-    const valuePassword = (e: any) => { setPassword(e.target.value) }
-
-    const valueUserLanguage = (e: any) => {
-        const language = e.target.value;
-        const isChecked = e.target.checked;
-
-        if (isChecked) {
-            setUserLanguage((prevLanguages) => [...prevLanguages, language]);
-        } else {
-            setUserLanguage((prevLanguages) =>
-                prevLanguages.filter((prevLanguage) => prevLanguage !== language)
-            );
-        }
-    };
-
-    const Adddata = () => {
-        addDoc(dataRef, {
-            name: UserName,
-            userEmail: email,
-            userPassword: password,
-            preferedLanguage: UserLanguage,
-            userSource: Source,
-            Package: UserPackage,
-        })
-            .then(() => {
-                alert("data sent");
-                setUserName('');
-                setEmail('');
-                setPassword('');
-                setUserLanguage([]);
-                setSource('');
-                setUserPackage('');
-            })
-            .catch((err) => {
-                console.log(err)
-            })
-    }
-
-    // signUp with email and password
-    const signUp = () => {
-        createUserWithEmailAndPassword(auth, email, password)
-            .then((response: any) => {
-                alert("yes" + response.user);
-                Adddata();
-                sessionStorage.setItem('Token', response.user.accessToken);
-                router.push('/IT_Pages/IT_User');
-
-            })
-            .catch((err) => {
-                console.log(err);
-            })
-    }
-
-    // log out function firebase ItuserPage
 
     //useEffect for detecting if the user is already authenticated
-
     useEffect(() => {
         let token = sessionStorage.getItem('Token');
         if (token) {
             router.push('/IT_Pages/IT_User');
         }
-
     }, [])
-
-
-
-
-
 
     return (
         <AppContext.Provider value={{
@@ -169,10 +91,11 @@ export default function IT() {
             Form_Labels, Form_place_holders, Form_btns, Form_title,
             Testemon_title, Testemoniels_names,
             Testemoniels_Quotes, WhyUs_title,
-
-            SectionContact, SignUpSection, LogInSection, FormContainer,
-            LogForm, SignForm, ContactIt,
-            SignUpwithgoogle, signUp, valueEmail, valuePassword, valueSource, valueUserName, valueUserLanguage, valueUserPackage, email, password,
+            SectionContact, SignUpSection, LogInSection,
+            FormContainer, LogForm, SignForm, ContactIt,
+            SignUpwithgoogle,
+            signUp, valueEmail, valuePassword, valueSource,
+            valueUserName, valueUserLanguage, valueUserPackage, email, password,
             UserLanguage, UserName, UserPackage, Source,
         }}>
             <div>

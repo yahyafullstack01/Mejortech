@@ -3,42 +3,31 @@ import Intro from "../../Components/IT-comp/Introduction_IT/intro_it";
 import UserNavbar from "../../Components/IT-User/UserNavbar/UserNavbar";
 import { AppContext } from "../../Mycontext/context";
 import { useTranslation } from "next-i18next";
-import { useContext, useState } from "react";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { GetStaticProps } from "next";
-import { app, dataBase } from "../../firebaseConfig";
-import {
-    getAuth,
-    createUserWithEmailAndPassword,
-    GoogleAuthProvider,
-    signInWithPopup,
+import { useAuth } from "../../Use_Auth/auth";
 
-} from "firebase/auth";
 
 
 
 export default function IT_User() {
 
+    const auth = useAuth();
+
+    // The Firebase Logout Function
+    const Logout = auth.Logout;
+
     const router = useRouter();
     const { t, i18n } = useTranslation("ITPage");
     const isArabic = i18n.language === "ar";
-    const auth = getAuth(app);
 
     //The arr information of the Navbar_it section
     const Signing: any = t('Signing', { returnObjects: true });
 
     //The arr information of the Intro_it section
     const Intro_info: any = t('Intro_info', { returnObjects: true });
-
-    // log out function firebase ItuserPage
-    const Logout = () => {
-        let remove = sessionStorage.removeItem('Token')
-        console.log('remove');
-        router.push('/IT_Pages/IT');
-    }
-
 
 
     useEffect(() => {

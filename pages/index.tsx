@@ -4,7 +4,7 @@ import Navbar from "../Components/Home-comp/Navbar/navbar";
 import Intro from "../Components/Home-comp/Introduction/intro";
 import About from "../Components/Home-comp/About_us/about";
 import Team from "../Components/Home-comp/Meet_team/team";
-import What_we_do from  "../Components/Home-comp/What_we_do/we_do";
+import What_we_do from "../Components/Home-comp/What_we_do/we_do";
 import Join_us from "../Components/Home-comp/Join_us/join";
 import Contact_Us from "../Components/Home-comp/Contact_us/contact";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
@@ -64,20 +64,21 @@ export default function Home() {
   const CONTACT_labels: any = t('CONTACT_labels', { returnObjects: true });
 
 
-
-
   return (
+
 
     <AppContext.Provider value={{
       isRussain,/*Navbar*/
       isSpanish,/*Introduction*/
       side, side2, side3, side4, side5, side6,
       flip, flip2, flip3, flip4, flip5, flip6,
-      t, isArabic, Names, Yahya_info, Work, Lana_info, Samer_info, Samuel_info, Polina_info, Alina_info, Team_btn,/* Team */
-      Titles, Info, Card_titles, Card_ED, Card_IT, Card_MK, Card_btn, /* What-we-do */
+      t, isArabic, Names, Yahya_info, Work,
+      Lana_info, Samer_info, Samuel_info,
+      Polina_info, Alina_info, Team_btn,/* Team */
+      Titles, Info, Card_titles, Card_ED,
+      Card_IT, Card_MK, Card_btn, /* What-we-do */
       Block_Join_titles, Block_Join_info,/*Join Us */
       CONTACT_labels,/*Contact Us*/
-
     }}>
       <div>
         <Navbar />

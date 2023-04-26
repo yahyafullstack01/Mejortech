@@ -5,9 +5,7 @@ import { useContext } from 'react';
 
 
 export default function Intro() {
-
     const { isArabic, isRussain, isSpanish } = useContext(AppContext)
-
     const { t } = useTranslation("Home");
 
     return (
@@ -30,7 +28,3 @@ export default function Intro() {
 
 
 }
-// WELCOME TO EL MEJOR TECH
-//{t("Home:Home_here")}
-
-

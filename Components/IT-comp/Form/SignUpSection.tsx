@@ -2,43 +2,43 @@ import styles from "../Form/form.module.css";
 import { AppContext } from "../../../Mycontext/context";
 import { useContext } from "react";
 
-export default function SignUp() {  
+export default function SignUp() {
     const { isArabic, Form_title, Form_Labels, Form_place_holders, Form_btns,
         signUp,
-        valueEmail, valuePassword, valueSource,valueUserName, valueUserLanguage, valueUserPackage, email, password,
-        UserLanguage, UserName, UserPackage, Source,} = useContext(AppContext);
+        valueEmail, valuePassword, valueSource, valueUserName, valueUserLanguage, valueUserPackage, email, password,
+        UserLanguage, UserName } = useContext(AppContext);
     return (
         <div data-aos="fade-right" data-aos-duration="2000" className={`${styles.form_container} ${"flex flex-col items-center"}`}>
             <h1 className={styles.title}>{Form_title[2]}</h1>
             <form action="" method="Get" className={`${styles.form} ${isArabic ? styles.ar : ""}  ${styles.form_signUp}`}>
                 <label className={styles.label} htmlFor={"Name"}>{Form_Labels[0]}
-                    <input type={"text"} required id="Name" name="name" className={styles.input} placeholder={`${Form_place_holders[0]}`} value={UserName} onChange={valueUserName}/>
+                    <input type={"text"} required id="Name" name="name" className={styles.input} placeholder={`${Form_place_holders[0]}`} value={UserName} onChange={valueUserName} />
                 </label>
                 <label className={styles.label} htmlFor={"Email"}>{Form_Labels[1]}
-                    <input type={"email"} required id="Email" name="email" className={styles.input} placeholder={`${Form_place_holders[1]}`} value={email}  onChange={valueEmail} />
+                    <input type={"email"} required id="Email" name="email" className={styles.input} placeholder={`${Form_place_holders[1]}`} value={email} onChange={valueEmail} />
                 </label>
                 <label className={styles.label} htmlFor={"Password"}>{Form_Labels[2]}
-                    <input type={"password"} required id="Password" name="password" className={styles.input} placeholder={Form_place_holders[2]} value={password}  onChange={valuePassword}/>
+                    <input type={"password"} required id="Password" name="password" className={styles.input} placeholder={Form_place_holders[2]} value={password} onChange={valuePassword} />
                 </label>
                 <label className={`${styles.label}`} htmlFor={"Language"}>
                     <label>{Form_Labels[4]}</label>
 
                     <div className={styles.checkbox_con}>
-                        <input type={"checkbox"} id="English" name="English" value={"English"} className={`${styles.input} ${styles.fixlanguages}`}  checked={UserLanguage.English} onChange={valueUserLanguage} />
+                        <input type={"checkbox"} id="English" name="English" value={"English"} className={`${styles.input} ${styles.fixlanguages}`} checked={UserLanguage.English} onChange={valueUserLanguage} />
                         <label htmlFor={"English"} className={`${styles.fixlanguages}`}>English</label>
                     </div>
 
                     <div className={styles.checkbox_con}>
-                        <input type={"checkbox"} id="Spanish" name="Spanish" value={"Spanish"} className={`${styles.input} ${styles.fixlanguages}`} checked={UserLanguage.Spanish}  onChange={valueUserLanguage}/>
+                        <input type={"checkbox"} id="Spanish" name="Spanish" value={"Spanish"} className={`${styles.input} ${styles.fixlanguages}`} checked={UserLanguage.Spanish} onChange={valueUserLanguage} />
                         <label htmlFor={"Spanish"} className={`${styles.fixlanguages}`}>Spanish</label>
                     </div>
 
                     <div className={styles.checkbox_con}>
-                        <input type={"checkbox"} id="Arabic" name="Arabic" value={"Arabic"} className={`${styles.input} ${styles.fixlanguages}`} placeholder={"confirm your password"} checked={UserLanguage.Arabic} onChange={valueUserLanguage}/>
+                        <input type={"checkbox"} id="Arabic" name="Arabic" value={"Arabic"} className={`${styles.input} ${styles.fixlanguages}`} placeholder={"confirm your password"} checked={UserLanguage.Arabic} onChange={valueUserLanguage} />
                         <label htmlFor={"Arabic"} className={`${styles.fixlanguages}`}>Arabic</label>
                     </div>
                     <div className={styles.checkbox_con}>
-                        <input type={"checkbox"} id="Russian" name="Russian" value={"Russian"} className={`${styles.input} ${styles.fixlanguages}`} placeholder={"confirm your password"} checked={UserLanguage.Russian} onChange={valueUserLanguage}/>
+                        <input type={"checkbox"} id="Russian" name="Russian" value={"Russian"} className={`${styles.input} ${styles.fixlanguages}`} placeholder={"confirm your password"} checked={UserLanguage.Russian} onChange={valueUserLanguage} />
                         <label htmlFor={"Russian"} className={`${styles.fixlanguages}`}>Russian</label>
                     </div>
 
@@ -57,20 +57,20 @@ export default function SignUp() {
                     <p className={styles.label} >{Form_Labels[8]}</p>
                     <div className={styles.package_con}>
                         <li>
-                            <input type="radio" id="Basic" name="type" value="Basic" onChange={valueUserPackage}/>
+                            <input type="radio" id="Basic" name="type" value="Basic" onChange={valueUserPackage} />
                             <label className={styles.lb} htmlFor={"Basic"}>{Form_btns[0]}</label>
                         </li>
                         <li>
-                            <input type="radio" id="Standard" name="type" value="Standard" onChange={valueUserPackage}/>
+                            <input type="radio" id="Standard" name="type" value="Standard" onChange={valueUserPackage} />
                             <label className={styles.lb} htmlFor={"Standard"}>{Form_btns[1]}</label>
                         </li>
                         <li>
-                            <input type="radio" id="Premium" name="type" value="Premium" onChange={valueUserPackage}/>
+                            <input type="radio" id="Premium" name="type" value="Premium" onChange={valueUserPackage} />
                             <label className={styles.lb} htmlFor={"Premium"}>{Form_btns[2]}</label>
                         </li>
                     </div>
                 </ul>
-                <button className={styles.btn_nm} type="button" onClick={()=>signUp()}>{Form_btns[4]}</button>
+                <button className={styles.btn_nm} type="button" onClick={() => signUp()}>{Form_btns[4]}</button>
             </form>
         </div>
     )
