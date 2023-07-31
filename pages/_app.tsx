@@ -14,7 +14,6 @@ function App({ Component, pageProps }: AppProps) {
   const { i18n } = useTranslation();
 
   useEffect(() => {
-
     //for animation
     AOS.init({ duration: 1000, once: false });
 

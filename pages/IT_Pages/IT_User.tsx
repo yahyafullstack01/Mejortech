@@ -1,15 +1,14 @@
 import Navbar from "../../Components/IT-comp/Navbar_IT/navbar_it";
 import Intro from "../../Components/IT-comp/Introduction_IT/intro_it";
 import UserNavbar from "../../Components/IT-User/UserNavbar/UserNavbar";
+import Userprofile from "../../Components/IT-User/UserProfile/UserProfile";
 import { AppContext } from "../../Mycontext/context";
 import { useTranslation } from "next-i18next";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { GetStaticProps } from "next";
 import { useAuth } from "../../Use_Auth/ITauth";
-
-
 
 
 export default function IT_User() {
@@ -29,7 +28,7 @@ export default function IT_User() {
     //The arr information of the Intro_it section
     const Intro_info: any = t('Intro_info', { returnObjects: true });
 
-
+    //This function activates when the user Logs Out of the IT User page and sends him back to the IT Home Page
     useEffect(() => {
         let token = sessionStorage.getItem('Token');
         if (!token) {
@@ -37,19 +36,26 @@ export default function IT_User() {
         }
     }, [])
 
+    //This function displays which component the user is choosing 
+    const [Section, SetSection]: any = useState(null)
+    const User_Profile = () => SetSection(<Userprofile />);
+    const UserProjects = () => SetSection(false);
+
+
+
 
     return (
         <AppContext.Provider value={{
             t, Signing, Intro_info,
-            isArabic, Logout
+            isArabic, Logout, User_Profile
         }}>
             <>
                 <Navbar />
                 <Intro />
                 <UserNavbar />
+                {Section}
             </>
         </AppContext.Provider>
-
     )
 }
 

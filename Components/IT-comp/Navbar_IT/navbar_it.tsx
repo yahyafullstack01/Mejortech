@@ -1,5 +1,6 @@
 import styles from "../../Home-comp/Navbar/navbar.module.css"
 import { BsGlobe } from 'react-icons/bs';
+import { ImSwitch } from "react-icons/im";
 import { TbEqual } from 'react-icons/tb';
 import { RxCross1 } from 'react-icons/rx';
 import Link from "next/link";
@@ -22,7 +23,10 @@ export default function header() {
         if (router.asPath == UserIT_route) {
             return (
                 <div id="Itusernav">
-                    <button onClick={() => Logout()}>Log out </button>
+                    <ImSwitch
+                        className={styles.logout}
+                        onClick={() => Logout()}
+                    />
                 </div>
             )
         }
