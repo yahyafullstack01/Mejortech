@@ -32,7 +32,7 @@ export default function UserProfile() {
                         <span className={styles.info}>Morrocan</span>
                     </p>
                     <p className={styles.data}>Projects :
-                        <span className={styles.info}>5</span>
+                        <span className={styles.info}>3</span>
                     </p>
                     <p className={styles.data}>Meetings :
                         <span className={styles.info}>3</span>

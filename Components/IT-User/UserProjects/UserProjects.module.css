@@ -1,0 +1,92 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Abel', sans-serif;
+    padding: 5% 5%;
+    border-bottom: 2px solid white;
+}
+
+.title {
+    display: flex;
+    font-family: 'Abel', sans-serif;
+    justify-content: center;
+    position: relative;
+    font-size: 4vw;
+    justify-content: center;
+    color: #907730;
+}
+
+.Box {
+    display: flex;
+    flex-direction: column;
+    background: #232323;
+    border-radius: 10px;
+}
+
+.Project {
+    display: flex;
+    align-items: center;
+    padding: 2%;
+    margin-bottom: 3%;
+    border-bottom: 2px solid white;
+    position: relative;
+
+}
+
+.Project_pic {
+    display: flex;
+    object-fit: cover;
+    border-radius: 10px;
+    width: 200px;
+    height: 200px;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    width: 60%;
+    margin-left: 5%;
+    font-size: 3vw;
+    color: white;
+}
+
+.date {
+    width: 20%;
+}
+
+
+.Project_name {
+    display: flex;
+    align-self: flex-start;
+    justify-self: flex-start;
+    margin-left: 5%;
+}
+
+.Project_country {
+    display: flex;
+    align-self: flex-end;
+    justify-self: flex-end;
+    width: 20%;
+}
+
+.btn {
+    display: flex;
+    position: absolute;
+    right: 0;
+    width: 12%;
+    justify-content: center;
+    padding: 15px;
+    margin-right: 2%;
+    font-size: 1.5vw;
+    background: #907730;
+    border-radius: 10px;
+    color: white;
+}
+
+.btn:hover {
+    background: #e1b53b;
+}
+
+.btn:active {
+    transform: scale(0.9);
+}

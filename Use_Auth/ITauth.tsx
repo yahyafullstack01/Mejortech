@@ -13,6 +13,7 @@ import {
 
 export const useAuth = () => {
     const router = useRouter();
+    
     // signUp with google (firebase)
     const auth = getAuth(app);
     const Googlesign = new GoogleAuthProvider();

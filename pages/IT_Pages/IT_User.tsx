@@ -2,6 +2,7 @@ import Navbar from "../../Components/IT-comp/Navbar_IT/navbar_it";
 import Intro from "../../Components/IT-comp/Introduction_IT/intro_it";
 import UserNavbar from "../../Components/IT-User/UserNavbar/UserNavbar";
 import Userprofile from "../../Components/IT-User/UserProfile/UserProfile";
+import UserProjects from "../../Components/IT-User/UserProjects/UserProjects";
 import { AppContext } from "../../Mycontext/context";
 import { useTranslation } from "next-i18next";
 import { useEffect, useState } from "react";
@@ -39,7 +40,7 @@ export default function IT_User() {
     //This function displays which component the user is choosing 
     const [Section, SetSection]: any = useState(null)
     const User_Profile = () => SetSection(<Userprofile />);
-    const UserProjects = () => SetSection(false);
+    const User_Projects = () => SetSection(<UserProjects />);
 
 
 
@@ -47,7 +48,7 @@ export default function IT_User() {
     return (
         <AppContext.Provider value={{
             t, Signing, Intro_info,
-            isArabic, Logout, User_Profile
+            isArabic, Logout, User_Profile, User_Projects
         }}>
             <>
                 <Navbar />
