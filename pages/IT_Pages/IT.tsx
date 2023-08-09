@@ -40,6 +40,8 @@ export default function IT() {
 
     const { t, i18n } = useTranslation("ITPage");
     const isArabic = i18n.language === "ar";
+    const isRussain = i18n.language === "ru";
+
 
     //The arr information of the Navbar_it section
     const Signing: any = t('Signing', { returnObjects: true });
@@ -86,7 +88,7 @@ export default function IT() {
     return (
         <AppContext.Provider value={{
             t, Signing, Intro_info,
-            WhyUs_list, isArabic, OurPakages_types,
+            WhyUs_list, isArabic, isRussain, OurPakages_types,
             OurPakages_list, OurPakages_Title,
             Form_Labels, Form_place_holders, Form_btns, Form_title,
             Testemon_title, Testemoniels_names,

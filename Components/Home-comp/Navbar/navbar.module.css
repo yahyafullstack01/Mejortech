@@ -13,7 +13,6 @@
     position: absolute;
     right: 0;
     left: 0;
-    /* width: 100%; */
     background: rgba(255, 255, 255, 0.055);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(4.5px);
@@ -24,15 +23,18 @@
     width: 10vw;
 }
 
-
 .Nav_con.ru {
     width: 55%;
+}
+
+
+.nav_con.ru{
+    width: 50%;
 }
 
 .navigation {
     font-family: 'Abel', sans-serif;
 }
-
 
 
 .navigation:hover {
@@ -59,13 +61,9 @@
     height: 100vh;
 }
 
-
-
-
 .menu:target {
     transform: translateX(0);
 }
-
 
 .bar {
     padding: 1% 5%;
@@ -98,8 +96,6 @@
     transform: scale(0.9);
 }
 
-
-
 .btn_container {
     column-gap: 2vw;
 }
@@ -108,7 +104,7 @@
     display: block;
     padding: 10px;
     background: rgb(231, 228, 228);
-    font-size: 1.3vw;
+    font-size: 1.1vw;
     border-radius: 5px;
 }
 
@@ -133,6 +129,10 @@
     background: #907730;
 }
 
+.btn.ru{
+    /* background: red; */
+}
+
 .menu_mobile {
     display: flex;
     padding: 0 5%;
@@ -146,7 +146,6 @@
     border-bottom: 2px solid#907730;
     border-radius: 20%;
 }
-
 
 @media(min-width:2000px) {
     .logo {

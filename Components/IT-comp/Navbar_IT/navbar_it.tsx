@@ -1,5 +1,4 @@
 import styles from "../../Home-comp/Navbar/navbar.module.css"
-import { BsGlobe } from 'react-icons/bs';
 import { ImSwitch } from "react-icons/im";
 import { TbEqual } from 'react-icons/tb';
 import { RxCross1 } from 'react-icons/rx';
@@ -14,11 +13,9 @@ export default function header() {
     const router = useRouter();
     let UserIT_route: string = "/IT_Pages/IT_User";
     const { t } = useTranslation("Home");
-    const { Signing, LogForm, SignForm, ContactIt, Logout, } = useContext(AppContext);
+    const { isRussain, Signing, LogForm, SignForm, ContactIt, Logout, } = useContext(AppContext);
 
-
-
-    // function for change the buttons of registration between navbar Itpage and UserItpage
+    // function to change the buttons of registration between navbar Itpage and UserItpage
     function Changeregistration() {
         if (router.asPath == UserIT_route) {
             return (
@@ -33,10 +30,10 @@ export default function header() {
         else {
             return (
                 <>
-                    <a href="#FormDiv" className={styles.btn}>
+                    <a href="#FormDiv" className={`${styles.btn} ${isRussain ? styles.ru : ""}`}>
                         <button onClick={() => { LogForm() }}>{Signing[0]}</button>
                     </a>
-                    <a href="#FormDiv" className={styles.btn}>
+                    <a href="#FormDiv" className={`${styles.btn} ${isRussain ? styles.ru : ""}`}>
                         <button onClick={() => { SignForm() }}>{Signing[1]}</button>
                     </a>
                 </>
@@ -44,9 +41,7 @@ export default function header() {
         }
     }
 
-
     return (
-
         <div className={`${styles.container2} ${"items-center justify-between flex"}`}>
             <Link passHref href="/">
                 <img
@@ -55,7 +50,7 @@ export default function header() {
                     className={`${styles.logo}`}
                 />
             </Link>
-            <nav className={"sm:flex md:w-96 w-72 2xl:w-4/12 justify-between hidden"}>
+            <nav className={`${styles.nav_con} ${"sm:flex md:w-96 w-72 2xl:w-4/12 justify-between hidden"} ${isRussain ? styles.ru : ""}`}>
                 <Link passHref href="/#About" className={`${styles.navigation} ${"text-sm md:text-xl  text-white"}`}>{t('About')}</Link>
                 <Link passHref href="/#Our_work" className={`${styles.navigation} ${"text-sm md:text-xl  text-white"}`}>{t("Our_Work")}</Link>
                 <Link passHref href="/#Team" className={`${styles.navigation} ${"text-sm md:text-xl  text-white"}`}>{t("Team")}</Link>
@@ -67,6 +62,8 @@ export default function header() {
             <a href="#menu" className="sm:hidden flex">
                 <TbEqual className="sm:hidden text-4xl text-white flex" />
             </a>
+
+            {/*For the Menu , When openning the screen below tablet mode*/}
             <section id="menu" className={styles.menu}>
                 <div className={`${styles.bar} ${"flex items-center justify-between"}`}>
                     <a href="#">
@@ -90,17 +87,13 @@ export default function header() {
                         </a>
                     </div>
                 </div>
-
                 <div className={`${styles.nav_mobile} ${"flex flex-col gap-y-12 mt-2"}`}>
                     <a href="/#About" className={`${styles.mob_hover} ${"text-2xl text-center text-white  w-full"}`}>{t('About')}</a>
                     <a href="/#Our_work" className={`${styles.mob_hover} ${"text-2xl text-center text-white  w-full"}`}>{t("Our_Work")}</a>
                     <a href="/#Team" className={`${styles.mob_hover} ${"text-2xl text-center text-white  w-full"}`}>{t("Team")}</a>
                     <a href="/#Contact_us" className={`${styles.mob_hover} ${"text-2xl text-center text-white  w-full"}`}>{t("Contact_Us")}</a>
                 </div>
-
             </section>
         </div>
     )
 }
-
-
