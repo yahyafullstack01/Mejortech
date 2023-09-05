@@ -122,7 +122,7 @@ export default function Team() {
                         </div>
                         <div className={styles.front}>
                             <img
-                                src="/samer.jpeg"
+                                src="/me.jpeg"
                                 alt=""
                                 className={`${styles.pic}`}
                             />
