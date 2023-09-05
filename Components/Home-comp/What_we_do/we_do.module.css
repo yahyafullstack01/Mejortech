@@ -54,7 +54,8 @@
     border-radius: 15px;
     border: 2px solid white;
     flex-direction: column;
-    padding: 3% ;
+    inset: 0;
+    padding: 3%;
     width: 100%;
     height: auto;
     background: rgb(37, 35, 35);
@@ -62,7 +63,7 @@
     box-shadow: #e6aa06 20px 20px 30px -10px;
 }
 
-.Text_block_Learn.ar{
+.Text_block_Learn.ar {
     direction: rtl;
 }
 
@@ -85,7 +86,7 @@
     font-style: italic;
 }
 
-.list_con_Learn.ar{
+.list_con_Learn.ar {
     margin-right: 4%;
 }
 
@@ -192,16 +193,16 @@
         font-size: 3.5vw;
     }
 
-    .con{
+    .con {
         height: 55vh;
         width: 100%;
     }
 
-    .title_Learn{
+    .title_Learn {
         font-size: 3vw;
     }
 
-    .list_con_Learn{
+    .list_con_Learn {
         font-size: 1.7vw;
         row-gap: 2vw;
         margin-left: 5%;
@@ -226,16 +227,16 @@
         font-size: 3.7vw;
     }
 
-    .con{
+    .con {
         height: 56vh;
         width: 100%;
     }
 
-    .title_Learn{
+    .title_Learn {
         font-size: 3.5vw;
     }
 
-    .list_con_Learn{
+    .list_con_Learn {
         font-size: 2vw;
         row-gap: 2vw;
         margin-left: 5%;
@@ -284,11 +285,15 @@
         width: 80%;
     }
 
-    .title_Learn{
+    .title_Learn {
         font-size: 7vw;
     }
 
-    .list_con_Learn{
+    .Text_block_Learn {
+        inset: none;
+    }
+
+    .list_con_Learn {
         display: flex;
         height: inherit;
         justify-content: space-evenly;
