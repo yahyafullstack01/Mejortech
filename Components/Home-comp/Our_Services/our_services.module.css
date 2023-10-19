@@ -1,0 +1,181 @@
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.vid {
+    display: block;
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    width: 100vw;
+    height: 100%;
+}
+
+.header {
+    display: flex;
+    font-family: 'Abel', sans-serif;
+    justify-content: center;
+    position: relative;
+    font-size: 5vw;
+    color: #907730;
+}
+
+.Block {
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    padding: 5%;
+}
+
+.img {
+    width: 100%;
+    height: 80vh;
+    margin-bottom: 2vh;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.title {
+    display: flex;
+    font-family: 'Abel', sans-serif;
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 5vw;
+    color: #907730;
+}
+
+.about {
+    color: white;
+    font-size: 1.5vw;
+    font-family: 'PT Sans', sans-serif;
+    font-style: italic;
+    text-align: center;
+}
+
+.about.ar {
+    direction: rtl;
+}
+
+.type {
+    color: white;
+    font-size: 2vw;
+    margin-top: 2%;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.type.ar {
+    direction: rtl;
+}
+
+.ol {
+    display: grid;
+    flex-direction: column;
+    grid-template-columns: repeat(2, 1fr);
+    font-family: 'PT Sans', sans-serif;
+    font-size: 2vw;
+    column-gap: 3vw;
+    margin-top: 4vh;
+    margin-bottom: 10vh;
+    row-gap: 5vh;
+}
+
+.types {
+    display: flex;
+    font-family: 'Abel', sans-serif;
+    font-size: 2vw;
+    color: #907730;
+    text-transform: uppercase;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1vw;
+    padding: 10px;
+    background: rgba(137, 136, 136, 0.359);
+    border-radius: 10px;
+    box-shadow: 1px 1px 20px white;
+}
+
+.list.ar {
+    direction: rtl;
+}
+
+
+
+
+
+@media(max-width:768px) {
+    .header {
+        font-size: 6vw;
+    }
+
+    .about {
+        font-size: 3vw;
+    }
+
+    .type {
+        font-size: 2.8vw;
+    }
+
+    .ol {
+        font-size: 2.5vw;
+    }
+
+    .list {
+        font-size: 3vw;
+    }
+
+    .types {
+        font-size: 2.8vw;
+    }
+}
+
+@media (max-width:500px) {
+    .container {
+        padding: 10% 1%;
+    }
+
+    .img {
+        height: 50vh;
+    }
+
+    .ol {
+        display: flex;
+        flex-direction: column;
+        font-size: 10vw;
+    }
+
+    .header {
+        font-size: 10vw;
+    }
+
+    .title {
+        font-size: 7vw;
+    }
+
+    .about {
+        font-size: 4.5vw;
+    }
+
+    .type {
+        font-size: 3.5vw;
+    }
+
+    .list {
+        font-size: 5vw;
+    }
+
+    .types {
+        font-size: 5vw;
+    }
+}

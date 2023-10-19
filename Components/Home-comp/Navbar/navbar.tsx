@@ -29,7 +29,7 @@ function Header() {
 
             <nav className={`${styles.Nav_con} ${"sm:flex md:w-96 w-72 2xl:w-4/12 justify-between hidden"} ${isRussain ? styles.ru : ""}`} >
                 <a href="#About" className={`${styles.navigation} ${"text-sm md:text-xl  text-white"}`}>{t("About")}</a>
-                <a href="#Our_work" className={`${styles.navigation} ${"text-sm md:text-xl  text-white"}`}>{t("Our_Work")}</a>
+                <a href="#Our_services" className={`${styles.navigation} ${"text-sm md:text-xl  text-white"}`}>{t("Our_Work")}</a>
                 <a href="#Team" className={`${styles.navigation} ${"text-sm md:text-xl  text-white"}`}>{t("Team")}</a>
                 <a href="#Contact_us" className={`${styles.navigation} ${"text-sm md:text-xl  text-white"}`}>{t("Contact_Us")}</a>
             </nav>
@@ -67,7 +67,7 @@ function Header() {
 
                 <div className={`${styles.nav_mobile} ${"flex items-center justify-center flex-col gap-y-12 mt-2"}`}>
                     <a href="#About" className="text-2xl text-center text-white  w-full">{t("About")}</a>
-                    <a href="#Our_work" className="text-2xl text-center text-white  w-full">{t("Our_Work")}</a>
+                    <a href="#Our_services" className="text-2xl text-center text-white  w-full">{t("Our_Work")}</a>
                     <a href="#Team" className="text-2xl text-center text-white  w-full">{t("Team")}</a>
                     <a href="#Contact_us" className="text-2xl text-center text-white  w-full">{t("Contact_Us")}</a>
                 </div>

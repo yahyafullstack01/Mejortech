@@ -5,6 +5,7 @@ import Intro from "../Components/Home-comp/Introduction/intro";
 import About from "../Components/Home-comp/About_us/about";
 import Team from "../Components/Home-comp/Meet_team/team";
 import What_we_do from "../Components/Home-comp/What_we_do/we_do";
+import Our_services from "../Components/Home-comp/Our_Services/our_services";
 import Join_us from "../Components/Home-comp/Join_us/join";
 import Contact_Us from "../Components/Home-comp/Contact_us/contact";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
@@ -56,6 +57,23 @@ export default function Home() {
   const Card_MK: any = t('Card_MK_info', { returnObjects: true });
   const Card_btn: any = t('Who_btn', { returnObjects: true });
 
+  //The arr of inforamtion for Our services 
+  const Our_services_title: any = t('Our_services_title', { returnObjects: true });
+  const Our_services_Types_title: any = t('Our_services_Types_title', { returnObjects: true });
+  const Our_services_Types_about: any = t('Our_services_Types_about', { returnObjects: true });
+  const Our_services_service: any = t('Our_services_service', { returnObjects: true });
+  const Our_services_type_website_Dev: any = t('Our_services_type_website_Dev', { returnObjects: true });
+  const Our_services_type_website_Dev_info: any = t('Our_services_type_website_Dev_info', { returnObjects: true });
+  const Our_services_type_Mobile_Dev: any = t('Our_services_type_Mobile_Dev', { returnObjects: true });
+  const Our_services_type_Mobile_Dev_info: any = t('Our_services_type_Mobile_Dev_info', { returnObjects: true });
+
+  const Our_services_type_Frontend_training  : any = t('Our_services_type_Frontend_training ', { returnObjects: true });
+
+  const Our_services_type_Frontend_training_info: any = t('Our_services_type_Frontend_training_info', { returnObjects: true });
+  const Our_services_type_Digital_marketing: any = t('Our_services_type_Digital_marketing', { returnObjects: true });
+  const Our_services_type_Digital_marketing_info: any = t('Our_services_type_Digital_marketing_info', { returnObjects: true });
+
+
   //The arr of iformations for Join Us section
   const Block_Join_titles: any = t('Block_Join_titles', { returnObjects: true });
   const Block_Join_info: any = t('Block_Join_info', { returnObjects: true });
@@ -77,6 +95,10 @@ export default function Home() {
       Polina_info, Alina_info, Team_btn,/* Team */
       Titles, Info, Card_titles, Card_ED,
       Card_IT, Card_MK, Card_btn, /* What-we-do */
+      Our_services_title, Our_services_Types_title,Our_services_Types_about,
+      Our_services_service,Our_services_type_website_Dev,Our_services_type_website_Dev_info,
+      Our_services_type_Mobile_Dev,Our_services_type_Mobile_Dev_info,Our_services_type_Frontend_training ,
+      Our_services_type_Frontend_training_info,Our_services_type_Digital_marketing,Our_services_type_Digital_marketing_info,/* Our Services*/
       Block_Join_titles, Block_Join_info,/*Join Us */
       CONTACT_labels,/*Contact Us*/
     }}>
@@ -86,6 +108,7 @@ export default function Home() {
         <About />
         <Team />
         <What_we_do />
+        <Our_services />
         <Join_us />
         <Contact_Us />
       </div>
