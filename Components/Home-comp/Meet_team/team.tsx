@@ -6,7 +6,7 @@ import { useContext } from "react";
 export default function Team() {
 
 
-    const { side, side2, side3, side4, side5, side6, flip, flip2, flip3, flip4, flip5, flip6, t, isArabic, Names, Yahya_info, Work, Lana_info, Samer_info, Samuel_info, Polina_info, Alina_info, Team_btn } = useContext(AppContext);
+    const { side, side2, side3, side4, side5, side6, flip, flip2, flip3, flip4, flip5, flip6, t, isArabic, Names, Yahya_info, Work, Lana_info, Samer_info, Anja_info, Polina_info, Alina_info, Team_btn } = useContext(AppContext);
     return (
         <div
             id="Team" className={`${styles.container} ${"flex flex-col relative"}`}>
@@ -68,11 +68,11 @@ export default function Team() {
                             <button onClick={() => flip2()} className={styles.btn}>{Team_btn[0]}</button>
                         </div>
                     </div>
-                    {/* Samuel card*/}
+                    {/* Anja card*/}
                     <div style={{ transform: side3 ? "rotateY(180deg)" : "" }} className={`${styles.holder} ${"flex flex-col items-center text-center "}`}>
                         <div className={styles.back}>
                             <ul className={`${styles.listcon} ${isArabic ? styles.ar : ""}`}>
-                                {Samuel_info && Samuel_info.map((item: string) => (
+                                {Anja_info && Anja_info.map((item: string) => (
                                     <li key={item} className={`${styles.list} ${isArabic ? styles.ar : ""}`}>{item}</li>
                                 ))}
                             </ul>
@@ -80,7 +80,7 @@ export default function Team() {
                         </div>
                         <div className={styles.front}>
                             <img
-                                src="/samuel.jpg"
+                                src="/Anja.JPG"
                                 alt=""
                                 className={`${styles.pic}`}
                             />
