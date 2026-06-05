@@ -9,7 +9,7 @@ import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
 
 
-export default function header() {
+export default function Header() {
     const router = useRouter();
     let UserIT_route: string = "/IT_Pages/IT_User";
     const { t } = useTranslation("Home");
@@ -88,10 +88,10 @@ export default function header() {
                     </div>
                 </div>
                 <div className={`${styles.nav_mobile} ${"flex flex-col gap-y-12 mt-2"}`}>
-                    <a href="/#About" className={`${styles.mob_hover} ${"text-2xl text-center text-white  w-full"}`}>{t('About')}</a>
-                    <a href="/#Our_work" className={`${styles.mob_hover} ${"text-2xl text-center text-white  w-full"}`}>{t("Our_Work")}</a>
-                    <a href="/#Team" className={`${styles.mob_hover} ${"text-2xl text-center text-white  w-full"}`}>{t("Team")}</a>
-                    <a href="/#Contact_us" className={`${styles.mob_hover} ${"text-2xl text-center text-white  w-full"}`}>{t("Contact_Us")}</a>
+                    <Link href="/#About" className={`${styles.mob_hover} ${"text-2xl text-center text-white  w-full"}`}>{t('About')}</Link>
+                    <Link href="/#Our_work" className={`${styles.mob_hover} ${"text-2xl text-center text-white  w-full"}`}>{t("Our_Work")}</Link>
+                    <Link href="/#Team" className={`${styles.mob_hover} ${"text-2xl text-center text-white  w-full"}`}>{t("Team")}</Link>
+                    <Link href="/#Contact_us" className={`${styles.mob_hover} ${"text-2xl text-center text-white  w-full"}`}>{t("Contact_Us")}</Link>
                 </div>
             </section>
         </div>

@@ -2,7 +2,7 @@ import styles from "../Footer/foot.module.css";
 import { useTranslation } from "next-i18next";
 
 
-export default function foot() {
+export default function Footer() {
 
     const { t, i18n } = useTranslation("Home");
     const isArabic = i18n.language === "ar";
