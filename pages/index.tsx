@@ -42,9 +42,9 @@ export default function Home() {
   const Work: any = t('Work_type', { returnObjects: true });
   const Lana_info: any = t('Lana_info', { returnObjects: true });
   const Yahya_info: any = t('Yahya_info', { returnObjects: true });
+  const Samuel_info: any = t('Samuel_info', { returnObjects: true });
   const Anja_info: any = t('Anja_info', { returnObjects: true });
   const Polina_info: any = t('Polina_info', { returnObjects: true });
-  const Samer_info: any = t('Samer_info', { returnObjects: true });
   const Alina_info: any = t('Alina_info', { returnObjects: true });
   const Team_btn: any = t('Team_btn', { returnObjects: true });
 
@@ -247,7 +247,7 @@ export default function Home() {
       side, side2, side3, side4, side5, side6,
       flip, flip2, flip3, flip4, flip5, flip6,
       t, isArabic, Names, Yahya_info, Work,
-      Lana_info, Samer_info, Anja_info,
+      Lana_info, Samuel_info, Anja_info,
       Polina_info, Alina_info, Team_btn,/* Team */
       Titles, Info, Card_titles, Card_ED,
       Card_IT, Card_MK, Card_btn, /* What-we-do */
