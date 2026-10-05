@@ -25,6 +25,7 @@ export default function About() {
                     {t("Para_5")}
                     <br></br>
                     {t("Para_6")}
+                    
                 </p>
             </div>
             <Image src="/about.jpg" alt="About" width={500}
